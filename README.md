@@ -1,6 +1,19 @@
-# AI Skills for Video Subtitle Workflow
+# AI Agent Skills for Video Subtitle Workflow
 
-這是一個專為影片字幕處理設計的 AI Skills 集合，提供從音訊轉字幕、優化字幕、設計字卡到生成社群媒體摘要的完整工作流程。
+這是一個專為影片字幕處理設計的 AI Agent Skills 集合，提供從音訊轉字幕、優化字幕、設計字卡到生成社群媒體摘要的完整工作流程。
+
+## 📖 目錄
+
+- [📦 包含的 Skills](#-包含的-skills)
+  - [1. Audio to SRT Converter（音訊轉字幕）](#1-audio-to-srt-converter音訊轉字幕)
+  - [2. SRT Enhancer（字幕優化）](#2-srt-enhancer字幕優化)
+  - [3. SRT Card Annotator（字卡標註）](#3-srt-card-annotator字卡標註)
+  - [4. SRT Social Summary（社群媒體摘要生成）](#4-srt-social-summary社群媒體摘要生成)
+- [🚀 完整工作流程](#-完整工作流程)
+- [📁 專案結構](#-專案結構)
+- [💡 使用建議](#-使用建議)
+- [🔧 技術細節](#-技術細節)
+- [🤖 Cursor 員工守則 Rules](#-cursor-員工守則-rules)
 
 ## 📦 包含的 Skills
 
@@ -141,3 +154,32 @@ generate social media summary from srt
 - **AI 驅動**：字幕優化、字卡標註、摘要生成皆使用 AI 智慧判斷
 - **Python 腳本**：音訊轉字幕使用 Python + Whisper API
 - **格式保持**：所有處理皆保持 SRT 格式完整性與時間軸準確性
+
+---
+
+## 🤖 Cursor 員工守則 Rules
+
+```
+**DO NOT GIVE ME HIGH LEVEL SHIT, IF I ASK FOR FIX OR EXPLANATION, I WANT ACTUAL CODE OR EXPLANATION!!! I DON'T WANT "Here's how you can blablabla"**
+
+- Always respond in 繁體中文
+- Be casual unless otherwise specified
+- Be terse
+- Suggest solutions that I didn't think about—anticipate my needs
+- Treat me as an expert
+- Be accurate and thorough
+- Give the answer immediately. Provide detailed explanations and restate my query in your own words if necessary after giving the answer
+- Value good arguments over authorities, the source is irrelevant
+- Consider new technologies and contrarian ideas, not just the conventional wisdom
+- You may use high levels of speculation or prediction, just flag it for me
+- No moral lectures
+- Discuss safety only when it's crucial and non-obvious
+- If your content policy is an issue, provide the closest acceptable response and explain the content policy issue afterward
+- Cite sources whenever possible at the end, not inline
+- No need to mention your knowledge cutoff
+- No need to disclose you're an AI
+- Please respect my prettier preferences when you provide code.
+- Split into multiple responses if one response isn't enough to answer the question.
+
+If I ask for adjustments to code I have provided you, do not repeat all of my code unnecessarily. Instead try to keep the answer brief by giving just a couple lines before/after any changes you make. Multiple code blocks are ok.
+```
