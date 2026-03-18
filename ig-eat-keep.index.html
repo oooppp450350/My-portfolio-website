@@ -4525,17 +4525,21 @@
     }
 
     // Bar chart — animate on first scroll into view
-    const bars = document.querySelectorAll('.bar-fill');
+    // Observe .bar-chart containers (have real dimensions) instead of
+    // .bar-fill (width:0 initially → area=0 → threshold:0.1 never fires)
+    const barCharts = document.querySelectorAll('.bar-chart');
     const barObserver = new IntersectionObserver(entries => {
       entries.forEach(e => {
         if (e.isIntersecting) {
-          const w = e.target.style.getPropertyValue('--w') || '0%';
-          e.target.style.width = w;
+          e.target.querySelectorAll('.bar-fill').forEach(fill => {
+            const w = fill.style.getPropertyValue('--w') || '0%';
+            fill.style.width = w;
+          });
           barObserver.unobserve(e.target);
         }
       });
     }, { threshold: 0.1 });
-    bars.forEach(b => barObserver.observe(b));
+    barCharts.forEach(c => barObserver.observe(c));
 
     // Nav highlight on scroll
     const allSections = document.querySelectorAll('section[id]');
