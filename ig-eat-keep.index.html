@@ -5239,6 +5239,10 @@
         style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:1.5px;padding:8px 16px;border-radius:99px;border:1px solid var(--accent);background:var(--accent);color:#111;cursor:pointer;transition:all .2s;">
         按鈕
       </button>
+      <button onclick="showComp('navbar')" id="tag-navbar"
+        style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:1.5px;padding:8px 16px;border-radius:99px;border:1px solid var(--accent);background:transparent;color:var(--accent);cursor:pointer;transition:all .2s;">
+        導覽列
+      </button>
     </div>
 
     <!-- Slides -->
@@ -5352,6 +5356,78 @@
               </div>
               </div>
 
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 導覽列 Slide -->
+      <div id="comp-navbar" class="comp-slide" style="display:none;">
+        <div style="background:#FFFFFF;border:1px solid rgba(0,0,0,0.1);border-radius:2px;padding:32px;">
+
+          <!-- Default state -->
+          <div style="margin-bottom:40px;">
+            <div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:20px;">NAVIGATION BAR · h-52px · blur(14px)</div>
+            <!-- Full bar: default (no active) -->
+            <div style="background:rgba(35,35,35,0.94);border-bottom:1px solid rgba(255,255,255,0.06);height:52px;display:flex;align-items:center;padding:0 32px;gap:4px;border-radius:8px 8px 0 0;overflow:hidden;">
+              <span style="font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:18px;color:#AAE8EC;margin-right:20px;flex-shrink:0;">LYC</span>
+              <div style="width:1px;height:16px;background:rgba(255,255,255,0.06);flex-shrink:0;margin:0 6px;"></div>
+              <span style="font-family:'Roboto Mono',monospace;font-size:12px;color:rgba(255,255,255,0.28);letter-spacing:.5px;padding:5px 12px;border-radius:100px;border:1px solid transparent;">研究背景</span>
+              <span style="font-family:'Roboto Mono',monospace;font-size:12px;color:rgba(255,255,255,0.28);letter-spacing:.5px;padding:5px 12px;border-radius:100px;border:1px solid transparent;">研究過程</span>
+              <span style="font-family:'Roboto Mono',monospace;font-size:12px;color:rgba(255,255,255,0.28);letter-spacing:.5px;padding:5px 12px;border-radius:100px;border:1px solid transparent;">架構規劃</span>
+              <span style="font-family:'Roboto Mono',monospace;font-size:12px;color:rgba(255,255,255,0.28);letter-spacing:.5px;padding:5px 12px;border-radius:100px;border:1px solid transparent;">成品展示</span>
+            </div>
+            <!-- Active state -->
+            <div style="background:rgba(35,35,35,0.94);height:52px;display:flex;align-items:center;padding:0 32px;gap:4px;border-radius:0 0 8px 8px;border-top:1px solid rgba(255,255,255,0.04);overflow:hidden;">
+              <span style="font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:18px;color:#AAE8EC;margin-right:20px;flex-shrink:0;">LYC</span>
+              <div style="width:1px;height:16px;background:rgba(255,255,255,0.06);flex-shrink:0;margin:0 6px;"></div>
+              <span style="font-family:'Roboto Mono',monospace;font-size:12px;color:rgba(255,255,255,0.28);letter-spacing:.5px;padding:5px 12px;border-radius:100px;border:1px solid transparent;">研究背景</span>
+              <span style="font-family:'Roboto Mono',monospace;font-size:12px;color:#AAE8EC;letter-spacing:.5px;padding:5px 12px;border-radius:100px;background:rgba(170,232,236,0.12);border:1px solid rgba(170,232,236,0.18);">研究過程</span>
+              <span style="font-family:'Roboto Mono',monospace;font-size:12px;color:rgba(255,255,255,0.28);letter-spacing:.5px;padding:5px 12px;border-radius:100px;border:1px solid transparent;">架構規劃</span>
+              <span style="font-family:'Roboto Mono',monospace;font-size:12px;color:rgba(255,255,255,0.28);letter-spacing:.5px;padding:5px 12px;border-radius:100px;border:1px solid transparent;">成品展示</span>
+            </div>
+            <div style="display:flex;gap:24px;margin-top:10px;">
+              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;flex:1;text-align:center;">Default</div>
+              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;flex:1;text-align:center;">Active</div>
+            </div>
+          </div>
+
+          <!-- Specs -->
+          <div>
+            <div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:16px;">TOKENS & SPECS</div>
+            <div style="display:flex;flex-wrap:wrap;gap:10px;">
+              <div style="padding:8px 14px;border-radius:8px;background:#f5f5f5;border:1px solid #e0e0e0;">
+                <div style="font-family:'Roboto Mono',monospace;font-size:9px;color:#909090;letter-spacing:1px;margin-bottom:3px;">HEIGHT</div>
+                <div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#333;">52px</div>
+              </div>
+              <div style="padding:8px 14px;border-radius:8px;background:#f5f5f5;border:1px solid #e0e0e0;">
+                <div style="font-family:'Roboto Mono',monospace;font-size:9px;color:#909090;letter-spacing:1px;margin-bottom:3px;">BG</div>
+                <div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#333;">#232323 · 94%</div>
+              </div>
+              <div style="padding:8px 14px;border-radius:8px;background:#f5f5f5;border:1px solid #e0e0e0;">
+                <div style="font-family:'Roboto Mono',monospace;font-size:9px;color:#909090;letter-spacing:1px;margin-bottom:3px;">BLUR</div>
+                <div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#333;">blur(14px)</div>
+              </div>
+              <div style="padding:8px 14px;border-radius:8px;background:#f5f5f5;border:1px solid #e0e0e0;">
+                <div style="font-family:'Roboto Mono',monospace;font-size:9px;color:#909090;letter-spacing:1px;margin-bottom:3px;">BRAND</div>
+                <div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#333;">Noto Sans TC · 18px · 700</div>
+              </div>
+              <div style="padding:8px 14px;border-radius:8px;background:#f5f5f5;border:1px solid #e0e0e0;">
+                <div style="font-family:'Roboto Mono',monospace;font-size:9px;color:#909090;letter-spacing:1px;margin-bottom:3px;">ITEM</div>
+                <div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#333;">Roboto Mono · 12px · 0.5px</div>
+              </div>
+              <div style="padding:8px 14px;border-radius:8px;background:#f5f5f5;border:1px solid #e0e0e0;">
+                <div style="font-family:'Roboto Mono',monospace;font-size:9px;color:#909090;letter-spacing:1px;margin-bottom:3px;">ACCENT</div>
+                <div style="display:flex;align-items:center;gap:6px;">
+                  <div style="width:12px;height:12px;border-radius:50%;background:#AAE8EC;"></div>
+                  <span style="font-family:'Roboto Mono',monospace;font-size:11px;color:#333;">#AAE8EC</span>
+                </div>
+              </div>
+              <div style="padding:8px 14px;border-radius:8px;background:#f5f5f5;border:1px solid #e0e0e0;">
+                <div style="font-family:'Roboto Mono',monospace;font-size:9px;color:#909090;letter-spacing:1px;margin-bottom:3px;">Z-INDEX</div>
+                <div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#333;">200</div>
+              </div>
             </div>
           </div>
 
