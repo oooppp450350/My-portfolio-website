@@ -2398,25 +2398,15 @@
     .wf-left-cards {
       display: flex;
       flex-direction: column;
-      gap: 0;
+      gap: 36px;
     }
 
     /* Each HMW card: left text + right mockup side by side */
     .wf-card {
       background: var(--card);
       border: 1px solid var(--border-subtle);
-      border-radius: 0;
+      border-radius: 12px;
       overflow: hidden;
-      border-bottom: none;
-    }
-
-    .wf-card:first-child {
-      border-radius: 12px 12px 0 0;
-    }
-
-    .wf-card:last-child {
-      border-radius: 0 0 12px 12px;
-      border-bottom: 1px solid var(--border-subtle);
     }
 
     .wf-card-inner {
@@ -2453,12 +2443,8 @@
         min-height: auto;
       }
 
-      .wf-card:first-child {
-        border-radius: 12px 12px 0 0;
-      }
-
-      .wf-card:last-child {
-        border-radius: 0 0 12px 12px;
+      .wf-left-cards {
+        gap: 16px;
       }
     }
 
@@ -4632,15 +4618,7 @@
       }
     }
 
-    // ── WF Carousel ───────────────────────────────────────────────
-    (function () {
-      const track = document.getElementById('wfCarouselTrack');
-      const dots = document.querySelectorAll('#wfDots );
-    dots.forEach((d, i) => d.classList.toggle('active', i === cur));
-    }
-  window.wfCarouselGo = (dir) => wfGoTo(cur + dir);
-    dots.forEach(d => d.addEventListener('click', () => wfGoTo(parseInt(d.dataset.i))));
-}) ();
+
 
 
     // ── Sitemap Carousel ──────────────────────────────
@@ -5230,7 +5208,7 @@
             style="display:flex;justify-content:center;padding:16px;background:rgba(0,0,0,0.2);border-radius:0 0 12px 12px;">
             <div style="position:relative;width:min(56.25%,260px);padding-top:min(100%,462px);flex-shrink:0;">
               <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:12px;"
-                src="https://www.youtube.com/embed/Eor9yDwizt0"
+                src="https://www.youtube-nocookie.com/embed/Eor9yDwizt0?rel=0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
             </div>
