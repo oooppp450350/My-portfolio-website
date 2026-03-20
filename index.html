@@ -2993,6 +2993,146 @@
       transform: scale(1.3);
     }
 
+    /* ── Site Map Desktop Tree (sm3) ────────────────── */
+    .sm3-desktop { display: none; }
+
+    @media(min-width:900px) {
+      .sm2-wrap { display: none !important; }
+      .sm3-desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+    }
+
+    .sm3-trunk-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sm3-vline {
+      width: 2px;
+      height: 24px;
+      background: rgba(170, 232, 236, 0.3);
+    }
+
+    .sm3-vline.short { height: 16px; }
+
+    .sm3-page {
+      border: 1px solid rgba(170, 232, 236, 0.35);
+      border-radius: 12px;
+      background: rgba(170, 232, 236, 0.07);
+      min-width: 130px;
+      max-width: 240px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .sm3-page.sm3-subpage {
+      background: rgba(170, 232, 236, 0.04);
+      border-color: rgba(170, 232, 236, 0.2);
+    }
+
+    .sm3-page-hd {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 10px 14px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 700;
+      font-family: 'Noto Sans TC', sans-serif;
+      text-align: left;
+      gap: 6px;
+      transition: background .15s;
+    }
+
+    .sm3-page-hd:hover { background: rgba(170, 232, 236, 0.08); }
+    .sm3-page-hd.static { cursor: default; }
+    .sm3-page-hd.static:hover { background: none; }
+
+    .sm3-chevron {
+      font-size: 9px;
+      color: var(--accent);
+      opacity: 0.6;
+      flex-shrink: 0;
+      transition: transform .2s;
+      display: inline-block;
+    }
+
+    .sm3-chevron.open { transform: rotate(180deg); }
+
+    .sm3-items {
+      border-top: 1px solid rgba(170, 232, 236, 0.15);
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      animation: fadeUp .2s ease;
+    }
+
+    .sm3-item {
+      font-size: 11px;
+      color: var(--text-dim);
+      padding: 5px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(170, 232, 236, 0.1);
+      line-height: 1.5;
+    }
+
+    .sm3-item-pink {
+      background: rgba(255, 100, 100, 0.07);
+      border-color: rgba(255, 100, 100, 0.2);
+      color: rgba(255, 150, 140, 0.9);
+    }
+
+    .sm3-branches-row {
+      display: flex;
+      width: 100%;
+      position: relative;
+      align-items: flex-start;
+    }
+
+    .sm3-branches-row::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 12.5%;
+      right: 12.5%;
+      height: 2px;
+      background: rgba(170, 232, 236, 0.3);
+    }
+
+    .sm3-branch-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 6px;
+    }
+
+    .sm3-sub-pages-row {
+      display: flex;
+      width: 100%;
+      gap: 6px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .sm3-sub-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     /* ── Color Set Display ────────────────────────── */
   </style>
 </head>
@@ -4216,23 +4356,192 @@
     <p class="sec-desc">完整的 App 頁面層級關係，從介紹頁到各功能模組一覽。</p>
     <p class="sec-relation">↳ 根據 User Flow 的路徑整理出頁面架構，確保每個流程步驟都有對應的畫面節點，不遺漏任何功能模組。</p>
 
+    <!-- ── Desktop tree (≥900px) ── -->
+    <div class="sm3-desktop">
+
+      <!-- Trunk: 介紹頁面 → 登入/註冊 → 首頁 -->
+      <div class="sm3-trunk-wrap">
+
+        <div class="sm3-page">
+          <button class="sm3-page-hd" onclick="sm3Toggle(this)">
+            <span>介紹頁面（3頁）</span><span class="sm3-chevron">▼</span>
+          </button>
+          <div class="sm3-items" hidden>
+            <div class="sm3-item">整理你的 IG 地點地圖</div>
+            <div class="sm3-item">讓你收藏的餐廳一目了然</div>
+            <div class="sm3-item">快速找到你收藏的餐廳</div>
+          </div>
+        </div>
+
+        <div class="sm3-vline"></div>
+
+        <div class="sm3-page">
+          <button class="sm3-page-hd" onclick="sm3Toggle(this)">
+            <span>登入 / 註冊畫面</span><span class="sm3-chevron">▼</span>
+          </button>
+          <div class="sm3-items" hidden>
+            <div class="sm3-item">Facebook 登入</div>
+            <div class="sm3-item">IG 帳號登入</div>
+          </div>
+        </div>
+
+        <div class="sm3-vline"></div>
+
+        <div class="sm3-page">
+          <button class="sm3-page-hd" onclick="sm3Toggle(this)">
+            <span>首頁</span><span class="sm3-chevron">▼</span>
+          </button>
+          <div class="sm3-items" hidden>
+            <div class="sm3-item">推薦模組</div>
+            <div class="sm3-item">常用篩選列</div>
+            <div class="sm3-item">匯入收藏按鈕</div>
+            <div class="sm3-item sm3-item-pink">未綁定 IG 帳號 → 直接進到 IG 帳號綁定頁面</div>
+            <div class="sm3-item">卡片清單【篩析列出】或【指定類別】</div>
+          </div>
+        </div>
+
+      </div><!-- /sm3-trunk-wrap -->
+
+      <!-- Vertical drop + 4 branches -->
+      <div class="sm3-vline"></div>
+      <div class="sm3-branches-row">
+
+        <!-- Branch 1: 個人資訊頁 -->
+        <div class="sm3-branch-col">
+          <div class="sm3-vline short"></div>
+          <div class="sm3-page">
+            <button class="sm3-page-hd" onclick="sm3Toggle(this)">
+              <span>個人資訊頁</span><span class="sm3-chevron">▼</span>
+            </button>
+            <div class="sm3-items" hidden>
+              <div class="sm3-item">系統偏好設定</div>
+              <div class="sm3-item">通知設定（追蹤餐系統通知設定）</div>
+              <div class="sm3-item">光暗色模式</div>
+              <div class="sm3-item">帳號資訊</div>
+              <div class="sm3-item">帳號綁定資訊</div>
+              <div class="sm3-item sm3-item-pink">IG 帳號綁定</div>
+              <div class="sm3-item">分類管理</div>
+            </div>
+          </div>
+          <div class="sm3-vline short"></div>
+          <div class="sm3-page sm3-subpage">
+            <button class="sm3-page-hd" onclick="sm3Toggle(this)">
+              <span>分類管理頁面</span><span class="sm3-chevron">▼</span>
+            </button>
+            <div class="sm3-items" hidden>
+              <div class="sm3-item sm3-item-pink">現有分類顯示排列推薦</div>
+              <div class="sm3-item">新增分類</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Branch 2: 搜尋/篩選頁 -->
+        <div class="sm3-branch-col">
+          <div class="sm3-vline short"></div>
+          <div class="sm3-page">
+            <button class="sm3-page-hd" onclick="sm3Toggle(this)">
+              <span>搜尋 / 篩選頁</span><span class="sm3-chevron">▼</span>
+            </button>
+            <div class="sm3-items" hidden>
+              <div class="sm3-item">搜尋欄位</div>
+              <div class="sm3-item">接合篩選結果為常見用</div>
+              <div class="sm3-item">篩選選項</div>
+              <div class="sm3-item">設定篩選為預設（以用作主頁）</div>
+            </div>
+          </div>
+          <div class="sm3-sub-pages-row">
+            <div class="sm3-sub-col">
+              <div class="sm3-vline short"></div>
+              <div class="sm3-page sm3-subpage">
+                <button class="sm3-page-hd" onclick="sm3Toggle(this)">
+                  <span>地點選擇</span><span class="sm3-chevron">▼</span>
+                </button>
+                <div class="sm3-items" hidden>
+                  <div class="sm3-item">國家</div>
+                  <div class="sm3-item">縣市</div>
+                  <div class="sm3-item">鄉鎮區</div>
+                  <div class="sm3-item">自定義區域</div>
+                </div>
+              </div>
+            </div>
+            <div class="sm3-sub-col">
+              <div class="sm3-vline short"></div>
+              <div class="sm3-page sm3-subpage">
+                <button class="sm3-page-hd" onclick="sm3Toggle(this)">
+                  <span>篩選後的卡片清單</span><span class="sm3-chevron">▼</span>
+                </button>
+                <div class="sm3-items" hidden>
+                  <div class="sm3-item">搜尋 + 篩選後</div>
+                  <div class="sm3-item">篩選操作</div>
+                  <div class="sm3-item">到達卡片清單</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Branch 3: 卡片內詳細資訊頁 -->
+        <div class="sm3-branch-col">
+          <div class="sm3-vline short"></div>
+          <div class="sm3-page">
+            <button class="sm3-page-hd" onclick="sm3Toggle(this)">
+              <span>卡片內詳細資訊頁</span><span class="sm3-chevron">▼</span>
+            </button>
+            <div class="sm3-items" hidden>
+              <div class="sm3-item">卡片資訊</div>
+              <div class="sm3-item">編輯卡片</div>
+              <div class="sm3-item">跳轉至 IG 帳號查看</div>
+              <div class="sm3-item">跳轉至 Google Map</div>
+              <div class="sm3-item">分享</div>
+            </div>
+          </div>
+          <div class="sm3-vline short"></div>
+          <div class="sm3-page sm3-subpage">
+            <div class="sm3-page-hd static">
+              <span>卡片編輯頁面</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Branch 4: 匯入收藏頁面 -->
+        <div class="sm3-branch-col">
+          <div class="sm3-vline short"></div>
+          <div class="sm3-page">
+            <button class="sm3-page-hd" onclick="sm3Toggle(this)">
+              <span>匯入收藏頁面</span><span class="sm3-chevron">▼</span>
+            </button>
+            <div class="sm3-items" hidden>
+              <div class="sm3-item">連結暫存匯入區塊</div>
+              <div class="sm3-item">方法一：複製連結到應用（掌識辨識）</div>
+              <div class="sm3-item">直接透過分享儲存</div>
+              <div class="sm3-item">批輸貼入連結轉快區塊</div>
+            </div>
+          </div>
+          <div class="sm3-vline short"></div>
+          <div class="sm3-page sm3-subpage">
+            <div class="sm3-page-hd static">
+              <span>連到 Instagram</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /sm3-branches-row -->
+    </div><!-- /sm3-desktop -->
+
+    <!-- ── Mobile carousel (<900px) ── -->
     <div class="sm2-wrap">
-      <!-- Trunk -->
       <div class="sm2-trunk">
         <div class="sm2-node accent">介紹頁面（3頁）</div>
         <div class="sm2-vline"></div>
         <div class="sm2-node accent">登入 / 註冊畫面</div>
         <div class="sm2-vline"></div>
-        <div class="sm2-node dim">選擇對應的 IG 帳號進行綁定</div>
-        <div class="sm2-vline"></div>
-        <div class="sm2-node accent">首頁（卡片清單列表）</div>
+        <div class="sm2-node accent">首頁</div>
       </div>
 
-      <!-- Carousel nav -->
       <div class="sm2-carousel-nav">
         <button class="sm2-arrow-btn" id="smPrev" onclick="smBranchGo(-1)" disabled>‹</button>
         <span class="sm2-branch-label" id="smBranchLabel">個人資訊頁</span>
-        <span class="sm2-branch-idx" id="smBranchIdx">1 / 5</span>
+        <span class="sm2-branch-idx" id="smBranchIdx">1 / 4</span>
         <button class="sm2-arrow-btn" id="smNext" onclick="smBranchGo(1)">›</button>
       </div>
       <div class="sm2-dots" id="smDots">
@@ -4240,76 +4549,49 @@
         <button class="sm2-dot" data-i="1"></button>
         <button class="sm2-dot" data-i="2"></button>
         <button class="sm2-dot" data-i="3"></button>
-        <button class="sm2-dot" data-i="4"></button>
       </div>
 
-      <!-- Branch panels -->
       <div class="sm2-branches" id="smBranches">
-
-        <!-- Branch 0: 個人資訊頁 -->
         <div class="sm2-branch-panel active" id="smPanel0">
           <div class="sm2-vline short"></div>
           <div class="sm2-node main">個人資訊頁</div>
           <div class="sm2-vline short"></div>
           <div class="sm2-sub-row">
-            <div class="sm2-sub-node">IG 帳號綁定頁面</div>
-            <div class="sm2-sub-node dim">系統偏好設定</div>
-            <div class="sm2-sub-node dim">帳號資訊</div>
-            <div class="sm2-sub-node dim">通知設定</div>
+            <div class="sm2-sub-node">系統偏好設定</div>
+            <div class="sm2-sub-node">通知設定</div>
+            <div class="sm2-sub-node">帳號資訊</div>
+            <div class="sm2-sub-node">IG 帳號綁定</div>
+            <div class="sm2-sub-node">分類管理頁面</div>
           </div>
         </div>
-
-        <!-- Branch 1: 搜尋 / 篩選頁 -->
         <div class="sm2-branch-panel" id="smPanel1">
           <div class="sm2-vline short"></div>
           <div class="sm2-node main">搜尋 / 篩選頁</div>
           <div class="sm2-vline short"></div>
           <div class="sm2-sub-row">
-            <div class="sm2-sub-node">地點選擇（地圖）</div>
+            <div class="sm2-sub-node">地點選擇</div>
             <div class="sm2-sub-node">篩選後的卡片清單</div>
           </div>
         </div>
-
-        <!-- Branch 2: 卡片內詳細資訊頁 -->
         <div class="sm2-branch-panel" id="smPanel2">
           <div class="sm2-vline short"></div>
           <div class="sm2-node main">卡片內詳細資訊頁</div>
           <div class="sm2-vline short"></div>
           <div class="sm2-sub-row">
             <div class="sm2-sub-node">卡片編輯頁面</div>
-            <div class="sm2-sub-node">影片頁面</div>
           </div>
         </div>
-
-        <!-- Branch 3: 匯入收藏頁面 -->
         <div class="sm2-branch-panel" id="smPanel3">
           <div class="sm2-vline short"></div>
           <div class="sm2-node main">匯入收藏頁面</div>
           <div class="sm2-vline short"></div>
           <div class="sm2-sub-row">
-            <div class="sm2-sub-node">影片收藏選擇頁面</div>
-            <div class="sm2-sub-node">轉換頁面</div>
-            <div class="sm2-sub-node">轉換結果呈現（卡片一覽）</div>
-            <div class="sm2-sub-node">分類確認頁面</div>
-            <div class="sm2-sub-node dim">手動編輯匯入卡片分類頁面</div>
-            <div class="sm2-sub-node">完成匯入設置</div>
+            <div class="sm2-sub-node">連到 Instagram</div>
           </div>
         </div>
-
-        <!-- Branch 4: 分類管理頁面 -->
-        <div class="sm2-branch-panel" id="smPanel4">
-          <div class="sm2-vline short"></div>
-          <div class="sm2-node main">分類管理頁面</div>
-          <div class="sm2-vline short"></div>
-          <div class="sm2-sub-row">
-            <div class="sm2-sub-node">自訂標籤</div>
-            <div class="sm2-sub-node dim">AI 自動分類</div>
-            <div class="sm2-sub-node dim">編輯 / 刪除分類</div>
-          </div>
-        </div>
-
       </div><!-- /sm2-branches -->
     </div><!-- /sm2-wrap -->
+
   </section>
 
   <!-- CARD FIELDS -->
@@ -4612,10 +4894,25 @@
 
 
 
-    // ── Sitemap Carousel ──────────────────────────────
+    // ── Sitemap Desktop Toggle (sm3) ──────────────────
+    window.sm3Toggle = function (btn) {
+      var items = btn.parentElement.querySelector('.sm3-items');
+      var chevron = btn.querySelector('.sm3-chevron');
+      if (!items) return;
+      var hidden = items.hasAttribute('hidden');
+      if (hidden) {
+        items.removeAttribute('hidden');
+        if (chevron) chevron.classList.add('open');
+      } else {
+        items.setAttribute('hidden', '');
+        if (chevron) chevron.classList.remove('open');
+      }
+    };
+
+    // ── Sitemap Mobile Carousel (sm2) ─────────────────
     (function () {
       var smCur = 0;
-      var SM_BRANCHES = ['個人資訊頁', '搜尋 / 篩選頁', '卡片內詳細資訊頁', '匯入收藏頁面', '分類管理頁面'];
+      var SM_BRANCHES = ['個人資訊頁', '搜尋 / 篩選頁', '卡片內詳細資訊頁', '匯入收藏頁面'];
       var SM_N = SM_BRANCHES.length;
 
       function smGoTo(n) {
