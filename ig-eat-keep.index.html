@@ -3069,13 +3069,15 @@
     .sm3-chevron.open { transform: rotate(180deg); }
 
     .sm3-items {
+      display: none;
       border-top: 1px solid rgba(170, 232, 236, 0.15);
       padding: 8px;
-      display: flex;
       flex-direction: column;
       gap: 4px;
       animation: fadeUp .2s ease;
     }
+
+    .sm3-items.open { display: flex; }
 
     .sm3-item {
       font-size: 11px;
@@ -4366,7 +4368,7 @@
           <button class="sm3-page-hd" onclick="sm3Toggle(this)">
             <span>介紹頁面（3頁）</span><span class="sm3-chevron">▼</span>
           </button>
-          <div class="sm3-items" hidden>
+          <div class="sm3-items">
             <div class="sm3-item">整理你的 IG 地點地圖</div>
             <div class="sm3-item">讓你收藏的餐廳一目了然</div>
             <div class="sm3-item">快速找到你收藏的餐廳</div>
@@ -4379,7 +4381,7 @@
           <button class="sm3-page-hd" onclick="sm3Toggle(this)">
             <span>登入 / 註冊畫面</span><span class="sm3-chevron">▼</span>
           </button>
-          <div class="sm3-items" hidden>
+          <div class="sm3-items">
             <div class="sm3-item">Facebook 登入</div>
             <div class="sm3-item">IG 帳號登入</div>
           </div>
@@ -4391,7 +4393,7 @@
           <button class="sm3-page-hd" onclick="sm3Toggle(this)">
             <span>首頁</span><span class="sm3-chevron">▼</span>
           </button>
-          <div class="sm3-items" hidden>
+          <div class="sm3-items">
             <div class="sm3-item">推薦模組</div>
             <div class="sm3-item">常用篩選列</div>
             <div class="sm3-item">匯入收藏按鈕</div>
@@ -4413,7 +4415,7 @@
             <button class="sm3-page-hd" onclick="sm3Toggle(this)">
               <span>個人資訊頁</span><span class="sm3-chevron">▼</span>
             </button>
-            <div class="sm3-items" hidden>
+            <div class="sm3-items">
               <div class="sm3-item">系統偏好設定</div>
               <div class="sm3-item">通知設定（追蹤餐系統通知設定）</div>
               <div class="sm3-item">光暗色模式</div>
@@ -4428,7 +4430,7 @@
             <button class="sm3-page-hd" onclick="sm3Toggle(this)">
               <span>分類管理頁面</span><span class="sm3-chevron">▼</span>
             </button>
-            <div class="sm3-items" hidden>
+            <div class="sm3-items">
               <div class="sm3-item sm3-item-pink">現有分類顯示排列推薦</div>
               <div class="sm3-item">新增分類</div>
             </div>
@@ -4442,7 +4444,7 @@
             <button class="sm3-page-hd" onclick="sm3Toggle(this)">
               <span>搜尋 / 篩選頁</span><span class="sm3-chevron">▼</span>
             </button>
-            <div class="sm3-items" hidden>
+            <div class="sm3-items">
               <div class="sm3-item">搜尋欄位</div>
               <div class="sm3-item">接合篩選結果為常見用</div>
               <div class="sm3-item">篩選選項</div>
@@ -4456,7 +4458,7 @@
                 <button class="sm3-page-hd" onclick="sm3Toggle(this)">
                   <span>地點選擇</span><span class="sm3-chevron">▼</span>
                 </button>
-                <div class="sm3-items" hidden>
+                <div class="sm3-items">
                   <div class="sm3-item">國家</div>
                   <div class="sm3-item">縣市</div>
                   <div class="sm3-item">鄉鎮區</div>
@@ -4470,7 +4472,7 @@
                 <button class="sm3-page-hd" onclick="sm3Toggle(this)">
                   <span>篩選後的卡片清單</span><span class="sm3-chevron">▼</span>
                 </button>
-                <div class="sm3-items" hidden>
+                <div class="sm3-items">
                   <div class="sm3-item">搜尋 + 篩選後</div>
                   <div class="sm3-item">篩選操作</div>
                   <div class="sm3-item">到達卡片清單</div>
@@ -4487,7 +4489,7 @@
             <button class="sm3-page-hd" onclick="sm3Toggle(this)">
               <span>卡片內詳細資訊頁</span><span class="sm3-chevron">▼</span>
             </button>
-            <div class="sm3-items" hidden>
+            <div class="sm3-items">
               <div class="sm3-item">卡片資訊</div>
               <div class="sm3-item">編輯卡片</div>
               <div class="sm3-item">跳轉至 IG 帳號查看</div>
@@ -4510,7 +4512,7 @@
             <button class="sm3-page-hd" onclick="sm3Toggle(this)">
               <span>匯入收藏頁面</span><span class="sm3-chevron">▼</span>
             </button>
-            <div class="sm3-items" hidden>
+            <div class="sm3-items">
               <div class="sm3-item">連結暫存匯入區塊</div>
               <div class="sm3-item">方法一：複製連結到應用（掌識辨識）</div>
               <div class="sm3-item">直接透過分享儲存</div>
@@ -4899,14 +4901,8 @@
       var items = btn.parentElement.querySelector('.sm3-items');
       var chevron = btn.querySelector('.sm3-chevron');
       if (!items) return;
-      var hidden = items.hasAttribute('hidden');
-      if (hidden) {
-        items.removeAttribute('hidden');
-        if (chevron) chevron.classList.add('open');
-      } else {
-        items.setAttribute('hidden', '');
-        if (chevron) chevron.classList.remove('open');
-      }
+      items.classList.toggle('open');
+      if (chevron) chevron.classList.toggle('open', items.classList.contains('open'));
     };
 
     // ── Sitemap Mobile Carousel (sm2) ─────────────────
@@ -5336,20 +5332,6 @@
                 <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:8px;">Default</div>
               </div>
 
-              <!-- Variant2: 3 buttons vertical -->
-              <div style="text-align:center;">
-                <div style="display:flex;flex-direction:column;gap:10px;">
-                  <div style="display:flex;justify-content:center;align-items:center;width:40px;height:40px;border-radius:5px;background:linear-gradient(180deg,#FFA7A0 16%,#FF8A80 100%);">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="white"/></svg>
-                  </div>
-                  <div style="display:flex;justify-content:center;align-items:center;width:40px;height:40px;border-radius:5px;background:linear-gradient(180deg,#FFA7A0 16%,#FF8A80 100%);">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="white" stroke-width="2"/><circle cx="6" cy="12" r="3" stroke="white" stroke-width="2"/><circle cx="18" cy="19" r="3" stroke="white" stroke-width="2"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="white" stroke-width="2"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="white" stroke-width="2"/></svg>
-                  </div>
-                  <div style="display:flex;justify-content:center;align-items:center;width:40px;height:40px;border-radius:5px;background:linear-gradient(180deg,#FFA7A0 16%,#FF8A80 100%);">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </div>
-                </div>
-              </div>
 
               <!-- Check: single check button (default) -->
               <div style="display:flex;flex-direction:column;gap:10px;">
