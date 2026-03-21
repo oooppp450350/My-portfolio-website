@@ -20,6 +20,39 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Roboto+Mono:wght@400;500;700&display=swap"
     rel="stylesheet">
   <style>
+    /* ╔═══════════════════════════════════════════════════════════╗
+   ║  🛠  QUICK CUSTOMIZE GUIDE  ║  快速自訂導覽                ║
+   ╠═══════════════════════════════════════════════════════════╣
+   ║                                                           ║
+   ║  🎨 顏色 & 字型  →  第 60–82 行  (:root Design Tokens)   ║
+   ║     · --accent     整站主色（青藍）                       ║
+   ║     · --bg         頁面背景色                             ║
+   ║     · --text       主要文字色                             ║
+   ║     字型連結       第 19–21 行（Google Fonts）            ║
+   ║                                                           ║
+   ║  ✏️  頁面標題 & 副標                                       ║
+   ║     · Hero 標題 / 副標 / 統計數字  →  HTML 搜尋 #top      ║
+   ║     · 開場故事文字              →  HTML 搜尋 #intro       ║
+   ║                                                           ║
+   ║  👤 Persona（人物側寫）                                   ║
+   ║     · 名稱 / 年齡 / 標籤 / 照片  →  HTML 搜尋 #persona   ║
+   ║                                                           ║
+   ║  📊 研究數據                                              ║
+   ║     · 桌面研究統計卡           →  HTML 搜尋 #phase1       ║
+   ║     · 問卷長條圖數字           →  HTML 搜尋 #phase2       ║
+   ║     · 訪談痛點文字             →  HTML 搜尋 #phase3       ║
+   ║                                                           ║
+   ║  💡 HMW 設計挑戰卡片                                      ║
+   ║     · 每張卡的痛點標籤與問題    →  HTML 搜尋 #hmw         ║
+   ║                                                           ║
+   ║  🗺  Site Map / Flow                                      ║
+   ║     · 流程步驟與節點文字        →  HTML 搜尋 #sitemap     ║
+   ║     · User Flow / Function Flow →  HTML 搜尋 #userflow   ║
+   ║                                                           ║
+   ║  💡 提示：VS Code 用 Ctrl+F 搜尋 id（如 #persona）       ║
+   ║         即可跳到對應 HTML 區塊。                          ║
+   ╚═══════════════════════════════════════════════════════════╝ */
+
     /* ═══════════════════════════════════════════════════════════
    IG EatKeep · UX Portfolio
    Author: LYC  |  Stack: HTML / CSS / Vanilla JS
@@ -58,27 +91,24 @@
    全站設計變數：顏色、背景、邊框、排版
    ───────────────────────────────────────────────────────── */
     :root {
-      --bg: #2b2b2b;
-      /* 主背景色 */
-      --bg2: #232323;
-      /* 次要背景（卡片底色） */
+      /* ✏️ 改這裡換整站主色（目前：青藍色）
+         例如換成橘色 → #F4A261，換成粉色 → #F4ACB7  */
       --accent: #AAE8EC;
-      /* 主色調：青藍色 */
-      --accent-dim: rgba(170, 232, 236, 0.12);
-      /* 淡主色（填充用） */
-      --accent-mid: rgba(170, 232, 236, 0.35);
-      /* 中等主色 */
-      --text: #ffffff;
-      --text-dim: rgba(255, 255, 255, 0.55);
-      /* 次要文字 */
-      --text-muted: rgba(255, 255, 255, 0.28);
-      /* 說明文字 */
-      --border: rgba(170, 232, 236, 0.18);
-      /* 主色調邊框 */
-      --border-subtle: rgba(255, 255, 255, 0.06);
-      /* 淡邊框 */
-      --card: rgba(255, 255, 255, 0.04);
-      /* 卡片背景 */
+
+      /* ✏️ 改這裡換頁面底色（目前：深灰）
+         注意要同步改 --bg2 讓卡片/次要區塊協調  */
+      --bg:  #2b2b2b;
+      --bg2: #232323;
+
+      /* 通常不需要動以下這幾行 ──────────────────────── */
+      --accent-dim: rgba(170, 232, 236, 0.12);  /* 主色淡填充 */
+      --accent-mid: rgba(170, 232, 236, 0.35);  /* 主色中填充 */
+      --text:        #ffffff;                    /* 主要文字色 */
+      --text-dim:    rgba(255, 255, 255, 0.55);  /* 次要文字 */
+      --text-muted:  rgba(255, 255, 255, 0.28);  /* 說明文字 */
+      --border:      rgba(170, 232, 236, 0.18);  /* 主色調邊框 */
+      --border-subtle: rgba(255, 255, 255, 0.06); /* 淡邊框 */
+      --card:        rgba(255, 255, 255, 0.04);  /* 卡片背景 */
     }
 
     /* ─────────────────────────────────────────────────────────
@@ -3273,6 +3303,12 @@
   </nav>
 
   <!-- ── HERO ── -->
+  <!-- ✏️ CUSTOMIZE: 頁面主標題區
+       · 第一行 hero-eyebrow → 小標（專案名稱 / 年份）
+       · h1.hero-title       → 大標題
+       · p.hero-sub          → 副標說明文字
+       · stat-item           → 四個數據亮點（數字 + 說明）
+  -->
   <header class="hero" id="top">
     <p class="hero-eyebrow">IG EatKeep · UX Design Case Study · 2024</p>
     <h1 class="hero-title">研究與<br><em style="font-style:normal;-webkit-text-stroke:0;color:var(--text);">設計過程</em></h1>
@@ -3294,6 +3330,11 @@
     <div class="chapter-line"></div>
   </div>
 
+  <!-- ✏️ CUSTOMIZE: Phase 1 桌面研究
+       · phase-name         → 階段名稱
+       · phase-verdict      → 右側結論標籤（例：「✅ 市場規模驗證」）
+       · stat-card 內的數字和說明 → 桌面研究的統計數字
+  -->
   <!-- PHASE 1 -->
   <section id="phase1">
     <div class="phase-header">
@@ -3323,6 +3364,10 @@
     </div>
   </section>
 
+  <!-- ✏️ CUSTOMIZE: Phase 2 問卷調查
+       · bar-chart 內的 data-label 和 data-pct → 各題選項文字與百分比
+       · 例：data-pct="89.7" 改成你的數字（0–100 的小數）
+  -->
   <!-- PHASE 2 -->
   <section id="phase2">
     <div class="phase-header">
@@ -3421,6 +3466,11 @@
     </div>
   </section>
 
+  <!-- ✏️ CUSTOMIZE: Phase 3 深度訪談
+       · pain-title → 每個痛點的標題
+       · pain-desc  → 痛點描述文字
+       · pain-quote → 受訪者引言（加引號的文字）
+  -->
   <!-- PHASE 3 -->
   <section id="phase3">
     <div class="phase-header">
@@ -3480,6 +3530,13 @@
      ══════════════════════════════ -->
 
   <!-- PERSONA -->
+  <!-- ✏️ CUSTOMIZE: Persona 人物側寫
+       · persona-name     → 人物名稱（Emily）
+       · persona-role     → 職稱 / 角色定位
+       · span.tag         → 年齡 / 職業 / 地點 標籤
+       · img src          → 頭像照片（換成自己的圖）
+       · 下方的引言、痛點、需求列表也都可以直接改文字
+  -->
   <section id="persona" style="padding-bottom:56px;">
     <div class="phase-header">
       <div class="phase-num">★</div>
@@ -3827,6 +3884,12 @@
     <div class="chapter-line"></div>
   </div>
 
+  <!-- ✏️ CUSTOMIZE: HMW 設計挑戰卡片
+       · sec-title / sec-desc → 區塊標題與說明文字
+       · hmw-tag              → 每張卡的痛點標籤（例：「痛點 01 · ...」）
+       · hmw-q                → 每張卡的 HMW 問句（<strong> 內是重點詞）
+       可以增加 / 刪除 <div class="hmw-card">...</div> 來新增或移除卡片
+  -->
   <!-- HMW -->
   <section id="hmw">
     <p class="sec-label">01 / How Might We</p>
