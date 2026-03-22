@@ -3183,13 +3183,16 @@
       }
     }
 
-    /* ── Wireframe section: carousel dots ── */
-    .wf-dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      border: none; background: rgba(255,255,255,0.2);
-      cursor: pointer; padding: 0; transition: background .2s;
+    .wf-sub-section-label {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin: 32px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
-    .wf-dot-active { background: var(--accent); }
   </style>
 </head>
 
@@ -5612,26 +5615,18 @@
 
   <section id="wireframes" style="padding-bottom:80px;">
     <p class="sec-label">04 / Wireframe</p>
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:8px;">
-      <h2 class="sec-title" style="margin-bottom:0;">線框稿與原型</h2>
-      <div style="display:flex;gap:8px;flex-shrink:0;">
-        <button onclick="switchWfTab('wireframe')" id="wf-tab-wireframe"
-          style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:1px;padding:6px 16px;border-radius:99px;border:1px solid var(--accent);background:var(--accent);color:#111;cursor:pointer;transition:all .2s;">Wireframe</button>
-        <button onclick="switchWfTab('prototype')" id="wf-tab-prototype"
-          style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:1px;padding:6px 16px;border-radius:99px;border:1px solid var(--accent);background:transparent;color:var(--accent);cursor:pointer;transition:all .2s;">Prototype</button>
-      </div>
-    </div>
+    <h2 class="sec-title">線框稿與原型</h2>
     <p class="sec-desc">從 HMW 問題定義出發，對應核心痛點，驗證設計解法的可行性。</p>
     <p class="sec-relation">↳ 線框圖是設計流程的收斂點，將 HMW 問題、痛點與 Sitemap 架構三者對應，形成可測試的低保真原型。</p>
 
     <div class="wf-layout" style="display:flex;flex-direction:column;gap:0;">
 
-      <!-- ── Wireframe panel ── -->
-      <div id="wf-slide-panel">
-        <div class="wf-left-cards">
+      <!-- ── 線框稿 ── -->
+      <div class="wf-sub-section-label">線框稿</div>
+      <div class="wf-left-cards">
 
         <!-- HMW 01 -->
-        <div class="wf-slide" data-index="0"><div class="wf-card">
+        <div class="wf-card">
           <div class="wf-card-inner">
             <div class="wf-card-left">
               <div class="wf-card-row">
@@ -5673,8 +5668,7 @@
         </div>
 
         <!-- HMW 02 -->
-        </div><!-- /wf-slide 0 -->
-        <div class="wf-slide" data-index="1" style="display:none;"><div class="wf-card">
+        <div class="wf-card">
           <div class="wf-card-inner">
             <div class="wf-card-left">
               <div class="wf-card-row">
@@ -5716,8 +5710,7 @@
         </div>
 
         <!-- HMW 05 -->
-        </div><!-- /wf-slide 1 -->
-        <div class="wf-slide" data-index="2" style="display:none;"><div class="wf-card">
+        <div class="wf-card">
           <div class="wf-card-inner">
             <div class="wf-card-left">
               <div class="wf-card-row">
@@ -5758,18 +5751,9 @@
         </div>
 
       </div><!-- /wf-left-cards -->
-      </div><!-- /wf-slide 2 -->
-      </div><!-- /wf-slide-panel -->
 
-      <!-- Carousel dots -->
-      <div id="wf-dots" style="display:flex;justify-content:center;gap:8px;margin-top:20px;">
-        <button onclick="goWfSlide(0)" class="wf-dot wf-dot-active"></button>
-        <button onclick="goWfSlide(1)" class="wf-dot"></button>
-        <button onclick="goWfSlide(2)" class="wf-dot"></button>
-      </div>
-
-      <!-- ── Prototype panel ── -->
-      <div id="wf-prototype-panel" style="display:none;">
+      <!-- ── 原型 ── -->
+      <div class="wf-sub-section-label">原型</div>
 
       <!-- Media embeds row -->
       <div class="wf-embeds-row">
@@ -5837,35 +5821,9 @@
         </div>
 
       </div><!-- /wf-embeds-row -->
-      </div><!-- /wf-prototype-panel -->
 
     </div><!-- /wf-layout -->
   </section>
-
-  <script>
-    function switchWfTab(tab) {
-      var isWf = tab === 'wireframe';
-      document.getElementById('wf-slide-panel').style.display = isWf ? '' : 'none';
-      document.getElementById('wf-dots').style.display = isWf ? 'flex' : 'none';
-      document.getElementById('wf-prototype-panel').style.display = isWf ? 'none' : '';
-      var wBtn = document.getElementById('wf-tab-wireframe');
-      var pBtn = document.getElementById('wf-tab-prototype');
-      wBtn.style.background = isWf ? 'var(--accent)' : 'transparent';
-      wBtn.style.color = isWf ? '#111' : 'var(--accent)';
-      pBtn.style.background = isWf ? 'transparent' : 'var(--accent)';
-      pBtn.style.color = isWf ? 'var(--accent)' : '#111';
-    }
-    function goWfSlide(index) {
-      document.querySelectorAll('.wf-slide').forEach(function(el, i) {
-        el.style.display = i === index ? '' : 'none';
-      });
-      document.querySelectorAll('.wf-dot').forEach(function(el, i) {
-        el.classList.toggle('wf-dot-active', i === index);
-      });
-    }
-    switchWfTab('wireframe');
-    goWfSlide(0);
-  </script>
 
 </body>
 
