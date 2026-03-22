@@ -3168,10 +3168,19 @@
     /* ── Color Set Display ────────────────────────── */
 
     /* ── Components: Navigation Bar Demo ─────────────
-       電腦＋手機一律縮小至 0.5 倍，避免 393px 固定寬度破版
+       縮小至 0.5 倍，zoom 為主（Chrome/Safari/Edge），
+       transform 為備援（Firefox 舊版），
+       overflow-x:auto 防止任何情況下破版
     ─────────────────────────────────────────────── */
     .nb-demo-wrap {
       zoom: 0.5;
+    }
+    /* 備援：不支援 zoom 的瀏覽器讓卡片可橫向滾動 */
+    @media (max-width: 768px) {
+      #comp-navbar > div {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
     }
 
     /* ── Wireframe section: carousel dots ── */
