@@ -314,6 +314,21 @@
     .spec-footer { border-top: 1px solid var(--border); padding: 40px 0 0; margin-top: 80px; display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 12px; }
     .spec-footer a { color: var(--accent); text-decoration: none; }
 
+    /* ── Gradient Swatches ── */
+    .grad-swatch {
+      display: flex; flex-direction: column; gap: 8px;
+      min-width: 200px; flex: 1;
+    }
+    .grad-block {
+      height: 72px; border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    .grad-name  { font-size: 13px; color: var(--text); }
+    .grad-value { font-family: 'Roboto Mono', monospace; font-size: 10px; color: var(--text-muted); line-height: 1.6; word-break: break-all; }
+    .grad-usage { font-size: 11px; color: var(--accent); }
+
+    .grad-group { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+
     /* ── Responsive ── */
     @media(max-width:768px) {
       .page { padding: 48px 24px 80px; }
@@ -467,6 +482,83 @@
         <div class="swatch-token">inline only</div>
       </div>
     </div>
+
+    <!-- Gradients -->
+    <p class="group-label" style="margin-top:36px;">背景氛圍 — Radial Gradient</p>
+    <p style="font-size:12px;color:var(--text-muted);margin-bottom:16px;">用於各 section 的環境光暈，以 <code style="font-family:'Roboto Mono',monospace;color:var(--accent);font-size:11px;">::before</code> 偽元素疊在區塊背景上。</p>
+    <div class="grad-group">
+      <div class="grad-swatch">
+        <div class="grad-block" style="background:radial-gradient(ellipse 700px 400px at 20% 60%, rgba(170,232,236,0.07), transparent);"></div>
+        <div class="grad-name">Hero Glow</div>
+        <div class="grad-value">radial-gradient(ellipse 700px 400px at 20% 60%,<br>rgba(170,232,236,.07), transparent)</div>
+        <div class="grad-usage">hero section ::before</div>
+      </div>
+      <div class="grad-swatch">
+        <div class="grad-block" style="background:radial-gradient(ellipse 400px 200px at 5% 50%, rgba(170,232,236,0.03), transparent);"></div>
+        <div class="grad-name">Intro Glow</div>
+        <div class="grad-value">radial-gradient(ellipse 400px 200px at 5% 50%,<br>rgba(170,232,236,.03), transparent)</div>
+        <div class="grad-usage">intro-section ::before</div>
+      </div>
+      <div class="grad-swatch">
+        <div class="grad-block" style="background:radial-gradient(ellipse 800px 500px at 70% 30%, rgba(170,232,236,0.05), transparent);"></div>
+        <div class="grad-name">UJM Glow</div>
+        <div class="grad-value">radial-gradient(ellipse 800px 500px at 70% 30%,<br>rgba(170,232,236,.05), transparent)</div>
+        <div class="grad-usage">ujm section ::before</div>
+      </div>
+    </div>
+
+    <p class="group-label" style="margin-top:28px;">UI 結構 — Linear Gradient</p>
+    <p style="font-size:12px;color:var(--text-muted);margin-bottom:16px;">用於分隔線、卡片頂線、長條圖填充等結構性裝飾。</p>
+    <div class="grad-group">
+      <div class="grad-swatch">
+        <div class="grad-block" style="background:linear-gradient(90deg, rgba(170,232,236,0.18), transparent);"></div>
+        <div class="grad-name">Chapter Line</div>
+        <div class="grad-value">linear-gradient(90deg,<br>var(--border), transparent)</div>
+        <div class="grad-usage">chapter-divider · 分隔線</div>
+      </div>
+      <div class="grad-swatch">
+        <div class="grad-block" style="background:linear-gradient(90deg, #AAE8EC, transparent);"></div>
+        <div class="grad-name">Card Accent Line</div>
+        <div class="grad-value">linear-gradient(90deg,<br>var(--accent), transparent)</div>
+        <div class="grad-usage">card ::before · step connector</div>
+      </div>
+      <div class="grad-swatch">
+        <div class="grad-block" style="background:linear-gradient(90deg, #AAE8EC, rgba(170,232,236,0.5));"></div>
+        <div class="grad-name">Bar Fill</div>
+        <div class="grad-value">linear-gradient(90deg,<br>var(--accent), rgba(170,232,236,.5))</div>
+        <div class="grad-usage">bar-chart fill · 問卷長條</div>
+      </div>
+      <div class="grad-swatch">
+        <div class="grad-block" style="background:linear-gradient(90deg, transparent, rgba(170,232,236,0.18), transparent);"></div>
+        <div class="grad-name">Separator Fade</div>
+        <div class="grad-value">linear-gradient(90deg,<br>transparent, var(--border), transparent)</div>
+        <div class="grad-usage">分隔線（中間亮兩端淡）</div>
+      </div>
+    </div>
+
+    <p class="group-label" style="margin-top:28px;">App 按鈕色 — Linear Gradient（Wireframe）</p>
+    <p style="font-size:12px;color:var(--text-muted);margin-bottom:16px;">來自 wireframe 元件區的 App 主視覺按鈕，使用珊瑚橘色系漸層。</p>
+    <div class="grad-group">
+      <div class="grad-swatch">
+        <div class="grad-block" style="background:linear-gradient(180deg,#FF6F61 16%,#FFB74D 100%);"></div>
+        <div class="grad-name">Primary CTA</div>
+        <div class="grad-value">linear-gradient(180deg,<br>#FF6F61 16%, #FFB74D 100%)</div>
+        <div class="grad-usage">主要 CTA 按鈕（珊瑚 → 橘）</div>
+      </div>
+      <div class="grad-swatch">
+        <div class="grad-block" style="background:linear-gradient(180deg,#FF8A80 16%,#FF5A4F 100%);"></div>
+        <div class="grad-name">Secondary CTA</div>
+        <div class="grad-value">linear-gradient(180deg,<br>#FF8A80 16%, #FF5A4F 100%)</div>
+        <div class="grad-usage">次要按鈕（淡紅 → 深紅）</div>
+      </div>
+      <div class="grad-swatch">
+        <div class="grad-block" style="background:linear-gradient(180deg,#FFA7A0 16%,#FF8A80 100%);"></div>
+        <div class="grad-name">Tertiary / Icon</div>
+        <div class="grad-value">linear-gradient(180deg,<br>#FFA7A0 16%, #FF8A80 100%)</div>
+        <div class="grad-usage">圖示按鈕 / 第三層次</div>
+      </div>
+    </div>
+
   </section>
 
 

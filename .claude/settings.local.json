@@ -1,12 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(start:*)",
-      "Bash(python3:*)",
-      "Bash(python:*)",
-      "Bash(node:*)",
-      "Bash(find /c/Users/a0979/Documents/個人網站/My-portfolio-website -type f \\\\\\(-name *.js -o -name *.mjs -o -name *.ts -o -name *.tsx \\\\\\))",
-      "mcp__claude_ai_Figma__get_metadata"
+      "Bash(cd:*)"
     ]
   }
 }
