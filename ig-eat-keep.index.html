@@ -3166,15 +3166,6 @@
     }
 
     /* ── Color Set Display ────────────────────────── */
-
-    /* ── Components: Navigation Bar Demo ─────────────
-       手機端縮小約 20%，避免 393px 固定寬度溢出畫面
-    ─────────────────────────────────────────────── */
-    @media (max-width: 480px) {
-      .nb-demo-wrap {
-        zoom: 0.8;
-      }
-    }
   </style>
 </head>
 
@@ -5444,44 +5435,43 @@
 
             <!-- Variant helper: each row = one nav bar state -->
             <!-- Active = Home (Default) -->
-            <div class="nb-demo-wrap">
+            <div>
               <div style="display:flex;flex-direction:row;justify-content:center;align-items:flex-end;padding:0 8px;gap:8px;width:393px;height:76px;background:#FCFCFC;box-shadow:0px -4px 8px rgba(202,175,175,0.25);box-sizing:border-box;">
                 <!-- 篩選 inactive -->
                 <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v2L14 12v6l-4-2V12L4 6V4z" stroke="#FF6F61" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" style="color:#FF6F61;"><path d="M4 4h16v2L14 12v6l-4-2V12L4 6V4z" stroke="#FF6F61" stroke-width="1.5" stroke-linejoin="round"/></svg>
                   <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">篩選</span>
                 </div>
-                <!-- 匯入 inactive -->
+                <!-- 收藏 inactive -->
                 <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#FF6F61" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">匯入</span>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M5 3h14v18l-7-4-7 4V3z" stroke="#FF6F61" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">收藏</span>
                 </div>
                 <!-- 首頁 ACTIVE -->
                 <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:4px;gap:4px;flex:1;align-self:stretch;background:linear-gradient(180deg,#FF6F61 16%,#FFB74D 100%);border-radius:100px;">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V10.5z" stroke="#FCFCFC" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 21v-7h6v7" stroke="#FCFCFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   <span style="font-family:'Roboto';font-size:12px;font-weight:500;letter-spacing:0.5px;color:#FCFCFC;">首頁</span>
                 </div>
-                <!-- 個人頁面 inactive -->
+                <!-- 個人 inactive -->
                 <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#FF6F61" stroke-width="1.5"/><path d="M4 20c0-3.866 3.582-7 8-7s8 3.134 8 7" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">個人頁面</span>
+                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">個人</span>
                 </div>
               </div>
               <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">Default · 首頁 active</div>
             </div>
 
             <!-- 篩選 active (Variant2) -->
-            <div class="nb-demo-wrap">
+            <div>
               <div style="display:flex;flex-direction:row;justify-content:center;align-items:flex-end;padding:0 8px;gap:8px;width:393px;height:76px;background:#FCFCFC;box-shadow:0px -4px 8px rgba(202,175,175,0.25);box-sizing:border-box;">
                 <!-- 篩選 ACTIVE -->
                 <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:4px;gap:4px;flex:1;align-self:stretch;background:linear-gradient(180deg,#FF6F61 16%,#FFB74D 100%);border-radius:100px;">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v2L14 12v6l-4-2V12L4 6V4z" stroke="#FCFCFC" stroke-width="1.5" stroke-linejoin="round"/></svg>
                   <span style="font-family:'Roboto';font-size:12px;font-weight:500;letter-spacing:0.5px;color:#FCFCFC;">篩選</span>
                 </div>
-                <!-- 匯入 inactive -->
                 <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#FF6F61" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">匯入</span>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M5 3h14v18l-7-4-7 4V3z" stroke="#FF6F61" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">收藏</span>
                 </div>
                 <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V10.5z" stroke="#FF6F61" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 21v-7h6v7" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -5489,23 +5479,23 @@
                 </div>
                 <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#FF6F61" stroke-width="1.5"/><path d="M4 20c0-3.866 3.582-7 8-7s8 3.134 8 7" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">個人頁面</span>
+                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">個人</span>
                 </div>
               </div>
               <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">Variant2 · 篩選 active</div>
             </div>
 
-            <!-- 匯入 active (Variant3) -->
-            <div class="nb-demo-wrap">
+            <!-- 收藏 active (Variant3) -->
+            <div>
               <div style="display:flex;flex-direction:row;justify-content:center;align-items:flex-end;padding:0 8px;gap:8px;width:393px;height:76px;background:#FCFCFC;box-shadow:0px -4px 8px rgba(202,175,175,0.25);box-sizing:border-box;">
                 <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v2L14 12v6l-4-2V12L4 6V4z" stroke="#FF6F61" stroke-width="1.5" stroke-linejoin="round"/></svg>
                   <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">篩選</span>
                 </div>
-                <!-- 匯入 ACTIVE -->
+                <!-- 收藏 ACTIVE -->
                 <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:4px;gap:4px;flex:1;align-self:stretch;background:linear-gradient(180deg,#FF6F61 16%,#FFB74D 100%);border-radius:100px;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#FCFCFC" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="#FCFCFC" stroke-width="1.5" stroke-linecap="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;font-weight:500;letter-spacing:0.5px;color:#FCFCFC;">匯入</span>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M5 3h14v18l-7-4-7 4V3z" stroke="#FCFCFC" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                  <span style="font-family:'Roboto';font-size:12px;font-weight:500;letter-spacing:0.5px;color:#FCFCFC;">收藏</span>
                 </div>
                 <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V10.5z" stroke="#FF6F61" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 21v-7h6v7" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -5513,35 +5503,34 @@
                 </div>
                 <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#FF6F61" stroke-width="1.5"/><path d="M4 20c0-3.866 3.582-7 8-7s8 3.134 8 7" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">個人頁面</span>
+                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">個人</span>
                 </div>
               </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">Variant3 · 匯入 active</div>
+              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">Variant3 · 收藏 active</div>
             </div>
 
-            <!-- 個人頁面 active (Variant4) -->
-            <div class="nb-demo-wrap">
+            <!-- 個人 active (Variant4) -->
+            <div>
               <div style="display:flex;flex-direction:row;justify-content:center;align-items:flex-end;padding:0 8px;gap:8px;width:393px;height:76px;background:#FCFCFC;box-shadow:0px -4px 8px rgba(202,175,175,0.25);box-sizing:border-box;">
                 <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v2L14 12v6l-4-2V12L4 6V4z" stroke="#FF6F61" stroke-width="1.5" stroke-linejoin="round"/></svg>
                   <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">篩選</span>
                 </div>
-                <!-- 匯入 inactive -->
                 <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#FF6F61" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">匯入</span>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M5 3h14v18l-7-4-7 4V3z" stroke="#FF6F61" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">收藏</span>
                 </div>
                 <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V10.5z" stroke="#FF6F61" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 21v-7h6v7" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">首頁</span>
                 </div>
-                <!-- 個人頁面 ACTIVE -->
+                <!-- 個人 ACTIVE -->
                 <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:4px;gap:4px;flex:1;align-self:stretch;background:linear-gradient(180deg,#FF6F61 16%,#FFB74D 100%);border-radius:100px;">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#FCFCFC" stroke-width="1.5"/><path d="M4 20c0-3.866 3.582-7 8-7s8 3.134 8 7" stroke="#FCFCFC" stroke-width="1.5" stroke-linecap="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;font-weight:500;letter-spacing:0.5px;color:#FCFCFC;">個人頁面</span>
+                  <span style="font-family:'Roboto';font-size:12px;font-weight:500;letter-spacing:0.5px;color:#FCFCFC;">個人</span>
                 </div>
               </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">Variant4 · 個人頁面 active</div>
+              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">Variant4 · 個人 active</div>
             </div>
 
           </div>
