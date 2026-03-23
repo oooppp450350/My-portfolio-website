@@ -5367,6 +5367,18 @@
         style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:1.5px;padding:8px 16px;border-radius:99px;border:1px solid var(--accent);background:transparent;color:var(--accent);cursor:pointer;transition:all .2s;">
         導覽列
       </button>
+      <button onclick="showComp('card')" id="tag-card"
+        style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:1.5px;padding:8px 16px;border-radius:99px;border:1px solid var(--accent);background:transparent;color:var(--accent);cursor:pointer;transition:all .2s;">
+        卡片
+      </button>
+      <button onclick="showComp('loader')" id="tag-loader"
+        style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:1.5px;padding:8px 16px;border-radius:99px;border:1px solid var(--accent);background:transparent;color:var(--accent);cursor:pointer;transition:all .2s;">
+        等待狀態
+      </button>
+      <button onclick="showComp('filter')" id="tag-filter"
+        style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:1.5px;padding:8px 16px;border-radius:99px;border:1px solid var(--accent);background:transparent;color:var(--accent);cursor:pointer;transition:all .2s;">
+        篩選框
+      </button>
     </div>
 
     <!-- Slides -->
@@ -5599,6 +5611,197 @@
         </div>
       </div>
 
+      <!-- ── 卡片 Slide ── -->
+      <div id="comp-card" class="comp-slide" style="display:none;">
+        <div style="background:#FFFFFF;border:1px solid rgba(0,0,0,0.1);border-radius:2px;padding:32px;">
+          <div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:24px;">CARD · 382px</div>
+          <div style="display:flex;flex-direction:column;gap:24px;align-items:flex-start;">
+
+            <!-- Variant5：4:3 圖片 -->
+            <div>
+              <div class="ig-card">
+                <div class="ig-card-body">
+                  <div style="width:115px;height:154px;border-radius:8px;overflow:hidden;flex-shrink:0;background:linear-gradient(135deg,#ffd6d0,#ffe8b0);">
+                    <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;opacity:.4;">
+                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#FF6F61" stroke-width="1.5"/><circle cx="8.5" cy="8.5" r="1.5" fill="#FF6F61"/><path d="M21 15l-5-5L5 21" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                  </div>
+                  <div class="ig-card-info">
+                    <p class="ig-card-title">衛屋茶事</p>
+                    <div class="ig-card-meta">
+                      <div class="ig-card-meta-row">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;margin-top:1px;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z" fill="#909090"/></svg>
+                        <span class="ig-card-meta-text">台南市北區富北街74號</span>
+                      </div>
+                      <div class="ig-card-meta-row">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="9" stroke="#909090" stroke-width="1.5"/><path d="M12 7v5l3 3" stroke="#909090" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <span class="ig-card-meta-text">12:00-19:00（週三公休）</span>
+                      </div>
+                      <div class="ig-card-meta-row">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#FF5A4F" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="#FF5A4F" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="#FF5A4F"/></svg>
+                        <span class="ig-card-ig">fourshark_foodie</span>
+                      </div>
+                    </div>
+                    <p class="ig-card-price">200$~360$</p>
+                  </div>
+                  <div class="ig-card-actions">
+                    <button class="ig-card-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z" fill="white"/></svg></button>
+                    <button class="ig-card-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="white" stroke-width="1.8"/><circle cx="6" cy="12" r="3" stroke="white" stroke-width="1.8"/><circle cx="18" cy="19" r="3" stroke="white" stroke-width="1.8"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="white" stroke-width="1.8"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="white" stroke-width="1.8"/></svg></button>
+                    <button class="ig-card-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                  </div>
+                </div>
+                <div class="ig-card-tags">
+                  <span class="ig-tag">#餐廳</span>
+                  <span class="ig-tag">#台南</span>
+                  <span class="ig-tag">#市區</span>
+                  <span class="ig-tag">#未造訪</span>
+                  <span class="ig-tag">#甜點</span>
+                </div>
+              </div>
+              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:8px;">Variant5 · 4:3 圖片比例</div>
+            </div>
+
+            <!-- Default：正方形圖片 -->
+            <div>
+              <div class="ig-card">
+                <div class="ig-card-body">
+                  <div style="width:138px;height:138px;border-radius:8px;overflow:hidden;flex-shrink:0;background:linear-gradient(135deg,#ffd6d0,#ffe8b0);">
+                    <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;opacity:.4;">
+                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#FF6F61" stroke-width="1.5"/><circle cx="8.5" cy="8.5" r="1.5" fill="#FF6F61"/><path d="M21 15l-5-5L5 21" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                  </div>
+                  <div class="ig-card-info">
+                    <p class="ig-card-title">三臭寶鍋鍋</p>
+                    <div class="ig-card-meta">
+                      <div class="ig-card-meta-row">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;margin-top:1px;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z" fill="#909090"/></svg>
+                        <span class="ig-card-meta-text">台南市永康區中華東</span>
+                      </div>
+                      <div class="ig-card-meta-row">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="9" stroke="#909090" stroke-width="1.5"/><path d="M12 7v5l3 3" stroke="#909090" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <span class="ig-card-meta-text">09:00 - 17:00（營業中）</span>
+                      </div>
+                      <div class="ig-card-meta-row">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#FF5A4F" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="#FF5A4F" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="#FF5A4F"/></svg>
+                        <span class="ig-card-ig">阿瑄吃台南</span>
+                      </div>
+                    </div>
+                    <p class="ig-card-price">200$~360$</p>
+                  </div>
+                  <div class="ig-card-actions">
+                    <button class="ig-card-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z" fill="white"/></svg></button>
+                    <button class="ig-card-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="white" stroke-width="1.8"/><circle cx="6" cy="12" r="3" stroke="white" stroke-width="1.8"/><circle cx="18" cy="19" r="3" stroke="white" stroke-width="1.8"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="white" stroke-width="1.8"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="white" stroke-width="1.8"/></svg></button>
+                    <button class="ig-card-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                  </div>
+                </div>
+                <div class="ig-card-tags">
+                  <span class="ig-tag">#餐廳</span>
+                  <span class="ig-tag">#台南</span>
+                  <span class="ig-tag">#善化</span>
+                  <span class="ig-tag">#未造訪</span>
+                  <span class="ig-tag">#台式料理</span>
+                </div>
+              </div>
+              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:8px;">Default · 1:1 圖片比例</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 等待狀態 Slide ── -->
+      <div id="comp-loader" class="comp-slide" style="display:none;">
+        <div style="background:#FFFFFF;border:1px solid rgba(0,0,0,0.1);border-radius:2px;padding:32px;">
+          <div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:24px;">LOADER · 48×48px</div>
+          <div style="display:flex;gap:48px;align-items:flex-start;">
+
+            <div style="text-align:center;">
+              <div class="ig-loader"></div>
+              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:12px;">Primary</div>
+            </div>
+
+            <div style="text-align:center;">
+              <div class="ig-loader ig-loader-orange"></div>
+              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:12px;">Secondary</div>
+            </div>
+
+            <div style="text-align:center;">
+              <div style="display:flex;flex-direction:column;gap:12px;">
+                <div class="ig-loader" style="width:32px;height:32px;border-width:3px;"></div>
+                <div class="ig-loader" style="width:48px;height:48px;animation-duration:.75s;"></div>
+                <div class="ig-loader ig-loader-orange" style="width:32px;height:32px;border-width:3px;"></div>
+              </div>
+              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:12px;">Stacked</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 篩選框 Slide ── -->
+      <div id="comp-filter" class="comp-slide" style="display:none;">
+        <div style="background:#FFFFFF;border:1px solid rgba(0,0,0,0.1);border-radius:2px;padding:32px;">
+          <div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:24px;">FILTER COMPONENTS</div>
+          <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;">
+
+            <!-- 造訪狀態 -->
+            <div>
+              <div class="ig-filter-label">造訪狀態</div>
+              <div class="ig-filter-panel" style="width:260px;">
+                <div class="ig-filter-option">
+                  <span class="ig-filter-option-text">尚未造訪</span>
+                </div>
+                <div class="ig-filter-option active">
+                  <span class="ig-filter-option-text">已造訪</span>
+                  <div class="ig-filter-check">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                </div>
+                <div class="ig-filter-option">
+                  <span class="ig-filter-option-text">口袋名單</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 篩選框－類型 -->
+            <div>
+              <div class="ig-filter-label">類型</div>
+              <div class="ig-filter-panel" style="width:260px;">
+                <div class="ig-filter-option active">
+                  <span class="ig-filter-option-text">🍽 餐廳</span>
+                  <div class="ig-filter-check">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                </div>
+                <div class="ig-filter-option">
+                  <span class="ig-filter-option-text">🎪 活動</span>
+                </div>
+                <div class="ig-filter-option">
+                  <span class="ig-filter-option-text">🗺 景點</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tag Toggle -->
+            <div>
+              <div class="ig-filter-label">Tag Toggle</div>
+              <div class="ig-toggle-row">
+                <button class="ig-toggle on">台南</button>
+                <button class="ig-toggle">台北</button>
+                <button class="ig-toggle on">餐廳</button>
+                <button class="ig-toggle">甜點</button>
+                <button class="ig-toggle">景點</button>
+              </div>
+              <div style="margin-top:16px;">
+                <div class="ig-filter-label">套用篩選按鈕</div>
+                <button class="ig-filter-apply" style="max-width:260px;">套用篩選</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -5613,6 +5816,12 @@
       document.getElementById('tag-' + id).style.background = 'var(--accent)';
       document.getElementById('tag-' + id).style.color = '#111';
     }
+
+    // Toggle 互動效果
+    document.querySelectorAll('.ig-toggle').forEach(btn => {
+      btn.addEventListener('click', () => btn.classList.toggle('on'));
+    });
+
     showComp('buttons');
   </script>
 
@@ -5836,6 +6045,96 @@
 
     </div><!-- /wf-layout -->
   </section>
+
+  <!-- ─── 額外元件 CSS（卡片、Loader、篩選框）─── -->
+  <style>
+    /* ── Card ─────────────────────────────── */
+    .ig-card {
+      background: #FCFCFC;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(168,99,99,0.3);
+      width: 382px;
+      overflow: hidden;
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+    .ig-card-body { display:flex; gap:12px; align-items:flex-start; padding:12px 8px; }
+    .ig-card-img { width:115px; height:154px; border-radius:8px; object-fit:cover; flex-shrink:0; background:#d9d9d9; }
+    .ig-card-info { flex:1; display:flex; flex-direction:column; gap:8px; }
+    .ig-card-title { font-size:22px; font-weight:600; color:#4d4d4d; line-height:1.4; letter-spacing:-0.5px; margin:0; }
+    .ig-card-meta { display:flex; flex-direction:column; gap:4px; }
+    .ig-card-meta-row { display:flex; gap:4px; align-items:flex-start; }
+    .ig-card-meta-text { font-size:12px; color:#909090; line-height:1.4; }
+    .ig-card-ig { font-size:13px; font-weight:700; color:#FF5A4F; text-decoration:underline; }
+    .ig-card-price {
+      font-size:20px; font-weight:600; letter-spacing:-0.5px;
+      background: linear-gradient(180deg,#FF8A80 16%,#FF5A4F 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .ig-card-actions { display:flex; flex-direction:column; gap:10px; align-items:flex-end; justify-content:flex-end; flex-shrink:0; }
+    .ig-card-btn {
+      width:40px; height:40px; border-radius:5px; border:none; cursor:pointer;
+      background: linear-gradient(180deg,#FFA7A0 16%,#FF8A80 100%);
+      display:flex; align-items:center; justify-content:center;
+    }
+    .ig-card-tags { display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:10px 16px; border-top:1px solid #EFEFEF; }
+    .ig-tag {
+      border:1px solid #FF8A80; border-radius:50px;
+      padding:2px 8px; font-size:12px; color:#909090;
+      font-family:'Noto Sans TC',sans-serif;
+    }
+
+    /* ── Loader ────────────────────────────── */
+    @keyframes ig-spin { to { transform: rotate(360deg); } }
+    .ig-loader {
+      width:48px; height:48px; border-radius:50%;
+      border:4px solid rgba(255,111,97,0.2);
+      border-top-color:#FF6F61;
+      animation: ig-spin .9s linear infinite;
+      display:inline-block;
+    }
+    .ig-loader-orange { border-top-color:#FFB74D; border-color:rgba(255,183,77,.2); border-top-color:#FFB74D; }
+    .ig-loader-gradient {
+      border:4px solid transparent;
+      border-top-color:#FF6F61;
+      border-right-color:#FF9060;
+    }
+
+    /* ── Filter ────────────────────────────── */
+    .ig-filter-panel {
+      background:#FCFCFC; border-radius:12px;
+      box-shadow:0 2px 8px rgba(168,99,99,0.15);
+      padding:20px; font-family:'Noto Sans TC',sans-serif;
+      max-width:380px;
+    }
+    .ig-filter-label { font-size:12px; color:#909090; font-family:'Roboto Mono',monospace; letter-spacing:1.5px; margin-bottom:12px; }
+    .ig-filter-option {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:14px 16px; border:1.5px solid #FF8A80; border-radius:12px;
+      margin-bottom:8px; cursor:pointer; transition:all .2s;
+    }
+    .ig-filter-option:hover { background:rgba(255,111,97,0.05); }
+    .ig-filter-option.active { background:linear-gradient(180deg,rgba(255,111,97,.08) 0%,rgba(255,183,77,.08) 100%); }
+    .ig-filter-option-text { font-size:14px; color:#4d4d4d; font-weight:500; }
+    .ig-filter-check {
+      width:20px; height:20px; border-radius:50%;
+      background:linear-gradient(180deg,#FF6F61 16%,#FFB74D 100%);
+      display:flex; align-items:center; justify-content:center;
+    }
+    .ig-filter-apply {
+      width:100%; padding:14px; border:none; border-radius:8px; cursor:pointer;
+      background:linear-gradient(180deg,#FF6F61 16%,#FFB74D 100%);
+      color:#fff; font-size:14px; font-weight:600; margin-top:12px;
+      font-family:'Noto Sans TC',sans-serif;
+    }
+    .ig-toggle-row { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px; }
+    .ig-toggle {
+      padding:6px 14px; border-radius:99px; font-size:12px; cursor:pointer; transition:all .2s;
+      border:1.5px solid #FF8A80; background:transparent; color:#FF6F61;
+      font-family:'Noto Sans TC',sans-serif;
+    }
+    .ig-toggle.on { background:linear-gradient(180deg,#FF6F61 16%,#FFB74D 100%); color:#fff; border-color:transparent; }
+  </style>
 
 </body>
 
