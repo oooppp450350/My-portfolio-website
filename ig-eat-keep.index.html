@@ -2477,6 +2477,74 @@
       background: rgba(255, 255, 255, 0.015);
       padding: 20px 12px;
     }
+    .wf-figma-right {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 20px 14px;
+      gap: 12px;
+    }
+    .wf-tab-btns {
+      display: flex;
+      gap: 3px;
+      background: rgba(0,0,0,0.25);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 3px;
+      width: 100%;
+      max-width: 260px;
+    }
+    .wf-tab-btn {
+      flex: 1;
+      padding: 6px 8px;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: transparent;
+      color: var(--text-muted);
+      transition: background .18s, color .18s;
+    }
+    .wf-tab-btn.active {
+      background: var(--accent);
+      color: #0d1117;
+      font-weight: 700;
+    }
+    .wf-tab-pane { display: none; width: 100%; height: 100%; }
+    .wf-tab-pane.active { display: block; }
+    .wf-embed-phone {
+      position: relative;
+      width: 100%;
+      max-width: 260px;
+      border-radius: 32px;
+      border: 2.5px solid rgba(255,255,255,0.13);
+      background: #0d1117;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.07);
+      overflow: hidden;
+      aspect-ratio: 9 / 19.5;
+    }
+    .wf-embed-phone-notch {
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 36%; height: 22px;
+      background: #0d1117;
+      border-radius: 0 0 14px 14px;
+      z-index: 10; pointer-events: none;
+    }
+    .wf-figma-frame {
+      width: 100%; height: 100%;
+      border: none; display: block;
+    }
+    .wf-figma-link {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 10px; letter-spacing: 1px;
+      color: var(--accent); text-decoration: none;
+      opacity: 0.65; transition: opacity .18s;
+    }
+    .wf-figma-link:hover { opacity: 1; }
 
     @media(max-width:768px) {
       .wf-card-inner {
@@ -5706,7 +5774,7 @@
             <div style="display:inline-flex;flex-direction:column;gap:10px;">
               <div class="ig-frame-card" style="width:340px;padding:8px;">
                 <!-- 標題列 -->
-                <div style="display:flex;gap:12px;align-items:center;justify-content:center;margin-bottom:12px;">
+                <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px;">
                   <img src="https://www.figma.com/api/mcp/asset/cac4354b-7d68-4f4c-9420-eba516531b32" alt="" width="24" height="24" style="flex-shrink:0;object-fit:contain;">
                   <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#4d4d4d;letter-spacing:-0.456px;white-space:nowrap;">造訪狀態：</span>
                 </div>
@@ -6174,8 +6242,7 @@
       width:16px; height:16px; flex-shrink:0; overflow:hidden; position:relative;
     }
     .ig-chk-img {
-      position:absolute; top:25%; right:16.67%; bottom:29.17%; left:16.67%;
-      width:auto; height:auto; max-width:none;
+      position:absolute; inset:0; width:100%; height:100%; object-fit:contain;
     }
 
     /* ── RWD: comp-slide 超出螢幕時橫向捲動 ── */
@@ -6187,6 +6254,24 @@
     }
   </style>
 
+
+  <script>
+  function wfTab(btn, paneId) {
+    var right = btn.closest('.wf-card-right');
+    right.querySelectorAll('.wf-tab-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    right.querySelectorAll('.wf-tab-pane').forEach(function(p) { p.classList.remove('active'); });
+    var pane = document.getElementById(paneId);
+    if (pane) {
+      pane.classList.add('active');
+      var iframe = pane.querySelector('iframe[data-src]');
+      if (iframe) {
+        iframe.src = iframe.getAttribute('data-src');
+        iframe.removeAttribute('data-src');
+      }
+    }
+  }
+  </script>
 </body>
 
 </html>
