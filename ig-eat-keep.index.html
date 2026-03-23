@@ -5669,7 +5669,7 @@
                     <span style="font-family:'Roboto',sans-serif;font-size:14px;color:#909090;">餐廳類型</span>
                     <img src="https://www.figma.com/api/mcp/asset/2a87ccac-f923-41f8-8273-21a2dae7be4c" width="20" height="20" alt="" class="ig-drop-arrow">
                   </button>
-                  <div class="ig-dropdown-body" style="display:none;flex-wrap:wrap;gap:8px;" class="ig-tag-group">
+                  <div class="ig-dropdown-body ig-tag-group" style="display:none;flex-wrap:wrap;gap:8px;">
                     <button class="ig-visit-btn">燒烤</button>
                     <button class="ig-visit-btn">火鍋</button>
                     <button class="ig-visit-btn on"><img src="https://www.figma.com/api/mcp/asset/17af72c0-3b99-470f-9854-608656dc08a3" width="16" height="16" alt=""><span>壽司</span></button>
@@ -5683,7 +5683,7 @@
                     <span style="font-family:'Roboto',sans-serif;font-size:14px;color:#909090;">活動類型</span>
                     <img src="https://www.figma.com/api/mcp/asset/2a87ccac-f923-41f8-8273-21a2dae7be4c" width="20" height="20" alt="" class="ig-drop-arrow">
                   </button>
-                  <div class="ig-dropdown-body" style="display:none;flex-wrap:wrap;gap:8px;" class="ig-tag-group">
+                  <div class="ig-dropdown-body ig-tag-group" style="display:none;flex-wrap:wrap;gap:8px;">
                     <button class="ig-visit-btn">音樂祭</button>
                     <button class="ig-visit-btn">市集</button>
                     <button class="ig-visit-btn">展覽</button>
@@ -5708,10 +5708,7 @@
                 <div style="display:flex;gap:12px;" class="ig-tag-group">
                   <!-- 尚未造訪 active -->
                   <button class="ig-visit-btn on">
-                    <!-- Check icon 16×16, inner at top:25% left/right:16.67% bottom:29.17% -->
-                    <div style="width:16px;height:16px;flex-shrink:0;position:relative;overflow:hidden;">
-                      <img src="https://www.figma.com/api/mcp/asset/e10e36a6-4794-4720-9a04-3ddabcf12a1f" alt="" style="position:absolute;top:25%;right:16.67%;bottom:29.17%;left:16.67%;width:auto;height:auto;max-width:none;">
-                    </div>
+                    <div class="ig-chk-icon-wrap"><img src="https://www.figma.com/api/mcp/asset/e10e36a6-4794-4720-9a04-3ddabcf12a1f" alt="" class="ig-chk-img"></div>
                     <span>尚未造訪</span>
                   </button>
                   <button class="ig-visit-btn">已造訪</button>
@@ -5780,272 +5777,6 @@
 
           </div><!-- /frame grid -->
 
-          <!-- 保留舊有 variants（隱藏） -->
-          <div style="display:none;">
-          <!-- ① 造訪狀態 ─────────────────────────────── -->
-          <div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:20px;">① FILTER · 造訪狀態</div>
-          <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start;margin-bottom:40px;">
-
-            <!-- 尚未造訪 active -->
-            <div>
-              <div style="padding:8px;display:flex;flex-direction:column;gap:12px;width:340px;">
-                <div style="display:flex;gap:12px;align-items:center;">
-                  <img src="https://www.figma.com/api/mcp/asset/d4bce33c-c185-4243-9aae-eec236257133" width="24" height="24" alt="">
-                  <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#4d4d4d;letter-spacing:-0.5px;">造訪狀態：</span>
-                </div>
-                <div style="display:flex;gap:12px;" class="ig-tag-group">
-                  <button class="ig-visit-btn on"><img src="https://www.figma.com/api/mcp/asset/33063891-51c6-4ebd-ae92-b692e76f244a" width="16" height="16" alt=""><span>尚未造訪</span></button>
-                  <button class="ig-visit-btn">已造訪</button>
-                  <button class="ig-visit-btn">口袋名單</button>
-                </div>
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">尚未造訪 active</div>
-            </div>
-
-            <!-- 已造訪 active -->
-            <div>
-              <div style="padding:8px;display:flex;flex-direction:column;gap:12px;width:340px;">
-                <div style="display:flex;gap:12px;align-items:center;">
-                  <img src="https://www.figma.com/api/mcp/asset/d4bce33c-c185-4243-9aae-eec236257133" width="24" height="24" alt="">
-                  <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#4d4d4d;letter-spacing:-0.5px;">造訪狀態：</span>
-                </div>
-                <div style="display:flex;gap:12px;" class="ig-tag-group">
-                  <button class="ig-visit-btn">尚未造訪</button>
-                  <button class="ig-visit-btn on"><img src="https://www.figma.com/api/mcp/asset/33063891-51c6-4ebd-ae92-b692e76f244a" width="16" height="16" alt=""><span>已造訪</span></button>
-                  <button class="ig-visit-btn">口袋名單</button>
-                </div>
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">已造訪 active</div>
-            </div>
-
-            <!-- 口袋名單 active -->
-            <div>
-              <div style="padding:8px;display:flex;flex-direction:column;gap:12px;width:340px;">
-                <div style="display:flex;gap:12px;align-items:center;">
-                  <img src="https://www.figma.com/api/mcp/asset/d4bce33c-c185-4243-9aae-eec236257133" width="24" height="24" alt="">
-                  <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#4d4d4d;letter-spacing:-0.5px;">造訪狀態：</span>
-                </div>
-                <div style="display:flex;gap:12px;" class="ig-tag-group">
-                  <button class="ig-visit-btn">尚未造訪</button>
-                  <button class="ig-visit-btn">已造訪</button>
-                  <button class="ig-visit-btn on"><img src="https://www.figma.com/api/mcp/asset/33063891-51c6-4ebd-ae92-b692e76f244a" width="16" height="16" alt=""><span>口袋名單</span></button>
-                </div>
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">口袋名單 active</div>
-            </div>
-
-            <!-- Pop-up 口袋名單 (248px width, wraps) -->
-            <div>
-              <div style="padding:8px;display:flex;flex-direction:column;gap:12px;width:248px;">
-                <div style="display:flex;gap:12px;align-items:center;">
-                  <img src="https://www.figma.com/api/mcp/asset/d4bce33c-c185-4243-9aae-eec236257133" width="24" height="24" alt="">
-                  <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#4d4d4d;letter-spacing:-0.5px;">造訪狀態：</span>
-                </div>
-                <div style="display:flex;flex-wrap:wrap;gap:12px;" class="ig-tag-group">
-                  <button class="ig-visit-btn">尚未造訪</button>
-                  <button class="ig-visit-btn">已造訪</button>
-                  <button class="ig-visit-btn on"><img src="https://www.figma.com/api/mcp/asset/33063891-51c6-4ebd-ae92-b692e76f244a" width="16" height="16" alt=""><span>口袋名單</span></button>
-                </div>
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">Pop-up 口袋 (248px)</div>
-            </div>
-
-          </div>
-
-          <!-- ② 篩選框－類型 ──────────────────────────── -->
-          <div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:20px;">② FILTER · 篩選框－類型 <span style="font-size:9px;color:#bbb;">（點擊 Tag 可切換 · 點開下拉選單可展開）</span></div>
-          <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start;margin-bottom:40px;">
-
-            <!-- 餐廳 active + 展開選單 -->
-            <div>
-              <div style="padding:8px;display:flex;flex-direction:column;gap:12px;width:340px;">
-                <div style="display:flex;gap:12px;align-items:center;">
-                  <img src="https://www.figma.com/api/mcp/asset/ccd799aa-97bd-4b02-a5ba-04d4579784ae" width="24" height="24" alt="">
-                  <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#4d4d4d;letter-spacing:-0.5px;">類型：</span>
-                </div>
-                <div style="display:flex;gap:12px;" class="ig-tag-group">
-                  <button class="ig-visit-btn on"><img src="https://www.figma.com/api/mcp/asset/17af72c0-3b99-470f-9854-608656dc08a3" width="16" height="16" alt=""><span>餐廳</span></button>
-                  <button class="ig-visit-btn">景點</button>
-                  <button class="ig-visit-btn">活動</button>
-                </div>
-                <!-- 展開選單：餐廳類型 -->
-                <button class="ig-dropdown-btn" onclick="igToggleDrop(this)">
-                  <span style="font-family:'Roboto',sans-serif;font-size:14px;color:#909090;">餐廳類型</span>
-                  <img src="https://www.figma.com/api/mcp/asset/2a87ccac-f923-41f8-8273-21a2dae7be4c" width="20" height="20" alt="" style="transform:rotate(90deg);">
-                </button>
-                <div class="ig-dropdown-body" style="display:none;">
-                  <button class="ig-visit-btn" style="width:100%;justify-content:flex-start;">燒烤</button>
-                  <button class="ig-visit-btn" style="width:100%;justify-content:flex-start;">火鍋</button>
-                  <button class="ig-visit-btn on" style="width:100%;justify-content:flex-start;"><img src="https://www.figma.com/api/mcp/asset/17af72c0-3b99-470f-9854-608656dc08a3" width="16" height="16" alt=""><span>壽司</span></button>
-                  <button class="ig-visit-btn" style="width:100%;justify-content:flex-start;">義式料理</button>
-                </div>
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">餐廳 active（點開看子選單）</div>
-            </div>
-
-            <!-- 活動 active + 展開選單 -->
-            <div>
-              <div style="padding:8px;display:flex;flex-direction:column;gap:12px;width:340px;">
-                <div style="display:flex;gap:12px;align-items:center;">
-                  <img src="https://www.figma.com/api/mcp/asset/ccd799aa-97bd-4b02-a5ba-04d4579784ae" width="24" height="24" alt="">
-                  <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#4d4d4d;letter-spacing:-0.5px;">類型：</span>
-                </div>
-                <div style="display:flex;gap:12px;" class="ig-tag-group">
-                  <button class="ig-visit-btn">餐廳</button>
-                  <button class="ig-visit-btn">景點</button>
-                  <button class="ig-visit-btn on"><img src="https://www.figma.com/api/mcp/asset/17af72c0-3b99-470f-9854-608656dc08a3" width="16" height="16" alt=""><span>活動</span></button>
-                </div>
-                <!-- 展開選單：活動類型 -->
-                <button class="ig-dropdown-btn" onclick="igToggleDrop(this)">
-                  <span style="font-family:'Roboto',sans-serif;font-size:14px;color:#909090;">活動類型</span>
-                  <img src="https://www.figma.com/api/mcp/asset/2a87ccac-f923-41f8-8273-21a2dae7be4c" width="20" height="20" alt="" style="transform:rotate(90deg);">
-                </button>
-                <div class="ig-dropdown-body" style="display:none;">
-                  <button class="ig-visit-btn" style="width:100%;justify-content:flex-start;">音樂祭</button>
-                  <button class="ig-visit-btn on" style="width:100%;justify-content:flex-start;"><img src="https://www.figma.com/api/mcp/asset/17af72c0-3b99-470f-9854-608656dc08a3" width="16" height="16" alt=""><span>市集</span></button>
-                  <button class="ig-visit-btn" style="width:100%;justify-content:flex-start;">展覽</button>
-                </div>
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">活動 active（點開看子選單）</div>
-            </div>
-
-            <!-- 景點 active（無子選單） -->
-            <div>
-              <div style="padding:8px;display:flex;flex-direction:column;gap:12px;width:340px;">
-                <div style="display:flex;gap:12px;align-items:center;">
-                  <img src="https://www.figma.com/api/mcp/asset/126110b6-5c6e-4589-ae45-09ec8c969b73" width="24" height="24" alt="">
-                  <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#4d4d4d;letter-spacing:-0.5px;">類型：</span>
-                </div>
-                <div style="display:flex;gap:12px;" class="ig-tag-group">
-                  <button class="ig-visit-btn">餐廳</button>
-                  <button class="ig-visit-btn on"><img src="https://www.figma.com/api/mcp/asset/17af72c0-3b99-470f-9854-608656dc08a3" width="16" height="16" alt=""><span>景點</span></button>
-                  <button class="ig-visit-btn">活動</button>
-                </div>
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">景點 active</div>
-            </div>
-
-          </div>
-
-          <!-- ③ 地點 ──────────────────────────────────── -->
-          <div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:20px;">③ FILTER · 地點</div>
-          <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start;margin-bottom:40px;">
-
-            <!-- 未選擇地點 -->
-            <div>
-              <div style="border-top:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;display:flex;align-items:center;justify-content:space-between;padding:24px 8px;width:340px;">
-                <div style="display:flex;gap:12px;align-items:center;">
-                  <img src="https://www.figma.com/api/mcp/asset/eff196a3-3e93-4929-84ef-b1167b952a4b" width="27" height="30" alt="" style="flex-shrink:0;width:27px;height:30px;object-fit:contain;">
-                  <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#909090;letter-spacing:-0.5px;">地點</span>
-                </div>
-                <img src="https://www.figma.com/api/mcp/asset/251595bf-2186-468c-a9e9-1641320c4a5c" width="24" height="24" alt="">
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">未選擇地點</div>
-            </div>
-
-            <!-- 已選擇地點 (台南/市區，高雄) -->
-            <div>
-              <div style="border-top:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;display:flex;align-items:center;justify-content:space-between;padding:24px 8px;width:340px;">
-                <div style="display:flex;gap:12px;align-items:center;">
-                  <img src="https://www.figma.com/api/mcp/asset/eff196a3-3e93-4929-84ef-b1167b952a4b" width="27" height="30" alt="" style="flex-shrink:0;width:27px;height:30px;object-fit:contain;">
-                  <span style="font-family:'Noto Sans TC',sans-serif;font-size:16px;font-weight:500;color:#909090;letter-spacing:-0.3px;white-space:nowrap;">台南/市區，高雄</span>
-                </div>
-                <img src="https://www.figma.com/api/mcp/asset/251595bf-2186-468c-a9e9-1641320c4a5c" width="24" height="24" alt="">
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">已選擇地點</div>
-            </div>
-
-            <!-- 選擇卡片 Pop-up (272px) -->
-            <div>
-              <div style="border-top:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;display:flex;align-items:center;justify-content:space-between;padding:24px 8px;width:272px;">
-                <div style="display:flex;gap:12px;align-items:center;">
-                  <img src="https://www.figma.com/api/mcp/asset/eff196a3-3e93-4929-84ef-b1167b952a4b" width="27" height="30" alt="" style="flex-shrink:0;width:27px;height:30px;object-fit:contain;">
-                  <span style="font-family:'Noto Sans TC',sans-serif;font-size:16px;font-weight:500;color:#909090;letter-spacing:-0.3px;">地點</span>
-                </div>
-                <img src="https://www.figma.com/api/mcp/asset/251595bf-2186-468c-a9e9-1641320c4a5c" width="24" height="24" alt="">
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">選擇卡片 Pop-up (272px)</div>
-            </div>
-
-          </div>
-
-          <!-- ④ 套用篩選 ─────────────────────────────── -->
-          <div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:20px;">④ FILTER · 套用篩選</div>
-          <div style="display:flex;gap:32px;align-items:center;margin-bottom:40px;">
-
-            <!-- OFF -->
-            <div>
-              <button onclick="this.querySelector('.ig-chk-box').classList.toggle('checked')" style="display:flex;gap:12px;align-items:center;background:none;border:none;cursor:pointer;padding:8px;">
-                <div class="ig-chk-box" style="width:28px;height:28px;border:1px solid #4d4d4d;position:relative;flex-shrink:0;"></div>
-                <span style="font-family:'Noto Sans TC',sans-serif;font-size:16px;font-weight:500;color:#4d4d4d;letter-spacing:-0.3px;white-space:nowrap;">套用當前篩選條件為預設顯示</span>
-              </button>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;padding-left:8px;">off（點擊可切換）</div>
-            </div>
-
-            <!-- ON -->
-            <div>
-              <button onclick="this.querySelector('.ig-chk-box').classList.toggle('checked')" style="display:flex;gap:12px;align-items:center;background:none;border:none;cursor:pointer;padding:8px;">
-                <div class="ig-chk-box checked" style="width:28px;height:28px;border:1px solid #4d4d4d;position:relative;flex-shrink:0;">
-                  <img src="https://www.figma.com/api/mcp/asset/4ddd5a17-f610-4847-ab81-7db2a9a308f4" width="24" height="24" alt="" style="position:absolute;top:2px;left:2px;">
-                </div>
-                <span style="font-family:'Noto Sans TC',sans-serif;font-size:16px;font-weight:500;color:#4d4d4d;letter-spacing:-0.3px;white-space:nowrap;">套用當前篩選條件為預設顯示</span>
-              </button>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;padding-left:8px;">on</div>
-            </div>
-
-          </div>
-
-          <!-- ⑤ 價格區間 ─────────────────────────────── -->
-          <div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:20px;">⑤ FILTER · 價格區間</div>
-          <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;">
-
-            <!-- $200~400 -->
-            <div style="width:340px;">
-              <div style="display:flex;flex-direction:column;gap:12px;padding:8px;">
-                <div style="display:flex;gap:12px;align-items:center;">
-                  <img src="https://www.figma.com/api/mcp/asset/a1f0c416-420f-49b9-b71b-0cbee5d40513" width="24" height="24" alt="">
-                  <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#4d4d4d;letter-spacing:-0.5px;">價格區間：</span>
-                </div>
-                <div style="padding:0 0 20px;position:relative;">
-                  <div style="display:flex;justify-content:space-between;font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#1e1e1e;letter-spacing:1px;margin-bottom:16px;">
-                    <span>$0~100</span><span>$1000&lt;</span>
-                  </div>
-                  <div style="position:relative;height:8px;background:#e6e6e6;border-radius:9999px;">
-                    <div style="position:absolute;left:30%;right:0;height:8px;background:linear-gradient(90deg,#FF8A80,#FF5A4F);border-radius:9999px;top:0;"></div>
-                    <img src="https://www.figma.com/api/mcp/asset/3c5dc48b-9862-4d5e-a23a-cd7f396b9985" width="16" height="16" alt="" style="position:absolute;top:50%;left:30%;transform:translate(-50%,-50%);">
-                  </div>
-                  <div style="font-family:'Inter',sans-serif;font-size:14px;font-weight:700;color:#FF6F61;margin-top:8px;text-align:center;">$200~400</div>
-                </div>
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">$200~400（可互動）</div>
-              <!-- 互動版 slider -->
-              <input type="range" min="0" max="1000" value="200" step="50" class="ig-price-range" oninput="igUpdateSlider(this)">
-            </div>
-
-            <!-- $400~600 -->
-            <div style="width:340px;">
-              <div style="display:flex;flex-direction:column;gap:12px;padding:8px;">
-                <div style="display:flex;gap:12px;align-items:center;">
-                  <img src="https://www.figma.com/api/mcp/asset/a1f0c416-420f-49b9-b71b-0cbee5d40513" width="24" height="24" alt="">
-                  <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#4d4d4d;letter-spacing:-0.5px;">價格區間：</span>
-                </div>
-                <div style="padding:0 0 20px;position:relative;">
-                  <div style="display:flex;justify-content:space-between;font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#1e1e1e;letter-spacing:1px;margin-bottom:16px;">
-                    <span>$0~100</span><span>$1000&lt;</span>
-                  </div>
-                  <div style="position:relative;height:8px;background:#e6e6e6;border-radius:9999px;">
-                    <div style="position:absolute;left:40%;right:0;height:8px;background:linear-gradient(90deg,#FF8A80,#FF5A4F);border-radius:9999px;top:0;"></div>
-                    <img src="https://www.figma.com/api/mcp/asset/5a993575-b495-4c1e-a5fb-be8d16852d24" width="16" height="16" alt="" style="position:absolute;top:50%;left:40%;transform:translate(-50%,-50%);">
-                  </div>
-                  <div style="font-family:'Inter',sans-serif;font-size:14px;font-weight:700;color:#FF6F61;margin-top:8px;text-align:center;">$400~600</div>
-                </div>
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">$400~600</div>
-            </div>
-
-          </div>
-          </div><!-- /hidden variants -->
-
         </div>
       </div>
 
@@ -6084,18 +5815,17 @@
       var btn = e.target.closest('.ig-tag-group .ig-visit-btn');
       if (!btn) return;
       var group = btn.closest('.ig-tag-group');
-      // clear all
+      // clear all — rebuild text-only content, preserve data-* attributes
       group.querySelectorAll('.ig-visit-btn').forEach(function(b) {
         b.classList.remove('on');
-        var img = b.querySelector('img');
         var sp = b.querySelector('span');
         var label = sp ? sp.textContent : b.textContent.trim();
         b.innerHTML = label;
       });
-      // activate clicked
+      // activate clicked — read label before clearing, preserve data-sub
+      var label2 = btn.querySelector('span') ? btn.querySelector('span').textContent : btn.textContent.trim();
       btn.classList.add('on');
-      var label2 = btn.textContent.trim();
-      btn.innerHTML = '<div style="width:16px;height:16px;flex-shrink:0;overflow:hidden;position:relative;"><img src="' + CHECK_SRC + '" alt="" style="position:absolute;top:25%;right:16.67%;bottom:29.17%;left:16.67%;width:auto;height:auto;max-width:none;"></div><span>' + label2 + '</span>';
+      btn.innerHTML = '<div class="ig-chk-icon-wrap"><img src="' + CHECK_SRC + '" alt="" class="ig-chk-img"></div><span>' + label2 + '</span>';
       // 類型子選單聯動
       var subId = btn.dataset.sub;
       var typeGroup = btn.closest('#fg-type');
@@ -6477,6 +6207,14 @@
     /* ── Dropdown arrow rotation ── */
     .ig-drop-arrow { transform:rotate(90deg); transition:transform .2s; }
     .ig-dropdown-btn.open .ig-drop-arrow { transform:rotate(-90deg); }
+    /* ── Tag check icon container (replaces repeated inline style) ── */
+    .ig-chk-icon-wrap {
+      width:16px; height:16px; flex-shrink:0; overflow:hidden; position:relative;
+    }
+    .ig-chk-img {
+      position:absolute; top:25%; right:16.67%; bottom:29.17%; left:16.67%;
+      width:auto; height:auto; max-width:none;
+    }
 
     /* ── RWD: comp-slide 超出螢幕時橫向捲動 ── */
     .comp-slide > div {
