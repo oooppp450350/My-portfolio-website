@@ -5856,8 +5856,8 @@
                     <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
                   </div>
                 </div>
-                <div style="margin-top:4px;">
-                  <span id="fg-price-label" style="font-family:'Inter',sans-serif;font-size:14px;font-weight:700;color:#FF6F61;letter-spacing:-0.266px;">$200~400</span>
+                <div style="position:relative;height:20px;margin-top:4px;">
+                  <span id="fg-price-label" style="position:absolute;left:20%;transform:translateX(-50%);font-family:'Inter',sans-serif;font-size:14px;font-weight:700;color:#FF6F61;letter-spacing:-0.266px;white-space:nowrap;">$200~400</span>
                 </div>
               </div>
               <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">價格區間 · 拖動滑桿即時更新</div>
@@ -5955,6 +5955,9 @@
       var hi = Math.min(v + 200, 1000);
       var lbl = document.getElementById('fg-price-label');
       lbl.textContent = '$' + v + '~' + (hi < 1000 ? hi : '1000+');
+      // move label to sit under the thumb
+      var pct = (v - parseInt(input.min)) / (parseInt(input.max) - parseInt(input.min));
+      lbl.style.left = pct * 100 + '%';
     }
 
     // ── 套用篩選 checkbox (local, per-frame) ─────────
@@ -6243,13 +6246,13 @@
     }
     .ig-price-range::-webkit-slider-thumb {
       -webkit-appearance:none; width:20px; height:20px; border-radius:50%;
-      background:#FF6F61; border:2px solid #fff;
-      box-shadow:0 1px 4px rgba(0,0,0,0.22); cursor:pointer;
+      background:#fff; border:2.5px solid #FF6F61;
+      box-shadow:0 1px 4px rgba(0,0,0,0.15); cursor:pointer;
     }
     .ig-price-range::-moz-range-thumb {
       width:20px; height:20px; border-radius:50%;
-      background:#FF6F61; border:2px solid #fff;
-      box-shadow:0 1px 4px rgba(0,0,0,0.22); cursor:pointer;
+      background:#fff; border:2.5px solid #FF6F61;
+      box-shadow:0 1px 4px rgba(0,0,0,0.15); cursor:pointer;
     }
     /* ── Filter: 套用篩選 checkbox check icon ── */
     .ig-chk-box img { display:none; }
