@@ -5850,9 +5850,8 @@
       if (!lbl) return;
       var isSelected = lbl.dataset.selected === '1';
       if (!isSelected) {
-        var a = LOCATIONS[Math.floor(Math.random()*LOCATIONS.length)];
-        var b2 = LOCATIONS[Math.floor(Math.random()*LOCATIONS.length)];
-        lbl.textContent = a + '，' + b2;
+        var shuffled = LOCATIONS.slice().sort(function(){ return Math.random()-0.5; });
+        lbl.textContent = shuffled[0] + '，' + shuffled[1];
         lbl.style.fontSize = '16px'; lbl.style.fontWeight = '500';
         lbl.dataset.selected = '1';
       } else {
