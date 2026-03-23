@@ -5712,8 +5712,8 @@
             <!-- 3 stacked loaders from Figma (node-326_11993) -->
             <div style="display:flex;flex-direction:column;gap:16px;align-items:center;">
               <img src="https://www.figma.com/api/mcp/asset/a1ec7818-8d51-4aba-9bcc-ef552721e435" width="48" height="48" alt="Loader" class="ig-spin-loader">
-              <img src="https://www.figma.com/api/mcp/asset/a1ec7818-8d51-4aba-9bcc-ef552721e435" width="50" height="49" alt="Loader" class="ig-spin-loader" style="animation-duration:.7s;">
-              <img src="https://www.figma.com/api/mcp/asset/a1ec7818-8d51-4aba-9bcc-ef552721e435" width="48" height="48" alt="Loader" class="ig-spin-loader" style="animation-duration:.85s;">
+              <img src="https://www.figma.com/api/mcp/asset/a1ec7818-8d51-4aba-9bcc-ef552721e435" width="50" height="49" alt="Loader" class="ig-spin-loader" style="animation-duration:1.5s;">
+              <img src="https://www.figma.com/api/mcp/asset/a1ec7818-8d51-4aba-9bcc-ef552721e435" width="48" height="48" alt="Loader" class="ig-spin-loader" style="animation-duration:1.8s;">
             </div>
             <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">Property 1=Default · 3 instances</div>
           </div>
@@ -5837,15 +5837,27 @@
             <div style="display:inline-flex;flex-direction:column;gap:10px;">
               <div class="ig-frame-card" style="width:340px;">
                 <div style="display:flex;gap:12px;align-items:center;margin-bottom:16px;">
-                  <img src="https://www.figma.com/api/mcp/asset/a1f0c416-420f-49b9-b71b-0cbee5d40513" width="24" height="24" alt="">
-                  <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#4d4d4d;letter-spacing:-0.5px;">價格區間：</span>
+                  <img src="https://www.figma.com/api/mcp/asset/85816054-f532-4127-a15a-52cc46710ca9" width="24" height="24" alt="" style="flex-shrink:0;object-fit:contain;">
+                  <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#4d4d4d;letter-spacing:-0.456px;">價格區間：</span>
                 </div>
-                <div style="display:flex;justify-content:space-between;font-family:'Noto Sans TC',sans-serif;font-size:13px;font-weight:500;color:#1e1e1e;letter-spacing:1px;margin-bottom:12px;">
+                <div style="display:flex;justify-content:space-between;font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#1e1e1e;letter-spacing:1px;margin-bottom:12px;">
                   <span>$0~100</span><span>$1000&lt;</span>
                 </div>
-                <input type="range" min="0" max="1000" value="200" step="50" class="ig-price-range" id="fg-price-slider" oninput="igUpdatePrice(this)">
-                <div style="text-align:center;margin-top:8px;">
-                  <span id="fg-price-label" style="font-family:'Inter',sans-serif;font-size:14px;font-weight:700;color:#FF6F61;">$200~400</span>
+                <!-- Slider with tick marks overlay -->
+                <div style="position:relative;padding:6px 0;">
+                  <input type="range" min="0" max="1000" value="200" step="50" class="ig-price-range" id="fg-price-slider" oninput="igUpdatePrice(this)">
+                  <div style="position:absolute;top:50%;transform:translateY(-50%);left:0;right:0;display:flex;justify-content:space-between;pointer-events:none;">
+                    <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
+                    <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
+                    <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
+                    <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
+                    <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
+                    <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
+                    <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
+                  </div>
+                </div>
+                <div style="margin-top:4px;">
+                  <span id="fg-price-label" style="font-family:'Inter',sans-serif;font-size:14px;font-weight:700;color:#FF6F61;letter-spacing:-0.266px;">$200~400</span>
                 </div>
               </div>
               <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">價格區間 · 拖動滑桿即時更新</div>
@@ -6177,7 +6189,7 @@
     /* ── Loader ────────────────────────────── */
     @keyframes ig-spin { to { transform: rotate(360deg); } }
     .ig-spin-loader {
-      animation: ig-spin .9s linear infinite;
+      animation: ig-spin 2s linear infinite;
       display:block;
     }
 
@@ -6226,12 +6238,18 @@
     /* ── Filter: 價格區間 slider ── */
     .ig-price-range {
       -webkit-appearance:none; appearance:none;
-      width:100%; height:4px; background:#e6e6e6; border-radius:9999px;
-      outline:none; margin-top:8px;
+      width:100%; height:8px; background:#e6e6e6; border-radius:9999px;
+      outline:none; cursor:pointer; position:relative; z-index:1;
     }
     .ig-price-range::-webkit-slider-thumb {
-      -webkit-appearance:none; width:16px; height:16px; border-radius:50%;
-      background:linear-gradient(180deg,#FF8A80,#FF5A4F); cursor:pointer;
+      -webkit-appearance:none; width:20px; height:20px; border-radius:50%;
+      background:#FF6F61; border:2px solid #fff;
+      box-shadow:0 1px 4px rgba(0,0,0,0.22); cursor:pointer;
+    }
+    .ig-price-range::-moz-range-thumb {
+      width:20px; height:20px; border-radius:50%;
+      background:#FF6F61; border:2px solid #fff;
+      box-shadow:0 1px 4px rgba(0,0,0,0.22); cursor:pointer;
     }
     /* ── Filter: 套用篩選 checkbox check icon ── */
     .ig-chk-box img { display:none; }
