@@ -5497,116 +5497,38 @@
         </div>
       </div>
 
-      <!-- 導覽列 Slide -->
+      <!-- 導覽列 Slide — 可點擊原型 -->
       <div id="comp-navbar" class="comp-slide" style="display:none;">
         <div style="background:#FFFFFF;border:1px solid rgba(0,0,0,0.1);border-radius:2px;padding:32px;">
+          <div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:4px;">NAVIGATION BAR · 可點擊原型</div>
+          <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#bbb;letter-spacing:1px;margin-bottom:28px;">點擊各 Tab 切換 active 狀態</div>
 
-          <div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:24px;">NAVIGATION BAR · 393×76px</div>
+          <div class="nb-demo-wrap">
+            <nav id="ig-nb" style="display:flex;flex-direction:row;justify-content:center;align-items:flex-end;padding:0 8px;gap:8px;width:393px;height:76px;background:#FCFCFC;box-shadow:0px -4px 8px rgba(202,175,175,0.25);box-sizing:border-box;">
 
-          <!-- reusable icon SVGs as inline -->
-          <div style="display:flex;flex-direction:column;gap:20px;">
+              <!-- 篩選 -->
+              <button class="ig-nb-tab" data-label="篩選 active" onclick="igSetNav(this)">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v2L14 12v6l-4-2V12L4 6V4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                <span>篩選</span>
+              </button>
+              <!-- 匯入 -->
+              <button class="ig-nb-tab" data-label="匯入 active" onclick="igSetNav(this)">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <span>匯入</span>
+              </button>
+              <!-- 首頁 (default active) -->
+              <button class="ig-nb-tab active" data-label="首頁 active" onclick="igSetNav(this)">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V10.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 21v-7h6v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>首頁</span>
+              </button>
+              <!-- 個人頁面 -->
+              <button class="ig-nb-tab" data-label="個人頁面 active" onclick="igSetNav(this)">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 20c0-3.866 3.582-7 8-7s8 3.134 8 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <span>個人頁面</span>
+              </button>
 
-            <!-- Variant helper: each row = one nav bar state -->
-            <!-- Active = Home (Default) -->
-            <div class="nb-demo-wrap">
-              <div style="display:flex;flex-direction:row;justify-content:center;align-items:flex-end;padding:0 8px;gap:8px;width:393px;height:76px;background:#FCFCFC;box-shadow:0px -4px 8px rgba(202,175,175,0.25);box-sizing:border-box;">
-                <!-- 篩選 inactive -->
-                <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v2L14 12v6l-4-2V12L4 6V4z" stroke="#FF6F61" stroke-width="1.5" stroke-linejoin="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">篩選</span>
-                </div>
-                <!-- 匯入 inactive -->
-                <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#FF6F61" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">匯入</span>
-                </div>
-                <!-- 首頁 ACTIVE -->
-                <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:4px;gap:4px;flex:1;align-self:stretch;background:linear-gradient(180deg,#FF6F61 16%,#FFB74D 100%);border-radius:100px;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V10.5z" stroke="#FCFCFC" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 21v-7h6v7" stroke="#FCFCFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;font-weight:500;letter-spacing:0.5px;color:#FCFCFC;">首頁</span>
-                </div>
-                <!-- 個人頁面 inactive -->
-                <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#FF6F61" stroke-width="1.5"/><path d="M4 20c0-3.866 3.582-7 8-7s8 3.134 8 7" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">個人頁面</span>
-                </div>
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">Default · 首頁 active</div>
-            </div>
-
-            <!-- 篩選 active (Variant2) -->
-            <div class="nb-demo-wrap">
-              <div style="display:flex;flex-direction:row;justify-content:center;align-items:flex-end;padding:0 8px;gap:8px;width:393px;height:76px;background:#FCFCFC;box-shadow:0px -4px 8px rgba(202,175,175,0.25);box-sizing:border-box;">
-                <!-- 篩選 ACTIVE -->
-                <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:4px;gap:4px;flex:1;align-self:stretch;background:linear-gradient(180deg,#FF6F61 16%,#FFB74D 100%);border-radius:100px;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v2L14 12v6l-4-2V12L4 6V4z" stroke="#FCFCFC" stroke-width="1.5" stroke-linejoin="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;font-weight:500;letter-spacing:0.5px;color:#FCFCFC;">篩選</span>
-                </div>
-                <!-- 匯入 inactive -->
-                <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#FF6F61" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">匯入</span>
-                </div>
-                <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V10.5z" stroke="#FF6F61" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 21v-7h6v7" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">首頁</span>
-                </div>
-                <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#FF6F61" stroke-width="1.5"/><path d="M4 20c0-3.866 3.582-7 8-7s8 3.134 8 7" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">個人頁面</span>
-                </div>
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">Variant2 · 篩選 active</div>
-            </div>
-
-            <!-- 匯入 active (Variant3) -->
-            <div class="nb-demo-wrap">
-              <div style="display:flex;flex-direction:row;justify-content:center;align-items:flex-end;padding:0 8px;gap:8px;width:393px;height:76px;background:#FCFCFC;box-shadow:0px -4px 8px rgba(202,175,175,0.25);box-sizing:border-box;">
-                <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v2L14 12v6l-4-2V12L4 6V4z" stroke="#FF6F61" stroke-width="1.5" stroke-linejoin="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">篩選</span>
-                </div>
-                <!-- 匯入 ACTIVE -->
-                <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:4px;gap:4px;flex:1;align-self:stretch;background:linear-gradient(180deg,#FF6F61 16%,#FFB74D 100%);border-radius:100px;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#FCFCFC" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="#FCFCFC" stroke-width="1.5" stroke-linecap="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;font-weight:500;letter-spacing:0.5px;color:#FCFCFC;">匯入</span>
-                </div>
-                <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V10.5z" stroke="#FF6F61" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 21v-7h6v7" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">首頁</span>
-                </div>
-                <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#FF6F61" stroke-width="1.5"/><path d="M4 20c0-3.866 3.582-7 8-7s8 3.134 8 7" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">個人頁面</span>
-                </div>
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">Variant3 · 匯入 active</div>
-            </div>
-
-            <!-- 個人頁面 active (Variant4) -->
-            <div class="nb-demo-wrap">
-              <div style="display:flex;flex-direction:row;justify-content:center;align-items:flex-end;padding:0 8px;gap:8px;width:393px;height:76px;background:#FCFCFC;box-shadow:0px -4px 8px rgba(202,175,175,0.25);box-sizing:border-box;">
-                <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v2L14 12v6l-4-2V12L4 6V4z" stroke="#FF6F61" stroke-width="1.5" stroke-linejoin="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">篩選</span>
-                </div>
-                <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#FF6F61" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">匯入</span>
-                </div>
-                <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 0 16px;gap:4px;flex:1;align-self:stretch;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V10.5z" stroke="#FF6F61" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 21v-7h6v7" stroke="#FF6F61" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;letter-spacing:0.5px;color:#FF6F61;">首頁</span>
-                </div>
-                <!-- 個人頁面 ACTIVE -->
-                <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:4px;gap:4px;flex:1;align-self:stretch;background:linear-gradient(180deg,#FF6F61 16%,#FFB74D 100%);border-radius:100px;">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#FCFCFC" stroke-width="1.5"/><path d="M4 20c0-3.866 3.582-7 8-7s8 3.134 8 7" stroke="#FCFCFC" stroke-width="1.5" stroke-linecap="round"/></svg>
-                  <span style="font-family:'Roboto';font-size:12px;font-weight:500;letter-spacing:0.5px;color:#FCFCFC;">個人頁面</span>
-                </div>
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">Variant4 · 個人頁面 active</div>
-            </div>
-
+            </nav>
+            <div id="ig-nb-state" style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:10px;">首頁 active</div>
           </div>
         </div>
       </div>
@@ -5721,10 +5643,144 @@
         </div>
       </div>
 
-      <!-- ── 篩選框 Slide ── -->
+      <!-- ── 篩選框 Slide — 可點擊原型 ── -->
       <div id="comp-filter" class="comp-slide" style="display:none;">
         <div style="background:#FFFFFF;border:1px solid rgba(0,0,0,0.1);border-radius:2px;padding:32px;overflow-x:auto;-webkit-overflow-scrolling:touch;">
+          <div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:4px;">FILTER PANEL · 可點擊原型</div>
+          <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#bbb;letter-spacing:1px;margin-bottom:28px;">所有選項均可互動 · 下拉選單可展開收合</div>
 
+          <!-- Phone frame -->
+          <div style="display:inline-block;border:2px solid #e0e0e0;border-radius:36px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.10);">
+            <!-- Status bar area -->
+            <div style="background:#FCFCFC;height:16px;display:flex;justify-content:center;align-items:center;">
+              <div style="width:80px;height:6px;background:#d0d0d0;border-radius:3px;margin-top:8px;"></div>
+            </div>
+
+            <!-- Filter panel body -->
+            <div style="background:#FCFCFC;width:390px;padding:0 0 24px;">
+
+              <!-- Header -->
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:20px 20px 12px;">
+                <span style="font-family:'Noto Sans TC',sans-serif;font-size:20px;font-weight:700;color:#4d4d4d;">篩選</span>
+                <button onclick="igResetFilter()" style="font-family:'Noto Sans TC',sans-serif;font-size:14px;color:#FF6F61;background:none;border:none;cursor:pointer;font-weight:500;padding:4px 8px;">清除全部</button>
+              </div>
+
+              <!-- Divider -->
+              <div style="height:1px;background:#e8e8e8;margin:0 20px;"></div>
+
+              <!-- ① 類型 ── -->
+              <div style="padding:16px 20px;">
+                <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px;">
+                  <img src="https://www.figma.com/api/mcp/asset/ccd799aa-97bd-4b02-a5ba-04d4579784ae" width="22" height="22" alt="">
+                  <span style="font-family:'Noto Sans TC',sans-serif;font-size:20px;font-weight:600;color:#4d4d4d;letter-spacing:-0.4px;">類型：</span>
+                </div>
+                <div style="display:flex;gap:10px;flex-wrap:wrap;" class="ig-tag-group" id="fg-type">
+                  <button class="ig-visit-btn on" data-sub="fg-sub-restaurant"><img src="https://www.figma.com/api/mcp/asset/17af72c0-3b99-470f-9854-608656dc08a3" width="16" height="16" alt=""><span>餐廳</span></button>
+                  <button class="ig-visit-btn" data-sub=""><span>景點</span></button>
+                  <button class="ig-visit-btn" data-sub="fg-sub-event"><span>活動</span></button>
+                </div>
+                <!-- 子選單：餐廳 -->
+                <div id="fg-sub-restaurant" style="margin-top:10px;">
+                  <button class="ig-dropdown-btn" onclick="igToggleDrop(this)">
+                    <span style="font-family:'Roboto',sans-serif;font-size:14px;color:#909090;">餐廳類型</span>
+                    <img src="https://www.figma.com/api/mcp/asset/2a87ccac-f923-41f8-8273-21a2dae7be4c" width="20" height="20" alt="" class="ig-drop-arrow">
+                  </button>
+                  <div class="ig-dropdown-body" style="display:none;">
+                    <div style="display:flex;flex-wrap:wrap;gap:8px;" class="ig-tag-group">
+                      <button class="ig-visit-btn">燒烤</button>
+                      <button class="ig-visit-btn">火鍋</button>
+                      <button class="ig-visit-btn on"><img src="https://www.figma.com/api/mcp/asset/17af72c0-3b99-470f-9854-608656dc08a3" width="16" height="16" alt=""><span>壽司</span></button>
+                      <button class="ig-visit-btn">義式料理</button>
+                      <button class="ig-visit-btn">泰式料理</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- 子選單：活動 -->
+                <div id="fg-sub-event" style="margin-top:10px;display:none;">
+                  <button class="ig-dropdown-btn" onclick="igToggleDrop(this)">
+                    <span style="font-family:'Roboto',sans-serif;font-size:14px;color:#909090;">活動類型</span>
+                    <img src="https://www.figma.com/api/mcp/asset/2a87ccac-f923-41f8-8273-21a2dae7be4c" width="20" height="20" alt="" class="ig-drop-arrow">
+                  </button>
+                  <div class="ig-dropdown-body" style="display:none;">
+                    <div style="display:flex;flex-wrap:wrap;gap:8px;" class="ig-tag-group">
+                      <button class="ig-visit-btn">音樂祭</button>
+                      <button class="ig-visit-btn">市集</button>
+                      <button class="ig-visit-btn">展覽</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <div style="height:1px;background:#e8e8e8;margin:0 20px;"></div>
+
+              <!-- ② 造訪狀態 ── -->
+              <div style="padding:16px 20px;">
+                <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px;">
+                  <img src="https://www.figma.com/api/mcp/asset/d4bce33c-c185-4243-9aae-eec236257133" width="22" height="22" alt="">
+                  <span style="font-family:'Noto Sans TC',sans-serif;font-size:20px;font-weight:600;color:#4d4d4d;letter-spacing:-0.4px;">造訪狀態：</span>
+                </div>
+                <div style="display:flex;gap:10px;flex-wrap:wrap;" class="ig-tag-group">
+                  <button class="ig-visit-btn on"><img src="https://www.figma.com/api/mcp/asset/33063891-51c6-4ebd-ae92-b692e76f244a" width="16" height="16" alt=""><span>尚未造訪</span></button>
+                  <button class="ig-visit-btn">已造訪</button>
+                  <button class="ig-visit-btn">口袋名單</button>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <div style="height:1px;background:#e8e8e8;margin:0 20px;"></div>
+
+              <!-- ③ 地點 ── -->
+              <button onclick="igToggleLocation(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:none;border:none;cursor:pointer;text-align:left;">
+                <div style="display:flex;gap:10px;align-items:center;">
+                  <img src="https://www.figma.com/api/mcp/asset/ef3389a2-5b52-48ce-9813-6ba99714d45a" width="26" height="26" alt="">
+                  <span id="fg-location-label" style="font-family:'Noto Sans TC',sans-serif;font-size:20px;font-weight:600;color:#909090;letter-spacing:-0.4px;">地點</span>
+                </div>
+                <img src="https://www.figma.com/api/mcp/asset/1c5b25a9-b670-4a52-8681-d07edfd9a9cc" width="22" height="22" alt="">
+              </button>
+
+              <!-- Divider -->
+              <div style="height:1px;background:#e8e8e8;margin:0 20px;"></div>
+
+              <!-- ④ 價格區間 ── -->
+              <div style="padding:16px 20px;">
+                <div style="display:flex;gap:10px;align-items:center;margin-bottom:16px;">
+                  <img src="https://www.figma.com/api/mcp/asset/a1f0c416-420f-49b9-b71b-0cbee5d40513" width="22" height="22" alt="">
+                  <span style="font-family:'Noto Sans TC',sans-serif;font-size:20px;font-weight:600;color:#4d4d4d;letter-spacing:-0.4px;">價格區間：</span>
+                </div>
+                <div style="padding:0 4px;">
+                  <div style="display:flex;justify-content:space-between;font-family:'Noto Sans TC',sans-serif;font-size:13px;font-weight:500;color:#1e1e1e;letter-spacing:1px;margin-bottom:12px;">
+                    <span>$0</span><span>$1000+</span>
+                  </div>
+                  <input type="range" min="0" max="1000" value="200" step="50" class="ig-price-range" id="fg-price-slider" oninput="igUpdatePrice(this)">
+                  <div style="text-align:center;margin-top:6px;">
+                    <span id="fg-price-label" style="font-family:'Inter',sans-serif;font-size:14px;font-weight:700;color:#FF6F61;">$200~400</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <div style="height:1px;background:#e8e8e8;margin:0 20px;"></div>
+
+              <!-- ⑤ 套用篩選 checkbox ── -->
+              <button id="fg-apply-check" onclick="igToggleApply(this)" style="width:100%;display:flex;gap:12px;align-items:center;padding:16px 20px;background:none;border:none;cursor:pointer;text-align:left;">
+                <div id="fg-chk" style="width:26px;height:26px;border:1.5px solid #4d4d4d;position:relative;flex-shrink:0;border-radius:2px;">
+                  <img src="https://www.figma.com/api/mcp/asset/4ddd5a17-f610-4847-ab81-7db2a9a308f4" width="22" height="22" alt="" style="position:absolute;top:1px;left:1px;display:none;" id="fg-chk-icon">
+                </div>
+                <span style="font-family:'Noto Sans TC',sans-serif;font-size:15px;font-weight:500;color:#4d4d4d;letter-spacing:-0.3px;">套用當前篩選條件為預設顯示</span>
+              </button>
+
+              <!-- Action buttons -->
+              <div style="display:flex;gap:12px;padding:8px 20px 0;">
+                <button onclick="igResetFilter()" style="flex:1;height:48px;border-radius:12px;border:1.5px solid #FF6F61;background:none;font-family:'Noto Sans TC',sans-serif;font-size:16px;font-weight:600;color:#FF6F61;cursor:pointer;">清除</button>
+                <button style="flex:2;height:48px;border-radius:12px;border:none;background:linear-gradient(135deg,#FF8A80 0%,#FF5A4F 100%);font-family:'Noto Sans TC',sans-serif;font-size:16px;font-weight:700;color:#fff;cursor:pointer;">套用篩選</button>
+              </div>
+
+            </div>
+          </div><!-- /phone frame -->
+
+          <!-- 原始 variants（隱藏的空 div，保留 DOM 不破壞既有結構） -->
+          <div style="display:none;">
           <!-- ① 造訪狀態 ─────────────────────────────── -->
           <div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:20px;">① FILTER · 造訪狀態</div>
           <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start;margin-bottom:40px;">
@@ -5987,6 +6043,7 @@
             </div>
 
           </div>
+          </div><!-- /hidden variants -->
 
         </div>
       </div>
@@ -6011,36 +6068,109 @@
       btn.addEventListener('click', () => btn.classList.toggle('on'));
     });
 
-    // Tag group: 互斥點擊切換
+    // ── Nav bar: 點擊切換 active tab ──────────────────
+    function igSetNav(btn) {
+      document.querySelectorAll('#ig-nb .ig-nb-tab').forEach(function(t) {
+        t.classList.remove('active');
+      });
+      btn.classList.add('active');
+      document.getElementById('ig-nb-state').textContent = btn.dataset.label || btn.querySelector('span').textContent + ' active';
+    }
+
+    // ── Tag group: 互斥點擊切換 ──────────────────────
+    var CHECK_SRC = 'https://www.figma.com/api/mcp/asset/33063891-51c6-4ebd-ae92-b692e76f244a';
     document.addEventListener('click', function(e) {
-      var btn = e.target.closest('.ig-visit-btn');
+      var btn = e.target.closest('.ig-tag-group .ig-visit-btn');
       if (!btn) return;
       var group = btn.closest('.ig-tag-group');
-      if (!group) return;
+      // clear all
       group.querySelectorAll('.ig-visit-btn').forEach(function(b) {
         b.classList.remove('on');
-        // remove inner check img if any
         var img = b.querySelector('img');
-        if (img) { b.removeChild(img); }
         var sp = b.querySelector('span');
-        if (sp) { b.textContent = sp.textContent; }
+        var label = sp ? sp.textContent : b.textContent.trim();
+        b.innerHTML = label;
       });
+      // activate clicked
       btn.classList.add('on');
-      var checkImg = document.createElement('img');
-      checkImg.src = 'https://www.figma.com/api/mcp/asset/33063891-51c6-4ebd-ae92-b692e76f244a';
-      checkImg.width = 16; checkImg.height = 16; checkImg.alt = '';
-      var label = btn.textContent.trim();
-      btn.textContent = '';
-      btn.appendChild(checkImg);
-      var sp2 = document.createElement('span');
-      sp2.textContent = label;
-      btn.appendChild(sp2);
+      var label2 = btn.textContent.trim();
+      btn.innerHTML = '<img src="' + CHECK_SRC + '" width="16" height="16" alt=""><span>' + label2 + '</span>';
+      // 類型子選單聯動
+      var subId = btn.dataset.sub;
+      var typeGroup = btn.closest('#fg-type');
+      if (typeGroup) {
+        document.querySelectorAll('[id^="fg-sub-"]').forEach(function(s){ s.style.display='none'; });
+        if (subId) { document.getElementById(subId).style.display = 'block'; }
+      }
     });
 
-    // Dropdown toggle
+    // ── Dropdown toggle ──────────────────────────────
     function igToggleDrop(btn) {
       var body = btn.nextElementSibling;
-      body.style.display = body.style.display === 'none' ? 'flex' : 'none';
+      var isOpen = body.style.display !== 'none';
+      body.style.display = isOpen ? 'none' : 'flex';
+      btn.classList.toggle('open', !isOpen);
+    }
+
+    // ── 地點 toggle ──────────────────────────────────
+    var locationSelected = false;
+    var LOCATIONS = ['台南/市區', '台北/大安區', '高雄/鹽埕區'];
+    function igToggleLocation(btn) {
+      locationSelected = !locationSelected;
+      var lbl = document.getElementById('fg-location-label');
+      if (locationSelected) {
+        lbl.textContent = LOCATIONS[Math.floor(Math.random()*LOCATIONS.length)] + '，' + LOCATIONS[Math.floor(Math.random()*LOCATIONS.length)];
+        lbl.style.fontSize = '16px'; lbl.style.fontWeight = '500';
+      } else {
+        lbl.textContent = '地點';
+        lbl.style.fontSize = '20px'; lbl.style.fontWeight = '600';
+      }
+    }
+
+    // ── 價格區間 slider ──────────────────────────────
+    function igUpdatePrice(input) {
+      var v = parseInt(input.value);
+      var hi = Math.min(v + 200, 1000);
+      var lbl = document.getElementById('fg-price-label');
+      lbl.textContent = '$' + v + '~' + (hi < 1000 ? hi : '1000+');
+    }
+
+    // ── 套用篩選 checkbox ────────────────────────────
+    function igToggleApply(btn) {
+      var icon = document.getElementById('fg-chk-icon');
+      var chk = document.getElementById('fg-chk');
+      var isOn = icon.style.display !== 'none';
+      icon.style.display = isOn ? 'none' : 'block';
+      chk.style.borderColor = isOn ? '#4d4d4d' : '#FF6F61';
+    }
+
+    // ── 清除全部 ─────────────────────────────────────
+    function igResetFilter() {
+      // reset type
+      var typeGroup = document.getElementById('fg-type');
+      if (typeGroup) {
+        typeGroup.querySelectorAll('.ig-visit-btn').forEach(function(b,i){
+          b.classList.remove('on');
+          var labels = ['餐廳','景點','活動'];
+          b.innerHTML = labels[i];
+        });
+        typeGroup.querySelectorAll('.ig-visit-btn')[0].classList.add('on');
+        typeGroup.querySelectorAll('.ig-visit-btn')[0].innerHTML = '<img src="' + CHECK_SRC + '" width="16" height="16" alt=""><span>餐廳</span>';
+      }
+      document.querySelectorAll('[id^="fg-sub-"]').forEach(function(s){ s.style.display='none'; });
+      document.getElementById('fg-sub-restaurant').style.display = 'block';
+      // reset price
+      var slider = document.getElementById('fg-price-slider');
+      if (slider) { slider.value = 200; igUpdatePrice(slider); }
+      // reset location
+      locationSelected = false;
+      var lbl = document.getElementById('fg-location-label');
+      if (lbl) { lbl.textContent='地點'; lbl.style.fontSize='20px'; lbl.style.fontWeight='600'; }
+      // reset checkbox
+      var icon = document.getElementById('fg-chk-icon');
+      var chk = document.getElementById('fg-chk');
+      if (icon) { icon.style.display='none'; }
+      if (chk) { chk.style.borderColor='#4d4d4d'; }
     }
 
     showComp('buttons');
@@ -6324,6 +6454,18 @@
       background:linear-gradient(180deg,#FF8A80 16%,#FF5A4F 100%);
       color:#f5f5f5; font-weight:700; padding-left:8px;
     }
+    /* ── Interactive Nav Bar ── */
+    .ig-nb-tab {
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      gap:4px; flex:1; align-self:stretch;
+      padding:12px 4px 16px; background:none; border:none; cursor:pointer;
+      color:#FF6F61; border-radius:100px; transition:background .2s,color .2s,padding .15s;
+      font-family:'Roboto',sans-serif; font-size:12px; letter-spacing:0.5px; font-weight:400;
+    }
+    .ig-nb-tab.active {
+      background:linear-gradient(180deg,#FF6F61 16%,#FFB74D 100%);
+      color:#FCFCFC; padding:4px; font-weight:500;
+    }
     /* ── Filter: 展開下拉選單 ── */
     .ig-dropdown-btn {
       display:flex; align-items:center; justify-content:space-between;
@@ -6347,6 +6489,9 @@
     /* ── Filter: 套用篩選 checkbox check icon ── */
     .ig-chk-box img { display:none; }
     .ig-chk-box.checked img { display:block; }
+    /* ── Dropdown arrow rotation ── */
+    .ig-drop-arrow { transform:rotate(90deg); transition:transform .2s; }
+    .ig-dropdown-btn.open .ig-drop-arrow { transform:rotate(-90deg); }
 
     /* ── RWD: comp-slide 超出螢幕時橫向捲動 ── */
     .comp-slide > div {
