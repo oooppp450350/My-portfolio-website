@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { SectionTitle } from "./SectionTitle"
+import { NavigationBar } from "@/components/ig-eat-keep/NavigationBar"
 
 const projects = [
     {
@@ -64,8 +65,16 @@ export function Portfolio() {
                             whileHover={{ y: -10 }}
                             className={`group block relative rounded-[2rem] overflow-hidden bg-gradient-to-br ${project.color} border border-white/10 aspect-[16/10] p-6 lg:p-8 flex flex-col justify-end transition-all hover:border-primary/50`}
                         >
-                            {/* Note: User should replace this div with actual project image later */}
                             <div className="absolute inset-0 z-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+
+                            {/* IG KeepEat: show Navigation Bar component preview */}
+                            {project.title === "IG KeepEat" && (
+                                <div className="absolute inset-0 z-[1] flex items-center justify-center overflow-hidden">
+                                    <div className="scale-75 origin-center opacity-80 group-hover:opacity-100 transition-opacity">
+                                        <NavigationBar active="home" />
+                                    </div>
+                                </div>
+                            )}
 
                             <div className="relative z-10 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                                 <span className="inline-block px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-xs font-semibold mb-4 text-white/90">
