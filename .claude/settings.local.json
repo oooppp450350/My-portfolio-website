@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "Bash(python -c \":*)",
+      "Bash(gh pr:*)",
+      "Bash(gh --version)",
+      "Bash(npm show:*)",
+      "mcp__claude_ai_Figma__get_design_context",
+      "Bash(python:*)"
     ]
   }
 }
