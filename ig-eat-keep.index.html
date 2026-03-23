@@ -5846,7 +5846,7 @@
                 <!-- Slider with tick marks overlay -->
                 <div style="position:relative;padding:6px 0;">
                   <input type="range" min="0" max="1000" value="200" step="50" class="ig-price-range" id="fg-price-slider" oninput="igUpdatePrice(this)">
-                  <div style="position:absolute;top:50%;transform:translateY(-50%);left:0;right:0;display:flex;justify-content:space-between;pointer-events:none;">
+                  <div style="position:absolute;top:50%;transform:translateY(-50%);left:0;right:0;display:flex;justify-content:space-between;pointer-events:none;z-index:2;">
                     <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
                     <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
                     <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
@@ -6239,7 +6239,7 @@
     .ig-price-range {
       -webkit-appearance:none; appearance:none;
       width:100%; height:8px; background:#e6e6e6; border-radius:9999px;
-      outline:none; cursor:pointer; position:relative; z-index:1;
+      outline:none; cursor:pointer; position:relative; z-index:0;
     }
     .ig-price-range::-webkit-slider-thumb {
       -webkit-appearance:none; width:20px; height:20px; border-radius:50%;
