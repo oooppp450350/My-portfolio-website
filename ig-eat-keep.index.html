@@ -5693,15 +5693,27 @@
               <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">篩選框－類型 · 點擊 Tag 切換 · 點選單展開子項</div>
             </div>
 
-            <!-- ── Frame 2: 造訪狀態 ── -->
+            <!-- ── Frame 2: 造訪狀態 (Figma node 160:6873) ── -->
             <div style="display:inline-flex;flex-direction:column;gap:10px;">
-              <div class="ig-frame-card" style="width:340px;">
-                <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px;">
-                  <img src="https://www.figma.com/api/mcp/asset/d4bce33c-c185-4243-9aae-eec236257133" width="24" height="24" alt="">
-                  <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#4d4d4d;letter-spacing:-0.5px;">造訪狀態：</span>
+              <div class="ig-frame-card" style="width:340px;padding:8px;">
+                <!-- 標題列 -->
+                <div style="display:flex;gap:12px;align-items:center;justify-content:center;margin-bottom:12px;">
+                  <!-- Check square icon: 24×24, inner icon at inset 12.5% 8.33% -->
+                  <div style="width:24px;height:24px;flex-shrink:0;position:relative;overflow:hidden;">
+                    <img src="https://www.figma.com/api/mcp/asset/1300486a-614d-4b10-bc62-cc15dbe0fdd8" alt="" style="position:absolute;top:12.5%;right:8.33%;bottom:12.5%;left:12.5%;width:auto;height:auto;max-width:none;">
+                  </div>
+                  <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#4d4d4d;letter-spacing:-0.456px;white-space:nowrap;">造訪狀態：</span>
                 </div>
-                <div style="display:flex;gap:12px;flex-wrap:wrap;" class="ig-tag-group">
-                  <button class="ig-visit-btn on"><img src="https://www.figma.com/api/mcp/asset/33063891-51c6-4ebd-ae92-b692e76f244a" width="16" height="16" alt=""><span>尚未造訪</span></button>
+                <!-- Tag Toggle Group -->
+                <div style="display:flex;gap:12px;" class="ig-tag-group">
+                  <!-- 尚未造訪 active -->
+                  <button class="ig-visit-btn on">
+                    <!-- Check icon 16×16, inner at top:25% left/right:16.67% bottom:29.17% -->
+                    <div style="width:16px;height:16px;flex-shrink:0;position:relative;overflow:hidden;">
+                      <img src="https://www.figma.com/api/mcp/asset/e10e36a6-4794-4720-9a04-3ddabcf12a1f" alt="" style="position:absolute;top:25%;right:16.67%;bottom:29.17%;left:16.67%;width:auto;height:auto;max-width:none;">
+                    </div>
+                    <span>尚未造訪</span>
+                  </button>
                   <button class="ig-visit-btn">已造訪</button>
                   <button class="ig-visit-btn">口袋名單</button>
                 </div>
@@ -6067,7 +6079,7 @@
     }
 
     // ── Tag group: 互斥點擊切換 ──────────────────────
-    var CHECK_SRC = 'https://www.figma.com/api/mcp/asset/33063891-51c6-4ebd-ae92-b692e76f244a';
+    var CHECK_SRC = 'https://www.figma.com/api/mcp/asset/e10e36a6-4794-4720-9a04-3ddabcf12a1f';
     document.addEventListener('click', function(e) {
       var btn = e.target.closest('.ig-tag-group .ig-visit-btn');
       if (!btn) return;
@@ -6083,7 +6095,7 @@
       // activate clicked
       btn.classList.add('on');
       var label2 = btn.textContent.trim();
-      btn.innerHTML = '<img src="' + CHECK_SRC + '" width="16" height="16" alt=""><span>' + label2 + '</span>';
+      btn.innerHTML = '<div style="width:16px;height:16px;flex-shrink:0;overflow:hidden;position:relative;"><img src="' + CHECK_SRC + '" alt="" style="position:absolute;top:25%;right:16.67%;bottom:29.17%;left:16.67%;width:auto;height:auto;max-width:none;"></div><span>' + label2 + '</span>';
       // 類型子選單聯動
       var subId = btn.dataset.sub;
       var typeGroup = btn.closest('#fg-type');
