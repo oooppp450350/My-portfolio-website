@@ -5922,6 +5922,161 @@
           <!-- Frame 卡片 Grid -->
           <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;">
 
+            <!-- ── Full Page: 篩選頁_展開選項狀態 ── -->
+            <div style="display:inline-flex;flex-direction:column;gap:10px;align-self:flex-start;">
+              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;letter-spacing:1px;">篩選頁_展開選項狀態 · 完整畫面 · 可互動</div>
+              <div style="background:#fff;border:1px solid rgba(0,0,0,0.12);border-radius:2px;width:390px;display:flex;flex-direction:column;overflow:hidden;">
+                <!-- Scrollable content area -->
+                <div style="flex:1;overflow-y:auto;max-height:680px;padding:15px 15px 0;">
+                  <!-- Back arrow -->
+                  <button style="background:none;border:none;cursor:pointer;padding:0;margin-bottom:24px;display:block;">
+                    <img src="https://www.figma.com/api/mcp/asset/effdd393-b01f-4155-8fd8-1e16db3ae9bc" width="40" height="40" alt="←" style="display:block;">
+                  </button>
+                  <div style="display:flex;flex-direction:column;gap:32px;padding-bottom:24px;">
+                    <!-- 搜尋篩選框 -->
+                    <div style="display:flex;flex-direction:column;gap:16px;">
+                      <div style="background:#ece6f0;border-radius:28px;height:44px;display:flex;align-items:center;padding:4px;overflow:hidden;">
+                        <div style="width:48px;height:40px;flex-shrink:0;"></div>
+                        <div style="flex:1;font-family:'Roboto',sans-serif;font-size:16px;color:#49454f;letter-spacing:0.5px;">Hinted search text</div>
+                        <div style="width:48px;height:40px;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+                          <img src="https://www.figma.com/api/mcp/asset/a88fb9ec-a4d4-49a0-b379-67bf8283fb9b" width="24" height="24" alt="">
+                        </div>
+                      </div>
+                      <div style="display:flex;align-items:center;gap:8px;padding:0 8px;">
+                        <span style="font-family:'SF Pro Display',sans-serif;font-size:16px;color:#000;white-space:nowrap;flex-shrink:0;">目前預設：</span>
+                        <div style="display:flex;gap:8px;overflow:hidden;flex:1;">
+                          <div style="border:1px solid #cac4d0;border-radius:8px;padding:6px 12px;font-family:'Roboto',sans-serif;font-size:14px;font-weight:500;color:#49454f;white-space:nowrap;flex-shrink:0;">#活動</div>
+                          <div style="border:1px solid #cac4d0;border-radius:8px;padding:6px 12px;font-family:'Roboto',sans-serif;font-size:14px;font-weight:500;color:#49454f;white-space:nowrap;flex-shrink:0;">#台中</div>
+                          <div style="border:1px solid #cac4d0;border-radius:8px;padding:6px 12px;font-family:'Roboto',sans-serif;font-size:14px;font-weight:500;color:#49454f;white-space:nowrap;flex-shrink:0;">#價格區間</div>
+                        </div>
+                        <button style="background:none;border:none;cursor:pointer;flex-shrink:0;padding:0;">
+                          <img src="https://www.figma.com/api/mcp/asset/575b04f1-f68a-4aab-8207-ec22f6e307dc" width="24" height="24" alt="">
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Filter sections -->
+                    <div style="display:flex;flex-direction:column;gap:36px;">
+                      <!-- 地點 -->
+                      <button onclick="igToggleLocationFull(this)" style="border-top:1px solid #000;border-bottom:1px solid #000;background:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:24px 8px;width:100%;box-sizing:border-box;text-align:left;">
+                        <div style="display:flex;gap:12px;align-items:center;">
+                          <img src="https://www.figma.com/api/mcp/asset/372d41bc-abb2-4a4a-beae-9f4804c633b1" width="24" height="24" alt="">
+                          <span id="fp-loc-label" style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#000;letter-spacing:-0.456px;white-space:nowrap;">地點</span>
+                        </div>
+                        <img src="https://www.figma.com/api/mcp/asset/d8fc4500-49b3-4e57-bbe2-3dcc83ff7418" width="24" height="24" alt="">
+                      </button>
+                      <!-- 類型 -->
+                      <div style="padding:12px 8px;display:flex;flex-direction:column;gap:12px;">
+                        <div style="display:flex;gap:12px;align-items:center;">
+                          <img src="https://www.figma.com/api/mcp/asset/561cddee-9342-4e84-a2c3-88538ce4fc39" width="24" height="24" alt="">
+                          <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#000;letter-spacing:-0.456px;">類型：</span>
+                        </div>
+                        <div style="display:flex;flex-direction:column;gap:12px;">
+                          <div style="display:flex;gap:12px;" class="ig-tag-group" id="fp-type">
+                            <button class="ig-visit-btn on" data-sub="fp-sub-restaurant"><div class="ig-chk-icon-wrap"><img src="https://www.figma.com/api/mcp/asset/51cc8ba5-5c5f-441b-879c-b162e2260689" alt="" class="ig-chk-img"></div><span>餐廳</span></button>
+                            <button class="ig-visit-btn" data-sub="">景點</button>
+                            <button class="ig-visit-btn" data-sub="fp-sub-event">活動</button>
+                          </div>
+                          <div id="fp-sub-restaurant">
+                            <button class="ig-dropdown-btn" onclick="igToggleDrop(this)">
+                              <span style="font-family:'Roboto',sans-serif;font-size:14px;color:#000;">餐廳類型</span>
+                              <img src="https://www.figma.com/api/mcp/asset/50877434-dd21-46d3-87b0-94e56aa5b7dc" width="12" height="14" alt="" class="ig-drop-arrow" style="flex-shrink:0;object-fit:contain;">
+                            </button>
+                            <div class="ig-dropdown-body ig-tag-group" style="display:none;flex-wrap:wrap;gap:8px;">
+                              <button class="ig-visit-btn">燒烤</button>
+                              <button class="ig-visit-btn">火鍋</button>
+                              <button class="ig-visit-btn">義式料理</button>
+                              <button class="ig-visit-btn">泰式料理</button>
+                            </div>
+                          </div>
+                          <div id="fp-sub-event" style="display:none;">
+                            <button class="ig-dropdown-btn" onclick="igToggleDrop(this)">
+                              <span style="font-family:'Roboto',sans-serif;font-size:14px;color:#000;">活動類型</span>
+                              <img src="https://www.figma.com/api/mcp/asset/50877434-dd21-46d3-87b0-94e56aa5b7dc" width="12" height="14" alt="" class="ig-drop-arrow" style="flex-shrink:0;object-fit:contain;">
+                            </button>
+                            <div class="ig-dropdown-body ig-tag-group" style="display:none;flex-wrap:wrap;gap:8px;">
+                              <button class="ig-visit-btn">音樂祭</button>
+                              <button class="ig-visit-btn">市集</button>
+                              <button class="ig-visit-btn">展覽</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 造訪狀態 -->
+                      <div style="padding:12px 8px;display:flex;flex-direction:column;gap:12px;">
+                        <div style="display:flex;gap:12px;align-items:center;">
+                          <img src="https://www.figma.com/api/mcp/asset/f128915b-87a8-4ad7-b619-2acc975b9b7e" width="24" height="24" alt="">
+                          <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#000;letter-spacing:-0.456px;">造訪狀態：</span>
+                        </div>
+                        <div style="display:flex;gap:12px;" class="ig-tag-group">
+                          <button class="ig-visit-btn on"><div class="ig-chk-icon-wrap"><img src="https://www.figma.com/api/mcp/asset/51cc8ba5-5c5f-441b-879c-b162e2260689" alt="" class="ig-chk-img"></div><span>尚未造訪</span></button>
+                          <button class="ig-visit-btn">已造訪</button>
+                          <button class="ig-visit-btn">口袋名單</button>
+                        </div>
+                      </div>
+                      <!-- 價格區間 -->
+                      <div style="padding:0 8px;display:flex;flex-direction:column;gap:12px;">
+                        <div style="display:flex;gap:12px;align-items:center;">
+                          <img src="https://www.figma.com/api/mcp/asset/8f8266aa-ebd2-4f3d-bb2b-20a711aafce8" width="24" height="24" alt="">
+                          <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#000;letter-spacing:-0.456px;">價格區間：</span>
+                        </div>
+                        <div>
+                          <div style="display:flex;justify-content:space-between;font-family:'Inter',sans-serif;font-size:14px;color:#1e1e1e;margin-bottom:12px;">
+                            <span>$0~100</span><span>$1000&lt;</span>
+                          </div>
+                          <div style="position:relative;height:20px;display:flex;align-items:center;">
+                            <div style="position:absolute;left:0;right:0;height:8px;background:#e6e6e6;border-radius:9999px;z-index:0;"></div>
+                            <div style="position:absolute;left:0;right:0;display:flex;justify-content:space-between;pointer-events:none;z-index:1;">
+                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
+                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
+                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
+                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
+                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
+                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
+                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
+                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
+                            </div>
+                            <input type="range" min="0" max="1000" value="200" step="100" class="ig-price-range" oninput="igUpdatePriceFp(this)" style="position:relative;z-index:2;width:100%;">
+                          </div>
+                          <div style="position:relative;height:24px;margin-top:4px;">
+                            <span id="fp-price-label" style="position:absolute;left:20%;transform:translateX(-50%);font-family:'Inter',sans-serif;font-size:14px;color:#1e1e1e;white-space:nowrap;">$200~400</span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 套用 + 確認 -->
+                      <div style="display:flex;flex-direction:column;gap:24px;padding:0 8px;">
+                        <button onclick="igToggleApplyFp(this)" style="background:none;border:none;cursor:pointer;display:flex;gap:12px;align-items:center;padding:0;">
+                          <div class="fg-chk-wrap" style="width:28px;height:28px;border:1px solid #000;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                            <svg class="fg-chk-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" style="display:none;">
+                              <path d="M9.54998 18.0001L3.84998 12.3001L5.27498 10.8751L9.54998 15.1501L18.725 5.9751L20.15 7.4001L9.54998 18.0001Z" fill="#4d4d4d"/>
+                            </svg>
+                          </div>
+                          <span style="font-family:'Inter',sans-serif;font-size:16px;color:#000;">套用當前篩選條件為預設顯示</span>
+                        </button>
+                        <button style="background:#2c2c2c;border:1px solid #2c2c2c;border-radius:8px;height:54px;width:100%;color:#f5f5f5;font-family:'Inter',sans-serif;font-size:16px;cursor:pointer;">確認</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Bottom nav (sticky) -->
+                <div style="flex-shrink:0;background:#f3edf7;height:76px;display:flex;align-items:flex-end;padding:0 8px;box-sizing:border-box;">
+                  <div style="display:flex;width:100%;">
+                    <button class="fp-nav-item" onclick="igSetFpNav(this)" style="flex:1;display:flex;flex-direction:column;gap:4px;align-items:center;justify-content:center;padding:12px 0 16px;background:none;border:none;cursor:pointer;">
+                      <img src="https://www.figma.com/api/mcp/asset/1278db72-ffb0-49ff-90aa-448699c76040" width="24" height="24" alt="">
+                      <span style="font-family:'Roboto',sans-serif;font-size:12px;color:#49454f;letter-spacing:0.5px;">篩選</span>
+                    </button>
+                    <button class="fp-nav-item" onclick="igSetFpNav(this)" style="flex:1;display:flex;flex-direction:column;gap:4px;align-items:center;justify-content:center;padding:12px 0 16px;background:none;border:none;cursor:pointer;">
+                      <img src="https://www.figma.com/api/mcp/asset/ab461e07-f436-4aca-a9fa-86a8505fbf2b" width="24" height="24" alt="">
+                      <span style="font-family:'Roboto',sans-serif;font-size:12px;font-weight:500;color:#49454f;letter-spacing:0.5px;">匯入 Reels</span>
+                    </button>
+                    <button class="fp-nav-item" onclick="igSetFpNav(this)" style="flex:1;display:flex;flex-direction:column;gap:4px;align-items:center;justify-content:center;padding:12px 0 16px;background:none;border:none;cursor:pointer;">
+                      <img src="https://www.figma.com/api/mcp/asset/8799ec4e-d297-483e-b952-3e532c414855" width="24" height="24" alt="">
+                      <span style="font-family:'Roboto',sans-serif;font-size:12px;font-weight:500;color:#49454f;letter-spacing:0.5px;">個人頁面</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <!-- ── Frame 1: 篩選框－類型 ── -->
             <div style="display:inline-flex;flex-direction:column;gap:10px;">
               <div class="ig-frame-card" style="width:340px;">
@@ -6107,7 +6262,7 @@
       <!-- ── 選單元件 Slide ── -->
       <div id="comp-menu" class="comp-slide" style="display:none;">
         <div
-          style="background:#FFFFFF;border:1px solid rgba(0,0,0,0.1);border-radius:2px;padding:32px;overflow-x:auto;-webkit-overflow-scrolling:touch;">
+          style="background:#FFFFFF;border:1px solid rgba(0,0,0,0.1);border-radius:2px;padding:32px;overflow-x:hidden;">
           <div
             style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:24px;">
             MENU COMPONENTS · 選單元件</div>
@@ -6318,7 +6473,7 @@
 
             <!-- ── 右欄: 長條清單 (interactive) ── -->
             <div style="display:flex;flex-direction:column;gap:8px;">
-              <div style="width:240px;border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+              <div style="width:175px;border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
                 <div
                   style="display:flex;align-items:center;justify-content:space-between;padding:0 8px 0 16px;height:48px;background:linear-gradient(180deg,#FF8A80 16%,#FF5A4F 100%);">
                   <span
@@ -6327,7 +6482,7 @@
                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpolygon points='2,4 12,4 7,10' fill='%23ffffff'/%3E%3C/svg%3E" width="16" height="16" alt="" style="object-fit:contain;">
                   </div>
                 </div>
-                <div style="max-height:360px;overflow-y:auto;">
+                <div style="width:175px;height:360px;overflow-y:auto;overflow-x:hidden;">
                   <button class="ig-chk-row" onclick="igToggleRegion(this)">
                     <span>不限(預設)</span>
                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
@@ -6432,12 +6587,13 @@
       var label2 = btn.querySelector('span') ? btn.querySelector('span').textContent : btn.textContent.trim();
       btn.classList.add('on');
       btn.innerHTML = '<div class="ig-chk-icon-wrap"><img src="' + CHECK_SRC + '" alt="" class="ig-chk-img"></div><span>' + label2 + '</span>';
-      // 類型子選單聯動
+      // 類型子選單聯動 (generic: supports fg-type, fp-type, etc.)
       var subId = btn.dataset.sub;
-      var typeGroup = btn.closest('#fg-type');
+      var typeGroup = btn.closest('[id$="-type"]');
       if (typeGroup) {
-        document.querySelectorAll('[id^="fg-sub-"]').forEach(function (s) { s.style.display = 'none'; });
-        if (subId) { document.getElementById(subId).style.display = 'block'; }
+        var pfx = typeGroup.id.replace('-type', '');
+        document.querySelectorAll('[id^="' + pfx + '-sub-"]').forEach(function (s) { s.style.display = 'none'; });
+        if (subId) { var subEl = document.getElementById(subId); if (subEl) subEl.style.display = 'block'; }
       }
     });
 
@@ -6476,6 +6632,46 @@
       // move label to sit under the thumb
       var pct = (v - parseInt(input.min)) / (parseInt(input.max) - parseInt(input.min));
       lbl.style.left = pct * 100 + '%';
+    }
+
+    // ── 篩選頁 full-page functions ────────────────────
+    var FP_LOCATIONS = ['台南/市區', '台北/大安區', '高雄/鹽埕區'];
+    function igToggleLocationFull(btn) {
+      var lbl = document.getElementById('fp-loc-label');
+      if (!lbl) return;
+      var isSelected = lbl.dataset.selected === '1';
+      if (!isSelected) {
+        var shuffled = FP_LOCATIONS.slice().sort(function () { return Math.random() - 0.5; });
+        lbl.textContent = shuffled[0] + '，' + shuffled[1];
+        lbl.style.fontSize = '16px'; lbl.style.fontWeight = '500';
+        lbl.dataset.selected = '1';
+      } else {
+        lbl.textContent = '地點';
+        lbl.style.fontSize = '24px'; lbl.style.fontWeight = '600';
+        lbl.dataset.selected = '0';
+      }
+    }
+    function igUpdatePriceFp(input) {
+      var v = parseInt(input.value);
+      var hi = Math.min(v + 200, 1000);
+      var lbl = document.getElementById('fp-price-label');
+      if (!lbl) return;
+      lbl.textContent = '$' + v + '~' + (hi < 1000 ? hi : '1000+');
+      var pct = (v - parseInt(input.min)) / (parseInt(input.max) - parseInt(input.min));
+      lbl.style.left = pct * 100 + '%';
+    }
+    function igToggleApplyFp(btn) {
+      var icon = btn.querySelector('.fg-chk-icon');
+      var wrap = btn.querySelector('.fg-chk-wrap');
+      if (!icon) return;
+      var isOn = icon.style.display !== 'none';
+      icon.style.display = isOn ? 'none' : 'block';
+      wrap.style.borderColor = isOn ? '#000' : '#FF6F61';
+    }
+    function igSetFpNav(btn) {
+      var bar = btn.closest('div');
+      bar.querySelectorAll('.fp-nav-item').forEach(function (b) { b.style.opacity = '0.5'; });
+      btn.style.opacity = '1';
     }
 
     // ── 套用篩選 checkbox (local, per-frame) ─────────
@@ -7013,9 +7209,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 240px;
+      width: 100%;
       height: 40px;
       padding: 0 12px;
+      box-sizing: border-box;
       border-left: 1px solid #d0d0d0;
       border-right: 1px solid #d0d0d0;
       border-bottom: 1px solid #d0d0d0;
