@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" style="background:#fff;font-family:sans-serif">
+  <!-- Status bar -->
+  <rect x="0" y="0" width="390" height="44" fill="#f5f5f5"/>
+  <text x="20" y="28" font-size="12" fill="#333">9:41</text>
+  <rect x="320" y="14" width="50" height="16" rx="4" fill="#ccc"/>
+
+  <!-- Page title -->
+  <text x="195" y="80" font-size="18" font-weight="600" fill="#222" text-anchor="middle">我的收藏清單</text>
+
+  <!-- Sort/filter row -->
+  <rect x="15" y="96" width="360" height="36" rx="4" fill="#f5f5f5"/>
+  <text x="28" y="120" font-size="13" fill="#555">排序：最新加入</text>
+  <text x="330" y="120" font-size="13" fill="#555">篩選 ▾</text>
+
+  <!-- Section label -->
+  <text x="15" y="152" font-size="14" font-weight="600" fill="#333">自訂分類標籤</text>
+
+  <!-- Tags -->
+  <rect x="15" y="160" width="60" height="28" rx="14" fill="#2c2c2c"/>
+  <text x="44" y="179" font-size="12" fill="#fff" text-anchor="middle">全部</text>
+  <rect x="83" y="160" width="68" height="28" rx="14" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
+  <text x="117" y="179" font-size="12" fill="#555" text-anchor="middle"># 台南市</text>
+  <rect x="159" y="160" width="62" height="28" rx="14" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
+  <text x="190" y="179" font-size="12" fill="#555" text-anchor="middle"># 餐廳</text>
+  <rect x="229" y="160" width="62" height="28" rx="14" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
+  <text x="260" y="179" font-size="12" fill="#555" text-anchor="middle"># 景點</text>
+  <rect x="299" y="160" width="76" height="28" rx="14" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
+  <text x="337" y="179" font-size="12" fill="#555" text-anchor="middle"># 未造訪</text>
+
+  <!-- Divider -->
+  <line x1="15" y1="198" x2="375" y2="198" stroke="#eee" stroke-width="1"/>
+
+  <!-- List items with checkboxes and status -->
+  <!-- Item 1 -->
+  <rect x="15" y="208" width="360" height="68" rx="4" fill="#f9f9f9"/>
+  <rect x="25" y="222" width="16" height="16" fill="none" stroke="#2c2c2c" stroke-width="1.5"/>
+  <rect x="50" y="218" width="48" height="40" rx="4" fill="#e0e0e0"/>
+  <line x1="50" y1="238" x2="98" y2="238" stroke="#bbb" stroke-width="1"/>
+  <line x1="50" y1="218" x2="98" y2="258" stroke="#bbb" stroke-width="1"/>
+  <line x1="98" y1="218" x2="50" y2="258" stroke="#bbb" stroke-width="1"/>
+  <rect x="108" y="218" width="140" height="12" rx="3" fill="#ddd"/>
+  <rect x="108" y="236" width="100" height="10" rx="3" fill="#e8e8e8"/>
+  <rect x="108" y="252" width="50" height="16" rx="4" fill="#eee"/>
+  <text x="116" y="264" font-size="10" fill="#666">#餐廳</text>
+  <!-- Status badge -->
+  <rect x="298" y="222" width="66" height="22" rx="11" fill="#e0f7e0"/>
+  <text x="331" y="237" font-size="11" fill="#2e7d32" text-anchor="middle">✓ 已造訪</text>
+  <!-- Share button -->
+  <rect x="340" y="248" width="28" height="22" rx="4" fill="#eee"/>
+  <text x="354" y="263" font-size="11" fill="#555" text-anchor="middle">↗</text>
+
+  <!-- Item 2 -->
+  <rect x="15" y="284" width="360" height="68" rx="4" fill="#f9f9f9"/>
+  <rect x="25" y="298" width="16" height="16" fill="none" stroke="#2c2c2c" stroke-width="1.5"/>
+  <rect x="50" y="294" width="48" height="40" rx="4" fill="#e0e0e0"/>
+  <line x1="50" y1="314" x2="98" y2="314" stroke="#bbb" stroke-width="1"/>
+  <line x1="50" y1="294" x2="98" y2="334" stroke="#bbb" stroke-width="1"/>
+  <line x1="98" y1="294" x2="50" y2="334" stroke="#bbb" stroke-width="1"/>
+  <rect x="108" y="294" width="140" height="12" rx="3" fill="#ddd"/>
+  <rect x="108" y="312" width="100" height="10" rx="3" fill="#e8e8e8"/>
+  <rect x="108" y="328" width="50" height="16" rx="4" fill="#eee"/>
+  <text x="116" y="340" font-size="10" fill="#666">#景點</text>
+  <rect x="298" y="298" width="66" height="22" rx="11" fill="#fff3e0"/>
+  <text x="331" y="313" font-size="11" fill="#e65100" text-anchor="middle">未造訪</text>
+  <rect x="340" y="324" width="28" height="22" rx="4" fill="#eee"/>
+  <text x="354" y="339" font-size="11" fill="#555" text-anchor="middle">↗</text>
+
+  <!-- Item 3 -->
+  <rect x="15" y="360" width="360" height="68" rx="4" fill="#f9f9f9"/>
+  <rect x="25" y="374" width="16" height="16" fill="none" stroke="#2c2c2c" stroke-width="1.5"/>
+  <rect x="50" y="370" width="48" height="40" rx="4" fill="#e0e0e0"/>
+  <line x1="50" y1="390" x2="98" y2="390" stroke="#bbb" stroke-width="1"/>
+  <line x1="50" y1="370" x2="98" y2="410" stroke="#bbb" stroke-width="1"/>
+  <line x1="98" y1="370" x2="50" y2="410" stroke="#bbb" stroke-width="1"/>
+  <rect x="108" y="370" width="140" height="12" rx="3" fill="#ddd"/>
+  <rect x="108" y="388" width="100" height="10" rx="3" fill="#e8e8e8"/>
+  <rect x="108" y="404" width="50" height="16" rx="4" fill="#eee"/>
+  <text x="116" y="416" font-size="10" fill="#666">#活動</text>
+  <rect x="298" y="374" width="66" height="22" rx="11" fill="#e3f2fd"/>
+  <text x="331" y="389" font-size="11" fill="#1565c0" text-anchor="middle">口袋名單</text>
+  <rect x="340" y="400" width="28" height="22" rx="4" fill="#eee"/>
+  <text x="354" y="415" font-size="11" fill="#555" text-anchor="middle">↗</text>
+
+  <!-- Item 4 -->
+  <rect x="15" y="436" width="360" height="68" rx="4" fill="#f9f9f9"/>
+  <rect x="25" y="450" width="16" height="16" fill="none" stroke="#2c2c2c" stroke-width="1.5"/>
+  <rect x="50" y="446" width="48" height="40" rx="4" fill="#e0e0e0"/>
+  <line x1="50" y1="466" x2="98" y2="466" stroke="#bbb" stroke-width="1"/>
+  <line x1="50" y1="446" x2="98" y2="486" stroke="#bbb" stroke-width="1"/>
+  <line x1="98" y1="446" x2="50" y2="486" stroke="#bbb" stroke-width="1"/>
+  <rect x="108" y="446" width="140" height="12" rx="3" fill="#ddd"/>
+  <rect x="108" y="464" width="100" height="10" rx="3" fill="#e8e8e8"/>
+  <rect x="108" y="480" width="50" height="16" rx="4" fill="#eee"/>
+  <text x="116" y="492" font-size="10" fill="#666">#餐廳</text>
+  <rect x="298" y="450" width="66" height="22" rx="11" fill="#e0f7e0"/>
+  <text x="331" y="465" font-size="11" fill="#2e7d32" text-anchor="middle">✓ 已造訪</text>
+  <rect x="340" y="476" width="28" height="22" rx="4" fill="#eee"/>
+  <text x="354" y="491" font-size="11" fill="#555" text-anchor="middle">↗</text>
+
+  <!-- Batch actions bar -->
+  <rect x="15" y="524" width="360" height="50" rx="8" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="30" y="554" font-size="13" fill="#555">已選 2 項</text>
+  <!-- share btn -->
+  <rect x="200" y="534" width="80" height="30" rx="6" fill="#2c2c2c"/>
+  <text x="240" y="554" font-size="12" fill="#fff" text-anchor="middle">分享</text>
+  <!-- delete btn -->
+  <rect x="290" y="534" width="72" height="30" rx="6" fill="#ffebee"/>
+  <text x="326" y="554" font-size="12" fill="#c62828" text-anchor="middle">刪除</text>
+
+  <!-- ⚠ Reels下架警示 -->
+  <rect x="15" y="590" width="360" height="60" rx="6" fill="#fff8e1" stroke="#ffe082" stroke-width="1"/>
+  <text x="34" y="614" font-size="12" fill="#f57f17">⚠ 1 則 Reel 已下架</text>
+  <rect x="34" y="624" width="200" height="10" rx="3" fill="#ffe082"/>
+  <text x="338" y="630" font-size="12" fill="#f57f17" text-anchor="end">查看 ›</text>
+
+  <!-- Bottom nav -->
+  <rect x="0" y="768" width="390" height="76" fill="#f3edf7"/>
+  <g transform="translate(65,780)">
+    <rect x="0" y="0" width="24" height="24" rx="3" fill="#ccc"/>
+    <text x="12" y="42" font-size="11" fill="#49454f" text-anchor="middle">篩選</text>
+  </g>
+  <g transform="translate(183,780)">
+    <rect x="0" y="0" width="24" height="24" rx="12" fill="#ccc"/>
+    <text x="12" y="42" font-size="11" fill="#49454f" text-anchor="middle">匯入 Reels</text>
+  </g>
+  <g transform="translate(301,780)">
+    <rect x="0" y="0" width="24" height="24" rx="3" fill="#2c2c2c"/>
+    <text x="12" y="42" font-size="11" fill="#2c2c2c" text-anchor="middle" font-weight="600">個人頁面</text>
+  </g>
+</svg>
