@@ -6274,118 +6274,107 @@
           <div
             style="font-family:'Roboto Mono',monospace;font-size:10px;color:#b0b0b0;letter-spacing:1.5px;margin-bottom:16px;">
             B · 選單操作元件 · 277-6114</div>
-          <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;">
+          <div style="display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start;">
 
-            <!-- ── Card B1: 下拉選單鈕 ── -->
-            <div style="display:inline-flex;flex-direction:column;gap:10px;">
-              <div class="ig-frame-card" style="padding:12px;display:inline-flex;flex-direction:column;">
+            <!-- ── 左欄: 搜尋列 + 下拉選單鈕 + 篩選框 ── -->
+            <div style="display:flex;flex-direction:column;gap:16px;">
+              <!-- 搜尋列佔位 -->
+              <div style="width:148px;height:32px;background:#fcfcfc;border:1px solid #d0d0d0;border-radius:3px;"></div>
+
+              <!-- 下拉選單鈕 -->
+              <div style="display:flex;flex-direction:column;gap:8px;">
                 <div
-                  style="display:flex;align-items:center;justify-content:space-between;width:135px;height:40px;padding:0 4px 0 12px;box-sizing:border-box;background:linear-gradient(180deg,#FF8A80 16%,#FF5A4F 100%);border-radius:4px;">
+                  style="display:flex;align-items:center;justify-content:space-between;width:240px;height:48px;padding:0 8px 0 16px;box-sizing:border-box;background:linear-gradient(180deg,#FF8A80 16%,#FF5A4F 100%);border-radius:4px;">
                   <span
-                    style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:700;color:#fcfcfc;letter-spacing:1px;white-space:nowrap;">區域</span>
+                    style="font-family:'Noto Sans TC',sans-serif;font-size:16px;font-weight:700;color:#fcfcfc;letter-spacing:1px;">區域</span>
                   <div style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;">
-                    <img src="https://www.figma.com/api/mcp/asset/b3f51f0f-d85c-4db6-8fef-0d63f937d834" width="14"
-                      height="14" alt="" style="object-fit:contain;">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpolygon points='2,4 12,4 7,10' fill='%23ffffff'/%3E%3C/svg%3E" width="16" height="16" alt="" style="object-fit:contain;">
                   </div>
                 </div>
+                <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">下拉選單鈕</div>
               </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">下拉選單鈕</div>
-            </div>
 
-            <!-- ── Card B2: 篩選框 (off / on) ── -->
-            <div style="display:inline-flex;flex-direction:column;gap:10px;">
-              <div class="ig-frame-card"
-                style="padding:12px;display:inline-flex;flex-direction:column;gap:0;overflow:hidden;">
-                <div
-                  style="display:flex;align-items:center;justify-content:space-between;width:135px;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-left:1px solid #d0d0d0;border-right:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;">
-                  <span
-                    style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">不限(預設)</span>
-                  <img src="https://www.figma.com/api/mcp/asset/4cd4f97d-581d-42f1-8181-d24e62d2941a" width="20"
-                    height="20" alt="" style="flex-shrink:0;object-fit:contain;">
-                </div>
-                <div
-                  style="display:flex;align-items:center;justify-content:space-between;width:135px;height:40px;padding:0 12px;box-sizing:border-box;background:#efefef;border:1px solid #d0d0d0;">
-                  <span
-                    style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#4d4d4d;letter-spacing:1px;white-space:nowrap;">中西區</span>
-                  <img src="https://www.figma.com/api/mcp/asset/8a85f2cf-5e54-4b46-8591-d1127eb4e5e7" width="20"
-                    height="20" alt="" style="flex-shrink:0;object-fit:contain;">
-                </div>
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">篩選框 · off / on</div>
-            </div>
-
-            <!-- ── Card B3: 長條清單 (interactive) ── -->
-            <div style="display:inline-flex;flex-direction:column;gap:10px;">
-              <div class="ig-frame-card" style="padding:0;overflow:hidden;width:135px;">
-                <div
-                  style="display:flex;align-items:center;justify-content:space-between;padding:0 4px 0 12px;height:40px;background:linear-gradient(180deg,#FF8A80 16%,#FF5A4F 100%);border-radius:4px 4px 0 0;">
-                  <span
-                    style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:700;color:#fcfcfc;letter-spacing:1px;">區域</span>
-                  <div style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;">
-                    <img src="https://www.figma.com/api/mcp/asset/b3f51f0f-d85c-4db6-8fef-0d63f937d834" width="14"
-                      height="14" alt="" style="object-fit:contain;">
+              <!-- 篩選框 off / on -->
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <div style="border:1.5px dashed #8b7fe8;border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:8px;">
+                  <!-- off -->
+                  <div
+                    style="display:flex;align-items:center;justify-content:space-between;width:220px;height:44px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border:1px solid #d0d0d0;border-radius:4px;">
+                    <span
+                      style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;">不限(預設)</span>
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3C/svg%3E" width="22" height="22" alt="" style="flex-shrink:0;object-fit:contain;">
+                  </div>
+                  <!-- on -->
+                  <div
+                    style="display:flex;align-items:center;justify-content:space-between;width:220px;height:44px;padding:0 12px;box-sizing:border-box;background:#efefef;border:1px solid #d0d0d0;border-radius:4px;">
+                    <span
+                      style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#4d4d4d;letter-spacing:1px;">不限(預設)</span>
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3Cpolyline points='5,10.5 8.5,14 15,7' fill='none' stroke='%234d4d4d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" width="22" height="22" alt="" style="flex-shrink:0;object-fit:contain;">
                   </div>
                 </div>
-                <div style="max-height:280px;overflow-y:auto;">
+                <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">篩選框 · off / on</div>
+              </div>
+            </div>
+
+            <!-- ── 右欄: 長條清單 (interactive) ── -->
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="width:240px;border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+                <div
+                  style="display:flex;align-items:center;justify-content:space-between;padding:0 8px 0 16px;height:48px;background:linear-gradient(180deg,#FF8A80 16%,#FF5A4F 100%);">
+                  <span
+                    style="font-family:'Noto Sans TC',sans-serif;font-size:16px;font-weight:700;color:#fcfcfc;letter-spacing:1px;">區域</span>
+                  <div style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpolygon points='2,4 12,4 7,10' fill='%23ffffff'/%3E%3C/svg%3E" width="16" height="16" alt="" style="object-fit:contain;">
+                  </div>
+                </div>
+                <div style="max-height:360px;overflow-y:auto;">
                   <button class="ig-chk-row" onclick="igToggleRegion(this)">
                     <span>不限(預設)</span>
-                    <img src="https://www.figma.com/api/mcp/asset/4cd4f97d-581d-42f1-8181-d24e62d2941a" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
                   </button>
                   <button class="ig-chk-row ig-chk-on" onclick="igToggleRegion(this)">
                     <span>中西區</span>
-                    <img src="https://www.figma.com/api/mcp/asset/8a85f2cf-5e54-4b46-8591-d1127eb4e5e7" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3Cpolyline points='5,10.5 8.5,14 15,7' fill='none' stroke='%234d4d4d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
                   </button>
                   <button class="ig-chk-row ig-chk-on" onclick="igToggleRegion(this)">
                     <span>東區</span>
-                    <img src="https://www.figma.com/api/mcp/asset/8a85f2cf-5e54-4b46-8591-d1127eb4e5e7" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3Cpolyline points='5,10.5 8.5,14 15,7' fill='none' stroke='%234d4d4d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
                   </button>
                   <button class="ig-chk-row ig-chk-on" onclick="igToggleRegion(this)">
                     <span>北區</span>
-                    <img src="https://www.figma.com/api/mcp/asset/8a85f2cf-5e54-4b46-8591-d1127eb4e5e7" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3Cpolyline points='5,10.5 8.5,14 15,7' fill='none' stroke='%234d4d4d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
                   </button>
                   <button class="ig-chk-row ig-chk-on" onclick="igToggleRegion(this)">
                     <span>南區</span>
-                    <img src="https://www.figma.com/api/mcp/asset/8a85f2cf-5e54-4b46-8591-d1127eb4e5e7" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3Cpolyline points='5,10.5 8.5,14 15,7' fill='none' stroke='%234d4d4d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
                   </button>
                   <button class="ig-chk-row ig-chk-on" onclick="igToggleRegion(this)">
                     <span>永康區</span>
-                    <img src="https://www.figma.com/api/mcp/asset/8a85f2cf-5e54-4b46-8591-d1127eb4e5e7" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3Cpolyline points='5,10.5 8.5,14 15,7' fill='none' stroke='%234d4d4d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
                   </button>
                   <button class="ig-chk-row" onclick="igToggleRegion(this)">
                     <span>善化</span>
-                    <img src="https://www.figma.com/api/mcp/asset/4cd4f97d-581d-42f1-8181-d24e62d2941a" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
                   </button>
                   <button class="ig-chk-row" onclick="igToggleRegion(this)">
                     <span>新市</span>
-                    <img src="https://www.figma.com/api/mcp/asset/4cd4f97d-581d-42f1-8181-d24e62d2941a" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
                   </button>
                   <button class="ig-chk-row" onclick="igToggleRegion(this)">
                     <span>七股</span>
-                    <img src="https://www.figma.com/api/mcp/asset/4cd4f97d-581d-42f1-8181-d24e62d2941a" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
                   </button>
                   <button class="ig-chk-row" onclick="igToggleRegion(this)">
                     <span>麻豆</span>
-                    <img src="https://www.figma.com/api/mcp/asset/4cd4f97d-581d-42f1-8181-d24e62d2941a" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
                   </button>
                   <button class="ig-chk-row" onclick="igToggleRegion(this)">
                     <span>安南</span>
-                    <img src="https://www.figma.com/api/mcp/asset/4cd4f97d-581d-42f1-8181-d24e62d2941a" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
                   </button>
                   <button class="ig-chk-row" onclick="igToggleRegion(this)">
                     <span>新營</span>
-                    <img src="https://www.figma.com/api/mcp/asset/4cd4f97d-581d-42f1-8181-d24e62d2941a" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
                   </button>
                 </div>
               </div>
@@ -6500,8 +6489,8 @@
     }
 
     // ── 展開選單 sub-menu toggle ──
-    var CHK_ON = 'https://www.figma.com/api/mcp/asset/8a85f2cf-5e54-4b46-8591-d1127eb4e5e7';
-    var CHK_OFF = 'https://www.figma.com/api/mcp/asset/4cd4f97d-581d-42f1-8181-d24e62d2941a';
+    var CHK_ON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3Cpolyline points='5,10.5 8.5,14 15,7' fill='none' stroke='%234d4d4d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E";
+    var CHK_OFF = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3C/svg%3E";
     function igToggleSubMenu(btn) {
       var sub = document.getElementById('ig-sub-cuisine');
       var open = sub.style.display === 'flex';
@@ -6534,7 +6523,8 @@
 
     <div class="wf-layout" style="display:flex;flex-direction:column;gap:0;">
 
-      <!-- ── HMW WIREFRAME + PROTOTYPE BLOCKS ── -->
+      <!-- ── 線框稿 ── -->
+      <div class="wf-sub-section-label">線框稿</div>
       <div class="wf-left-cards">
 
         <!-- HMW 01 · 快速篩選定位 -->
@@ -6557,14 +6547,11 @@
                 <div class="wf-card-body">首頁卡片清單 + 地區篩選 + 關鍵字搜索欄，快速定位目標</div>
               </div>
             </div>
-            <div class="wf-card-right wf-figma-right">
+            <div class="wf-card-right">
               <div class="wf-embed-phone">
                 <div class="wf-embed-phone-notch"></div>
                 <img class="wf-wireframe-img" src="assets/wireframes/hmw01-wf.png" alt="篩選頁線框稿" loading="lazy">
               </div>
-              <a class="wf-figma-link"
-                href="https://www.figma.com/proto/l6LPbooCN59I8YWNDJp1O9/IG-Eat-Keeper?node-id=732-15330&scaling=scale-down"
-                target="_blank">開啟 Figma 原型 ⇗</a>
             </div>
           </div>
         </div>
@@ -6589,14 +6576,11 @@
                 <div class="wf-card-body">卡片自動擷取 Reel 截圖 + 解析店名／地點，一鍵開啟地圖</div>
               </div>
             </div>
-            <div class="wf-card-right wf-figma-right">
+            <div class="wf-card-right">
               <div class="wf-embed-phone">
                 <div class="wf-embed-phone-notch"></div>
                 <img class="wf-wireframe-img" src="assets/wireframes/hmw02-wf.png" alt="首頁線框稿" loading="lazy">
               </div>
-              <a class="wf-figma-link"
-                href="https://www.figma.com/proto/l6LPbooCN59I8YWNDJp1O9/IG-Eat-Keeper?node-id=732-15330&scaling=scale-down"
-                target="_blank">開啟 Figma 原型 ⇗</a>
             </div>
           </div>
         </div>
@@ -6620,48 +6604,74 @@
                 <div class="wf-card-body">自訂分類標籤 + 造訪狀態標記 + 一鍵分享給好友</div>
               </div>
             </div>
-            <div class="wf-card-right wf-figma-right">
+            <div class="wf-card-right">
               <div class="wf-embed-phone">
                 <div class="wf-embed-phone-notch"></div>
                 <img class="wf-wireframe-img" src="assets/wireframes/hmw05-wf.png" alt="分類線框稿" loading="lazy">
               </div>
-              <a class="wf-figma-link"
-                href="https://www.figma.com/proto/l6LPbooCN59I8YWNDJp1O9/IG-Eat-Keeper?node-id=732-15330&scaling=scale-down"
-                target="_blank">開啟 Figma 原型 ⇗</a>
             </div>
           </div>
         </div>
 
       </div><!-- /wf-left-cards -->
 
-      <!-- ── 影片展示 ── -->
-      <div style="margin-top:32px;">
-        <div class="wf-sub-section-label">影片展示</div>
-        <div class="wf-embeds-row" style="grid-template-columns:1fr;max-width:440px;margin:0 auto;">
-          <div class="wf-embed-wrap">
-            <div class="wf-embed-header">
-              <span class="wf-embed-title">PROTOTYPE WALKTHROUGH · YOUTUBE SHORTS</span>
-              <a class="wf-embed-link" href="https://youtube.com/shorts/Eor9yDwizt0?si=brXR577xfvQw43b7"
-                target="_blank">觀看影片 ⇗</a>
-            </div>
-            <div
-              style="display:flex;justify-content:center;padding:16px;background:rgba(0,0,0,0.2);border-radius:0 0 12px 12px;">
-              <div style="position:relative;width:min(56.25%,260px);padding-top:min(100%,462px);flex-shrink:0;">
-                <a href="https://youtube.com/shorts/Eor9yDwizt0" target="_blank"
-                  style="display:block;position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;overflow:hidden;text-decoration:none;">
-                  <img src="https://i.ytimg.com/vi/Eor9yDwizt0/hqdefault.jpg" alt="YouTube Shorts thumbnail"
-                    style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
-                  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);">
-                    <div class="wf-yt-play">▶</div>
-                  </div>
-                </a>
-              </div>
+      <!-- ── 原型 ── -->
+      <div class="wf-sub-section-label">原型</div>
+
+      <!-- Media embeds row -->
+      <div class="wf-embeds-row">
+
+        <!-- YouTube -->
+        <div class="wf-embed-wrap">
+          <div class="wf-embed-header">
+            <span class="wf-embed-title">PROTOTYPE WALKTHROUGH · YOUTUBE SHORTS</span>
+            <a class="wf-embed-link" href="https://youtube.com/shorts/Eor9yDwizt0?si=brXR577xfvQw43b7"
+              target="_blank">觀看影片 ↗</a>
+          </div>
+          <div
+            style="display:flex;justify-content:center;padding:16px;background:rgba(0,0,0,0.2);border-radius:0 0 12px 12px;">
+            <div style="position:relative;width:min(56.25%,260px);padding-top:min(100%,462px);flex-shrink:0;">
+              <a href="https://youtube.com/shorts/Eor9yDwizt0" target="_blank"
+                style="display:block;position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;overflow:hidden;text-decoration:none;">
+                <img src="https://i.ytimg.com/vi/Eor9yDwizt0/hqdefault.jpg" alt="YouTube Shorts thumbnail"
+                  style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);">
+                  <div class="wf-yt-play">▶</div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
-      </div>
 
-    </div><!-- /wf-embeds-row -->
+        <!-- Figma Prototype -->
+        <div class="wf-embed-wrap">
+          <div class="wf-embed-header">
+            <span class="wf-embed-title">INTERACTIVE PROTOTYPE · FIGMA</span>
+            <a class="wf-embed-link" href="https://www.figma.com/design/l6LPbooCN59I8YWNDJp1O9/IG-Eat-Keeper"
+              target="_blank">開啟原型 ↗</a>
+          </div>
+          <a href="https://www.figma.com/design/l6LPbooCN59I8YWNDJp1O9/IG-Eat-Keeper" target="_blank" style="display:flex;flex-direction:column;align-items:center;justify-content:center;
+                    gap:14px;width:100%;padding:40px 20px;background:rgba(255,255,255,0.03);
+                    border-radius:0 0 12px 12px;text-decoration:none;transition:background .2s;min-height:200px;"
+            onmouseover="this.style.background='rgba(170,232,236,0.07)'"
+            onmouseout="this.style.background='rgba(255,255,255,0.03)'">
+            <svg width="40" height="40" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 28.5C19 25.9804 20.0009 23.5641 21.7825 21.7825C23.5641 20.0009 25.9804 19 28.5 19C31.0196 19 33.4359 20.0009 35.2175 21.7825C36.9991 23.5641 38 25.9804 38 28.5C38 31.0196 36.9991 33.4359 35.2175 35.2175C33.4359 36.9991 31.0196 38 28.5 38C25.9804 38 23.5641 36.9991 21.7825 35.2175C20.0009 33.4359 19 31.0196 19 28.5Z" fill="#1ABCFE" />
+              <path d="M0 47.5C0 44.9804 1.00089 42.5641 2.78249 40.7825C4.56408 39.0009 6.98044 38 9.5 38H19V47.5C19 50.0196 17.9991 52.4359 16.2175 54.2175C14.4359 55.9991 12.0196 57 9.5 57C6.98044 57 4.56408 55.9991 2.78249 54.2175C1.00089 52.4359 0 50.0196 0 47.5Z" fill="#0ACF83" />
+              <path d="M19 0V19H28.5C31.0196 19 33.4359 17.9991 35.2175 16.2175C36.9991 14.4359 38 12.0196 38 9.5C38 6.98044 36.9991 4.56408 35.2175 2.78249C33.4359 1.00089 31.0196 0 28.5 0H19Z" fill="#FF7262" />
+              <path d="M0 9.5C0 12.0196 1.00089 14.4359 2.78249 16.2175C4.56408 17.9991 6.98044 19 9.5 19H19V0H9.5C6.98044 0 4.56408 1.00089 2.78249 2.78249C1.00089 4.56408 0 6.98044 0 9.5Z" fill="#F24E1E" />
+              <path d="M0 28.5C0 31.0196 1.00089 33.4359 2.78249 35.2175C4.56408 36.9991 6.98044 38 9.5 38H19V19H9.5C6.98044 19 4.56408 20.0009 2.78249 21.7825C1.00089 23.5641 0 25.9804 0 28.5Z" fill="#A259FF" />
+            </svg>
+            <div style="font-size:13px;color:var(--text-dim);font-family:'Roboto Mono',monospace;letter-spacing:1px;text-align:center;">
+              CLICK TO OPEN IN FIGMA
+            </div>
+            <div style="font-size:11px;color:rgba(170,232,236,0.4);font-family:'Roboto Mono',monospace;text-align:center;">
+              ⚠ Figma embed 需部署至 HTTPS 才可預覽，點此直接開啟
+            </div>
+          </a>
+        </div>
+
+      </div><!-- /wf-embeds-row -->
 
     </div><!-- /wf-layout -->
   </section>
@@ -7003,7 +7013,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 135px;
+      width: 240px;
       height: 40px;
       padding: 0 12px;
       border-left: 1px solid #d0d0d0;
