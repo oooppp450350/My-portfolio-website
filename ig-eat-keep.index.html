@@ -2570,6 +2570,9 @@
     }
 
     .wf-wireframe-img {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -5240,44 +5243,6 @@
           </div>
         </div>
 
-        <!-- Dark Mode -->
-        <div style="margin-bottom:20px;">
-          <div style="font-size:11px;color:var(--text-muted);letter-spacing:1px;margin-bottom:12px;">DARK MODE</div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;">
-            <div>
-              <div style="background:#E0E0E0;border-radius:8px;padding:14px 10px;"><span
-                  style="font-family:'Roboto Mono',monospace;font-size:11px;color:#111;">#E0E0E0</span></div>
-              <div style="font-size:11px;color:var(--text-muted);margin-top:5px;">Text Primary</div>
-            </div>
-            <div>
-              <div style="background:#BDBDBD;border-radius:8px;padding:14px 10px;"><span
-                  style="font-family:'Roboto Mono',monospace;font-size:11px;color:#111;">#BDBDBD</span></div>
-              <div style="font-size:11px;color:var(--text-muted);margin-top:5px;">Text Secondary</div>
-            </div>
-            <div>
-              <div
-                style="background:#121212;border-radius:8px;padding:14px 10px;border:1px solid rgba(255,255,255,0.1);">
-                <span style="font-family:'Roboto Mono',monospace;font-size:11px;color:#eee;">#121212</span>
-              </div>
-              <div style="font-size:11px;color:var(--text-muted);margin-top:5px;">Background Primary</div>
-            </div>
-            <div>
-              <div
-                style="background:#333333;border-radius:8px;padding:14px 10px;border:1px solid rgba(255,255,255,0.1);">
-                <span style="font-family:'Roboto Mono',monospace;font-size:11px;color:#eee;">#333333</span>
-              </div>
-              <div style="font-size:11px;color:var(--text-muted);margin-top:5px;">Background Secondary</div>
-            </div>
-            <div>
-              <div
-                style="background:#424242;border-radius:8px;padding:14px 10px;border:1px solid rgba(255,255,255,0.1);">
-                <span style="font-family:'Roboto Mono',monospace;font-size:11px;color:#eee;">#424242</span>
-              </div>
-              <div style="font-size:11px;color:var(--text-muted);margin-top:5px;">Border Gray</div>
-            </div>
-          </div>
-        </div>
-
         <!-- Brand Colors -->
         <div style="margin-bottom:20px;">
           <div style="font-size:11px;color:var(--text-muted);letter-spacing:1px;margin-bottom:12px;">BRAND · CORAL /
@@ -5782,8 +5747,7 @@
           <div
             style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:24px;">
             CARD · 382px</div>
-          <div
-            style="display:flex;flex-direction:column;gap:24px;align-items:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;">
+          <div style="display:flex;flex-direction:column;gap:24px;align-items:flex-start;">
 
             <!-- Variant5：4:3 圖片 -->
             <div>
@@ -5791,30 +5755,55 @@
                 <div class="ig-card-body">
                   <div
                     style="width:115px;height:154px;border-radius:8px;overflow:hidden;flex-shrink:0;position:relative;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="#e0e0e0"><path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1zm15.03-7c0-8-15.03-8-15.03 0h15.03zM1.02 17h15v2h-15z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="#e0e0e0">
+                      <path
+                        d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1zm15.03-7c0-8-15.03-8-15.03 0h15.03zM1.02 17h15v2h-15z" />
+                    </svg>
                   </div>
                   <div class="ig-card-info">
                     <p class="ig-card-title">衛屋茶事</p>
                     <div class="ig-card-meta">
                       <div class="ig-card-meta-row">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#909090"><circle cx="12" cy="12" r="4"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                          fill="#909090">
+                          <circle cx="12" cy="12" r="4" />
+                        </svg>
                         <span class="ig-card-meta-text">台南市北區富北街74號</span>
                       </div>
                       <div class="ig-card-meta-row">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="#909090"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                          fill="#909090">
+                          <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+                        </svg>
                         <span class="ig-card-meta-text">12:00-19:00（週三公休）</span>
                       </div>
                       <div class="ig-card-meta-row">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#ccc"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#ccc">
+                          <path
+                            d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z" />
+                        </svg>
                         <span class="ig-card-ig">fourshark_foodie</span>
                       </div>
                     </div>
                     <p class="ig-card-price">200$~360$</p>
                   </div>
                   <div class="ig-card-actions">
-                    <button class="ig-card-btn"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#909090"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg></button>
-                    <button class="ig-card-btn"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#909090"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg></button>
-                    <button class="ig-card-btn"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#909090"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg></button>
+                    <button class="ig-card-btn"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                        viewBox="0 0 24 24" fill="#909090">
+                        <path
+                          d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z" />
+                      </svg></button>
+                    <button class="ig-card-btn"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                        viewBox="0 0 24 24" fill="#909090">
+                        <path
+                          d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z" />
+                      </svg></button>
+                    <button class="ig-card-btn"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                        viewBox="0 0 24 24" fill="#909090">
+                        <path
+                          d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z" />
+                      </svg></button>
                   </div>
                 </div>
                 <div class="ig-card-tags">
@@ -5835,30 +5824,55 @@
                 <div class="ig-card-body">
                   <div
                     style="width:138px;height:138px;border-radius:8px;overflow:hidden;flex-shrink:0;position:relative;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="#e0e0e0"><path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1zm15.03-7c0-8-15.03-8-15.03 0h15.03zM1.02 17h15v2h-15z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="#e0e0e0">
+                      <path
+                        d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1zm15.03-7c0-8-15.03-8-15.03 0h15.03zM1.02 17h15v2h-15z" />
+                    </svg>
                   </div>
                   <div class="ig-card-info">
                     <p class="ig-card-title">三臭寶鍋鍋</p>
                     <div class="ig-card-meta">
                       <div class="ig-card-meta-row">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#909090"><circle cx="12" cy="12" r="4"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                          fill="#909090">
+                          <circle cx="12" cy="12" r="4" />
+                        </svg>
                         <span class="ig-card-meta-text">台南市永康區中華東</span>
                       </div>
                       <div class="ig-card-meta-row">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="#909090"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                          fill="#909090">
+                          <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+                        </svg>
                         <span class="ig-card-meta-text">09:00 - 17:00（營業中）</span>
                       </div>
                       <div class="ig-card-meta-row">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#ccc"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#ccc">
+                          <path
+                            d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z" />
+                        </svg>
                         <span class="ig-card-ig">阿瑄吃台南</span>
                       </div>
                     </div>
                     <p class="ig-card-price">200$~360$</p>
                   </div>
                   <div class="ig-card-actions">
-                    <button class="ig-card-btn"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#909090"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg></button>
-                    <button class="ig-card-btn"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#909090"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg></button>
-                    <button class="ig-card-btn"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#909090"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg></button>
+                    <button class="ig-card-btn"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                        viewBox="0 0 24 24" fill="#909090">
+                        <path
+                          d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z" />
+                      </svg></button>
+                    <button class="ig-card-btn"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                        viewBox="0 0 24 24" fill="#909090">
+                        <path
+                          d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z" />
+                      </svg></button>
+                    <button class="ig-card-btn"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                        viewBox="0 0 24 24" fill="#909090">
+                        <path
+                          d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z" />
+                      </svg></button>
                   </div>
                 </div>
                 <div class="ig-card-tags">
@@ -5884,7 +5898,9 @@
             style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:24px;">
             LOADER · 48×48px</div>
           <div style="display:flex;flex-direction:column;gap:20px;align-items:flex-start;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="#4d4d4d"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="#4d4d4d">
+              <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+            </svg>
             <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">Property 1=Default</div>
           </div>
         </div>
@@ -5899,68 +5915,117 @@
             FILTER COMPONENTS · 篩選框元件</div>
 
           <!-- Frame 卡片 Grid -->
-          <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;">
+          <div class="fg-phone-grid">
 
             <!-- ── Full Page: 篩選頁_展開選項狀態 ── -->
             <div style="display:inline-flex;flex-direction:column;gap:10px;align-self:flex-start;">
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;letter-spacing:1px;">篩選頁_展開選項狀態 · 完整畫面 · 可互動</div>
-              <div style="background:#fff;border:1px solid rgba(0,0,0,0.12);border-radius:2px;width:390px;display:flex;flex-direction:column;overflow:hidden;">
+              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;letter-spacing:1px;">
+                篩選頁_展開選項狀態 · 完整畫面 · 可互動</div>
+              <div
+                style="background:#fff;border:1px solid rgba(0,0,0,0.12);border-radius:2px;width:390px;display:flex;flex-direction:column;overflow:hidden;">
                 <!-- Scrollable content area -->
                 <div style="flex:1;overflow-y:auto;max-height:680px;padding:15px 15px 0;">
                   <!-- Back arrow -->
-                  <button style="background:none;border:none;cursor:pointer;padding:0;margin-bottom:24px;display:block;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="#000"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                  <button
+                    style="background:none;border:none;cursor:pointer;padding:0;margin-bottom:24px;display:block;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="#000">
+                      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                    </svg>
                   </button>
                   <div style="display:flex;flex-direction:column;gap:32px;padding-bottom:24px;">
                     <!-- 搜尋篩選框 -->
                     <div style="display:flex;flex-direction:column;gap:16px;">
-                      <div style="background:#ece6f0;border-radius:28px;height:44px;display:flex;align-items:center;padding:4px;overflow:hidden;">
-                        <div style="width:48px;height:40px;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#49454f"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                      <div
+                        style="background:#ece6f0;border-radius:28px;height:44px;display:flex;align-items:center;padding:4px;overflow:hidden;">
+                        <div
+                          style="width:48px;height:40px;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#49454f">
+                            <path
+                              d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                          </svg>
                         </div>
-                        <div style="flex:1;font-family:'Roboto',sans-serif;font-size:16px;color:#49454f;letter-spacing:0.5px;">Hinted search text</div>
-                        <div style="width:48px;height:40px;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#49454f"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+                        <div
+                          style="flex:1;font-family:'Roboto',sans-serif;font-size:16px;color:#49454f;letter-spacing:0.5px;">
+                          Hinted search text</div>
+                        <div
+                          style="width:48px;height:40px;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#49454f">
+                            <path
+                              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                          </svg>
                         </div>
                       </div>
                       <div style="display:flex;align-items:center;gap:8px;padding:0 8px;">
-                        <span style="font-family:'SF Pro Display',sans-serif;font-size:16px;color:#000;white-space:nowrap;flex-shrink:0;">目前預設：</span>
+                        <span
+                          style="font-family:'SF Pro Display',sans-serif;font-size:16px;color:#000;white-space:nowrap;flex-shrink:0;">目前預設：</span>
                         <div style="display:flex;gap:8px;overflow:hidden;flex:1;">
-                          <div style="border:1px solid #cac4d0;border-radius:8px;padding:6px 12px;font-family:'Roboto',sans-serif;font-size:14px;font-weight:500;color:#49454f;white-space:nowrap;flex-shrink:0;">#活動</div>
-                          <div style="border:1px solid #cac4d0;border-radius:8px;padding:6px 12px;font-family:'Roboto',sans-serif;font-size:14px;font-weight:500;color:#49454f;white-space:nowrap;flex-shrink:0;">#台中</div>
-                          <div style="border:1px solid #cac4d0;border-radius:8px;padding:6px 12px;font-family:'Roboto',sans-serif;font-size:14px;font-weight:500;color:#49454f;white-space:nowrap;flex-shrink:0;">#價格區間</div>
+                          <div
+                            style="border:1px solid #cac4d0;border-radius:8px;padding:6px 12px;font-family:'Roboto',sans-serif;font-size:14px;font-weight:500;color:#49454f;white-space:nowrap;flex-shrink:0;">
+                            #活動</div>
+                          <div
+                            style="border:1px solid #cac4d0;border-radius:8px;padding:6px 12px;font-family:'Roboto',sans-serif;font-size:14px;font-weight:500;color:#49454f;white-space:nowrap;flex-shrink:0;">
+                            #台中</div>
+                          <div
+                            style="border:1px solid #cac4d0;border-radius:8px;padding:6px 12px;font-family:'Roboto',sans-serif;font-size:14px;font-weight:500;color:#49454f;white-space:nowrap;flex-shrink:0;">
+                            #價格區間</div>
                         </div>
                         <button style="background:none;border:none;cursor:pointer;flex-shrink:0;padding:0;">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#000">
+                            <path
+                              d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" />
+                          </svg>
                         </button>
                       </div>
                     </div>
                     <!-- Filter sections -->
                     <div style="display:flex;flex-direction:column;gap:36px;">
                       <!-- 地點 -->
-                      <button onclick="igToggleLocationFull(this)" style="border-top:1px solid #000;border-bottom:1px solid #000;background:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:24px 8px;width:100%;box-sizing:border-box;text-align:left;">
+                      <button onclick="igToggleLocationFull(this)"
+                        style="border-top:1px solid #000;border-bottom:1px solid #000;background:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:24px 8px;width:100%;box-sizing:border-box;text-align:left;">
                         <div style="display:flex;gap:12px;align-items:center;">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                          <span id="fp-loc-label" style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#000;letter-spacing:-0.456px;white-space:nowrap;">地點</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#000">
+                            <path
+                              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                          </svg>
+                          <span id="fp-loc-label"
+                            style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#000;letter-spacing:-0.456px;white-space:nowrap;">地點</span>
                         </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000"><path d="M8 5v14l11-7z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
                       </button>
                       <!-- 類型 -->
                       <div style="padding:12px 8px;display:flex;flex-direction:column;gap:12px;">
                         <div style="display:flex;gap:12px;align-items:center;">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-                          <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#000;letter-spacing:-0.456px;">類型：</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#000">
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                          </svg>
+                          <span
+                            style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#000;letter-spacing:-0.456px;">類型：</span>
                         </div>
                         <div style="display:flex;flex-direction:column;gap:12px;">
                           <div style="display:flex;gap:12px;" class="ig-tag-group" id="fp-type">
-                            <button class="ig-visit-btn on" data-sub="fp-sub-restaurant"><div class="ig-chk-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#f5f5f5" class="ig-chk-img"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div><span>餐廳</span></button>
+                            <button class="ig-visit-btn on" data-sub="fp-sub-restaurant">
+                              <div class="ig-chk-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                  height="16" viewBox="0 0 24 24" fill="#f5f5f5" class="ig-chk-img">
+                                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg></div><span>餐廳</span>
+                            </button>
                             <button class="ig-visit-btn" data-sub="">景點</button>
                             <button class="ig-visit-btn" data-sub="fp-sub-event">活動</button>
                           </div>
                           <div id="fp-sub-restaurant">
                             <button class="ig-dropdown-btn" onclick="igToggleDrop(this)">
                               <span style="font-family:'Roboto',sans-serif;font-size:14px;color:#000;">餐廳類型</span>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#000" class="ig-drop-arrow" style="flex-shrink:0;"><path d="M7 10l5 5 5-5z"/></svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="#000" class="ig-drop-arrow" style="flex-shrink:0;">
+                                <path d="M7 10l5 5 5-5z" />
+                              </svg>
                             </button>
                             <div class="ig-dropdown-body ig-tag-group" style="display:none;flex-wrap:wrap;gap:8px;">
                               <button class="ig-visit-btn">燒烤</button>
@@ -5972,7 +6037,10 @@
                           <div id="fp-sub-event" style="display:none;">
                             <button class="ig-dropdown-btn" onclick="igToggleDrop(this)">
                               <span style="font-family:'Roboto',sans-serif;font-size:14px;color:#000;">活動類型</span>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#000" class="ig-drop-arrow" style="flex-shrink:0;"><path d="M7 10l5 5 5-5z"/></svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="#000" class="ig-drop-arrow" style="flex-shrink:0;">
+                                <path d="M7 10l5 5 5-5z" />
+                              </svg>
                             </button>
                             <div class="ig-dropdown-body ig-tag-group" style="display:none;flex-wrap:wrap;gap:8px;">
                               <button class="ig-visit-btn">音樂祭</button>
@@ -5985,11 +6053,21 @@
                       <!-- 造訪狀態 -->
                       <div style="padding:12px 8px;display:flex;flex-direction:column;gap:12px;">
                         <div style="display:flex;gap:12px;align-items:center;">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000"><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                          <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#000;letter-spacing:-0.456px;">造訪狀態：</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#000">
+                            <path
+                              d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                          </svg>
+                          <span
+                            style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#000;letter-spacing:-0.456px;">造訪狀態：</span>
                         </div>
                         <div style="display:flex;gap:12px;" class="ig-tag-group">
-                          <button class="ig-visit-btn on"><div class="ig-chk-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#f5f5f5" class="ig-chk-img"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div><span>尚未造訪</span></button>
+                          <button class="ig-visit-btn on">
+                            <div class="ig-chk-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                viewBox="0 0 24 24" fill="#f5f5f5" class="ig-chk-img">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                              </svg></div><span>尚未造訪</span>
+                          </button>
                           <button class="ig-visit-btn">已造訪</button>
                           <button class="ig-visit-btn">口袋名單</button>
                         </div>
@@ -5997,61 +6075,103 @@
                       <!-- 價格區間 -->
                       <div style="padding:0 8px;display:flex;flex-direction:column;gap:12px;">
                         <div style="display:flex;gap:12px;align-items:center;">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
-                          <span style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#000;letter-spacing:-0.456px;">價格區間：</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#000">
+                            <path
+                              d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" />
+                          </svg>
+                          <span
+                            style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#000;letter-spacing:-0.456px;">價格區間：</span>
                         </div>
                         <div>
-                          <div style="display:flex;justify-content:space-between;font-family:'Inter',sans-serif;font-size:14px;color:#1e1e1e;margin-bottom:12px;">
+                          <div
+                            style="display:flex;justify-content:space-between;font-family:'Inter',sans-serif;font-size:14px;color:#1e1e1e;margin-bottom:12px;">
                             <span>$0~100</span><span>$1000&lt;</span>
                           </div>
                           <div style="position:relative;height:20px;display:flex;align-items:center;">
-                            <div style="position:absolute;left:0;right:0;height:8px;background:#e6e6e6;border-radius:9999px;z-index:0;"></div>
-                            <div style="position:absolute;left:0;right:0;display:flex;justify-content:space-between;pointer-events:none;z-index:1;">
-                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
-                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
-                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
-                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
-                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
-                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
-                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
-                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;"></div>
+                            <div
+                              style="position:absolute;left:0;right:0;height:8px;background:#e6e6e6;border-radius:9999px;z-index:0;">
                             </div>
-                            <input type="range" min="0" max="1000" value="200" step="100" class="ig-price-range" oninput="igUpdatePriceFp(this)" style="position:relative;z-index:2;width:100%;">
+                            <div
+                              style="position:absolute;left:0;right:0;display:flex;justify-content:space-between;pointer-events:none;z-index:1;">
+                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;">
+                              </div>
+                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;">
+                              </div>
+                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;">
+                              </div>
+                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;">
+                              </div>
+                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;">
+                              </div>
+                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;">
+                              </div>
+                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;">
+                              </div>
+                              <div style="width:4px;height:4px;border-radius:50%;background:#2c2c2c;flex-shrink:0;">
+                              </div>
+                            </div>
+                            <input type="range" min="0" max="1000" value="200" step="100" class="ig-price-range"
+                              oninput="igUpdatePriceFp(this)" style="position:relative;z-index:2;width:100%;">
                           </div>
                           <div style="position:relative;height:24px;margin-top:4px;">
-                            <span id="fp-price-label" style="position:absolute;left:20%;transform:translateX(-50%);font-family:'Inter',sans-serif;font-size:14px;color:#1e1e1e;white-space:nowrap;">$200~400</span>
+                            <span id="fp-price-label"
+                              style="position:absolute;left:20%;transform:translateX(-50%);font-family:'Inter',sans-serif;font-size:14px;color:#1e1e1e;white-space:nowrap;">$200~400</span>
                           </div>
                         </div>
                       </div>
                       <!-- 套用 + 確認 -->
                       <div style="display:flex;flex-direction:column;gap:24px;padding:0 8px;">
-                        <button onclick="igToggleApplyFp(this)" style="background:none;border:none;cursor:pointer;display:flex;gap:12px;align-items:center;padding:0;">
-                          <div class="fg-chk-wrap" style="width:28px;height:28px;border:1px solid #000;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                            <svg class="fg-chk-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" style="display:none;">
-                              <path d="M9.54998 18.0001L3.84998 12.3001L5.27498 10.8751L9.54998 15.1501L18.725 5.9751L20.15 7.4001L9.54998 18.0001Z" fill="#4d4d4d"/>
+                        <button onclick="igToggleApplyFp(this)"
+                          style="background:none;border:none;cursor:pointer;display:flex;gap:12px;align-items:center;padding:0;">
+                          <div class="fg-chk-wrap"
+                            style="width:28px;height:28px;border:1px solid #000;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                            <svg class="fg-chk-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                              viewBox="0 0 24 24" fill="none" style="display:none;">
+                              <path
+                                d="M9.54998 18.0001L3.84998 12.3001L5.27498 10.8751L9.54998 15.1501L18.725 5.9751L20.15 7.4001L9.54998 18.0001Z"
+                                fill="#4d4d4d" />
                             </svg>
                           </div>
                           <span style="font-family:'Inter',sans-serif;font-size:16px;color:#000;">套用當前篩選條件為預設顯示</span>
                         </button>
-                        <button style="background:#2c2c2c;border:1px solid #2c2c2c;border-radius:8px;height:54px;width:100%;color:#f5f5f5;font-family:'Inter',sans-serif;font-size:16px;cursor:pointer;">確認</button>
+                        <button
+                          style="background:#2c2c2c;border:1px solid #2c2c2c;border-radius:8px;height:54px;width:100%;color:#f5f5f5;font-family:'Inter',sans-serif;font-size:16px;cursor:pointer;">確認</button>
                       </div>
                     </div>
                   </div>
                 </div>
                 <!-- Bottom nav (sticky) -->
-                <div style="flex-shrink:0;background:#f3edf7;height:76px;display:flex;align-items:flex-end;padding:0 8px;box-sizing:border-box;">
+                <div
+                  style="flex-shrink:0;background:#f3edf7;height:76px;display:flex;align-items:flex-end;padding:0 8px;box-sizing:border-box;">
                   <div style="display:flex;width:100%;">
-                    <button class="fp-nav-item" onclick="igSetFpNav(this)" style="flex:1;display:flex;flex-direction:column;gap:4px;align-items:center;justify-content:center;padding:12px 0 16px;background:none;border:none;cursor:pointer;">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#49454f"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/></svg>
-                      <span style="font-family:'Roboto',sans-serif;font-size:12px;color:#49454f;letter-spacing:0.5px;">篩選</span>
+                    <button class="fp-nav-item" onclick="igSetFpNav(this)"
+                      style="flex:1;display:flex;flex-direction:column;gap:4px;align-items:center;justify-content:center;padding:12px 0 16px;background:none;border:none;cursor:pointer;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#49454f">
+                        <path
+                          d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z" />
+                      </svg>
+                      <span
+                        style="font-family:'Roboto',sans-serif;font-size:12px;color:#49454f;letter-spacing:0.5px;">篩選</span>
                     </button>
-                    <button class="fp-nav-item" onclick="igSetFpNav(this)" style="flex:1;display:flex;flex-direction:column;gap:4px;align-items:center;justify-content:center;padding:12px 0 16px;background:none;border:none;cursor:pointer;">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#49454f"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
-                      <span style="font-family:'Roboto',sans-serif;font-size:12px;font-weight:500;color:#49454f;letter-spacing:0.5px;">匯入 Reels</span>
+                    <button class="fp-nav-item" onclick="igSetFpNav(this)"
+                      style="flex:1;display:flex;flex-direction:column;gap:4px;align-items:center;justify-content:center;padding:12px 0 16px;background:none;border:none;cursor:pointer;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#49454f">
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" />
+                      </svg>
+                      <span
+                        style="font-family:'Roboto',sans-serif;font-size:12px;font-weight:500;color:#49454f;letter-spacing:0.5px;">匯入
+                        Reels</span>
                     </button>
-                    <button class="fp-nav-item" onclick="igSetFpNav(this)" style="flex:1;display:flex;flex-direction:column;gap:4px;align-items:center;justify-content:center;padding:12px 0 16px;background:none;border:none;cursor:pointer;">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#49454f"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                      <span style="font-family:'Roboto',sans-serif;font-size:12px;font-weight:500;color:#49454f;letter-spacing:0.5px;">個人頁面</span>
+                    <button class="fp-nav-item" onclick="igSetFpNav(this)"
+                      style="flex:1;display:flex;flex-direction:column;gap:4px;align-items:center;justify-content:center;padding:12px 0 16px;background:none;border:none;cursor:pointer;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#49454f">
+                        <path
+                          d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                      </svg>
+                      <span
+                        style="font-family:'Roboto',sans-serif;font-size:12px;font-weight:500;color:#49454f;letter-spacing:0.5px;">個人頁面</span>
                     </button>
                   </div>
                 </div>
@@ -6059,15 +6179,20 @@
             </div>
 
             <!-- ── Frame 1: 篩選框－類型 ── -->
-            <div style="display:inline-flex;flex-direction:column;gap:10px;">
+            <div class="fg-phone-slot">
               <div class="ig-frame-card" style="width:340px;">
                 <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px;">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#4d4d4d"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#4d4d4d">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                  </svg>
                   <span
                     style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#4d4d4d;letter-spacing:-0.5px;">類型：</span>
                 </div>
                 <div style="display:flex;gap:12px;flex-wrap:wrap;" class="ig-tag-group" id="fg-type">
-                  <button class="ig-visit-btn on" data-sub="fg-sub-restaurant"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#f5f5f5"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg><span>餐廳</span></button>
+                  <button class="ig-visit-btn on" data-sub="fg-sub-restaurant"><svg xmlns="http://www.w3.org/2000/svg"
+                      width="16" height="16" viewBox="0 0 24 24" fill="#f5f5f5">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                    </svg><span>餐廳</span></button>
                   <button class="ig-visit-btn" data-sub=""><span>景點</span></button>
                   <button class="ig-visit-btn" data-sub="fg-sub-event"><span>活動</span></button>
                 </div>
@@ -6075,12 +6200,18 @@
                 <div id="fg-sub-restaurant" style="margin-top:12px;">
                   <button class="ig-dropdown-btn" onclick="igToggleDrop(this)">
                     <span style="font-family:'Roboto',sans-serif;font-size:14px;color:#909090;">餐廳類型</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#4d4d4d" class="ig-drop-arrow" style="flex-shrink:0;"><path d="M7 10l5 5 5-5z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#4d4d4d"
+                      class="ig-drop-arrow" style="flex-shrink:0;">
+                      <path d="M7 10l5 5 5-5z" />
+                    </svg>
                   </button>
                   <div class="ig-dropdown-body ig-tag-group" style="display:none;flex-wrap:wrap;gap:8px;">
                     <button class="ig-visit-btn">燒烤</button>
                     <button class="ig-visit-btn">火鍋</button>
-                    <button class="ig-visit-btn on"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#f5f5f5"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg><span>壽司</span></button>
+                    <button class="ig-visit-btn on"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 24 24" fill="#f5f5f5">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                      </svg><span>壽司</span></button>
                     <button class="ig-visit-btn">義式料理</button>
                     <button class="ig-visit-btn">泰式料理</button>
                   </div>
@@ -6089,7 +6220,10 @@
                 <div id="fg-sub-event" style="margin-top:12px;display:none;">
                   <button class="ig-dropdown-btn" onclick="igToggleDrop(this)">
                     <span style="font-family:'Roboto',sans-serif;font-size:14px;color:#909090;">活動類型</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#4d4d4d" class="ig-drop-arrow" style="flex-shrink:0;"><path d="M7 10l5 5 5-5z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#4d4d4d"
+                      class="ig-drop-arrow" style="flex-shrink:0;">
+                      <path d="M7 10l5 5 5-5z" />
+                    </svg>
                   </button>
                   <div class="ig-dropdown-body ig-tag-group" style="display:none;flex-wrap:wrap;gap:8px;">
                     <button class="ig-visit-btn">音樂祭</button>
@@ -6103,12 +6237,15 @@
             </div>
 
             <!-- ── Frame 2: 造訪狀態 (Figma node 160:6873) ── -->
-            <div style="display:inline-flex;flex-direction:column;gap:10px;">
+            <div class="fg-phone-slot">
               <div class="ig-frame-card"
                 style="width:380px;display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
                 <!-- 標題列 -->
                 <div style="display:flex;gap:12px;align-items:center;">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#4d4d4d"><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#4d4d4d">
+                    <path
+                      d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                  </svg>
                   <span
                     style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#4d4d4d;letter-spacing:-0.456px;white-space:nowrap;">造訪狀態：</span>
                 </div>
@@ -6116,7 +6253,10 @@
                 <div style="display:flex;gap:12px;" class="ig-tag-group">
                   <!-- 尚未造訪 active -->
                   <button class="ig-visit-btn on">
-                    <div class="ig-chk-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#f5f5f5" class="ig-chk-img"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                    <div class="ig-chk-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 24 24" fill="#f5f5f5" class="ig-chk-img">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                      </svg></div>
                     <span>尚未造訪</span>
                   </button>
                   <button class="ig-visit-btn">已造訪</button>
@@ -6127,17 +6267,23 @@
             </div>
 
             <!-- ── Frame 3: 地點 ── -->
-            <div style="display:inline-flex;flex-direction:column;gap:10px;">
+            <div class="fg-phone-slot">
               <!-- 未選擇地點 (互動) -->
               <div>
                 <button onclick="igToggleLocation(this)"
                   style="display:flex;align-items:center;justify-content:space-between;padding:24px 8px;background:none;border:none;cursor:pointer;text-align:left;border-top:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;box-sizing:border-box;width:316px;">
                   <div style="display:flex;gap:12px;align-items:center;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 24 24" fill="#4d4d4d"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 24 24" fill="#4d4d4d">
+                      <path
+                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                    </svg>
                     <span class="fg-loc-label"
                       style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#909090;letter-spacing:-0.456px;white-space:nowrap;">地點</span>
                   </div>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 24 24" fill="#4d4d4d" style="flex-shrink:0;"><path d="M8 5v14l11-7z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 24 24" fill="#4d4d4d"
+                    style="flex-shrink:0;">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
                 </button>
                 <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">未選擇地點 ·
                   點擊切換</div>
@@ -6147,11 +6293,17 @@
                 <div
                   style="display:flex;align-items:center;justify-content:space-between;padding:24px 8px;border-top:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;box-sizing:border-box;width:316px;">
                   <div style="display:flex;gap:12px;align-items:center;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 24 24" fill="#4d4d4d"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 24 24" fill="#4d4d4d">
+                      <path
+                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                    </svg>
                     <span
                       style="font-family:'Noto Sans TC',sans-serif;font-size:16px;font-weight:500;color:#909090;letter-spacing:-0.304px;white-space:nowrap;">台南/市區，高雄</span>
                   </div>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 24 24" fill="#4d4d4d" style="flex-shrink:0;"><path d="M8 5v14l11-7z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 24 24" fill="#4d4d4d"
+                    style="flex-shrink:0;">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
                 </div>
                 <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:6px;">已選擇地點
                 </div>
@@ -6159,7 +6311,7 @@
             </div>
 
             <!-- ── Frame 4: 套用篩選 ── -->
-            <div style="display:inline-flex;flex-direction:column;gap:10px;">
+            <div class="fg-phone-slot">
               <div class="ig-frame-card">
                 <button onclick="igToggleApplyLocal(this)"
                   style="display:flex;gap:12px;align-items:center;background:none;border:none;cursor:pointer;padding:0;">
@@ -6180,10 +6332,13 @@
             </div>
 
             <!-- ── Frame 5: 價格區間 ── -->
-            <div style="display:inline-flex;flex-direction:column;gap:10px;">
+            <div class="fg-phone-slot">
               <div class="ig-frame-card" style="width:340px;">
                 <div style="display:flex;gap:12px;align-items:center;margin-bottom:16px;">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#4d4d4d"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#4d4d4d">
+                    <path
+                      d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" />
+                  </svg>
                   <span
                     style="font-family:'Noto Sans TC',sans-serif;font-size:24px;font-weight:600;color:#4d4d4d;letter-spacing:-0.456px;">價格區間：</span>
                 </div>
@@ -6233,277 +6388,274 @@
             style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:24px;">
             MENU COMPONENTS · 選單元件</div>
 
-          <!-- ── Section A: 選單列元件 287-14567 ── -->
-          <div
-            style="font-family:'Roboto Mono',monospace;font-size:10px;color:#b0b0b0;letter-spacing:1.5px;margin-bottom:16px;">
-            A · 選單列元件 · 287-14567</div>
-          <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;margin-bottom:40px;">
+          <div class="ig-menu-sections">
+            <div class="ig-menu-section">
+              <!-- ── Section A: 選單列元件 287-14567 ── -->
+              <div
+                style="font-family:'Roboto Mono',monospace;font-size:10px;color:#b0b0b0;letter-spacing:1.5px;margin-bottom:16px;">
+                A · 選單列元件 · 287-14567</div>
+              <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;margin-bottom:40px;">
 
-            <!-- ── Card A1: 選單 · 有箭頭 ── -->
-            <div style="display:inline-flex;flex-direction:column;gap:10px;">
-              <div class="ig-frame-card"
-                style="padding:12px;display:inline-flex;flex-direction:column;gap:0;overflow:hidden;">
-                <div
-                  style="display:flex;align-items:center;justify-content:space-between;width:130px;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-left:1px solid #d0d0d0;border-right:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;">
-                  <span
-                    style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">日式料理</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="flex-shrink:0;"><polygon points="5.33,3.33 12.67,8 5.33,12.67" fill="#909090"/></svg>
-                </div>
-                <div
-                  style="display:flex;align-items:center;justify-content:space-between;width:130px;height:40px;padding:0 12px;box-sizing:border-box;background:#efefef;border:1px solid #d0d0d0;">
-                  <span
-                    style="font-family:'Roboto',sans-serif;font-size:14px;font-weight:400;color:#909090;line-height:22px;white-space:nowrap;">韓式料理</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="flex-shrink:0;"><polygon points="5.33,3.33 12.67,8 5.33,12.67" fill="#909090"/></svg>
-                </div>
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">選單 · 有箭頭 · off / on</div>
-            </div>
-
-            <!-- ── Card A2: 選單 · 無箭頭 ── -->
-            <div style="display:inline-flex;flex-direction:column;gap:10px;">
-              <div class="ig-frame-card"
-                style="padding:12px;display:inline-flex;flex-direction:column;gap:0;overflow:hidden;">
-                <div
-                  style="display:flex;align-items:center;width:130px;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-left:1px solid #d0d0d0;border-right:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;">
-                  <span
-                    style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">早午餐店</span>
-                </div>
-                <div
-                  style="display:flex;align-items:center;width:130px;height:40px;padding:0 12px;box-sizing:border-box;background:#efefef;border:1px solid #d0d0d0;">
-                  <span
-                    style="font-family:'Roboto',sans-serif;font-size:14px;font-weight:400;color:#909090;line-height:22px;white-space:nowrap;">甜點/咖啡</span>
-                </div>
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">選單 · 無箭頭 · off / on</div>
-            </div>
-
-            <!-- ── Card A3: 子選單元件 ── -->
-            <div style="display:inline-flex;flex-direction:column;gap:10px;">
-              <div class="ig-frame-card"
-                style="padding:12px;display:inline-flex;flex-direction:column;gap:0;overflow:hidden;">
-                <div
-                  style="display:flex;align-items:center;width:95px;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-left:1px solid #d0d0d0;border-right:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;border-radius:4px 4px 0 0;">
-                  <span
-                    style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">泰式料理</span>
-                </div>
-                <div
-                  style="display:flex;align-items:center;width:95px;height:40px;padding:0 12px;box-sizing:border-box;background:#efefef;border:1px solid #d0d0d0;border-radius:0 0 4px 4px;">
-                  <span
-                    style="font-family:'Roboto',sans-serif;font-size:14px;font-weight:400;color:#909090;line-height:22px;white-space:nowrap;">越式料理</span>
-                </div>
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">子選單元件 · off / on</div>
-            </div>
-
-            <!-- ── Card A4: 子選單展開樣式 ── -->
-            <div style="display:inline-flex;flex-direction:column;gap:10px;">
-              <div class="ig-frame-card"
-                style="padding:12px;display:inline-flex;flex-direction:row;gap:20px;align-items:flex-start;">
-                <!-- 未展開 -->
-                <div style="display:inline-flex;flex-direction:column;gap:6px;">
-                  <div style="font-family:'Roboto Mono',monospace;font-size:9px;color:#b0b0b0;">未展開</div>
-                  <div
-                    style="display:flex;flex-direction:column;border:1px solid #d0d0d0;border-radius:4px;overflow:hidden;">
+                <!-- ── Card A1: 選單 · 有箭頭 ── -->
+                <div style="display:inline-flex;flex-direction:column;gap:10px;">
+                  <div class="ig-frame-card"
+                    style="padding:12px;display:inline-flex;flex-direction:column;gap:0;overflow:hidden;">
                     <div
-                      style="display:flex;align-items:center;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-bottom:1px solid #d0d0d0;width:130px;">
-                      <span
-                        style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">日式料理</span>
-                    </div>
-                    <div
-                      style="display:flex;align-items:center;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-bottom:1px solid #d0d0d0;width:130px;">
-                      <span
-                        style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">韓式料理</span>
-                    </div>
-                    <div
-                      style="display:flex;align-items:center;justify-content:space-between;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-bottom:1px solid #d0d0d0;width:130px;">
+                      style="display:flex;align-items:center;justify-content:space-between;width:130px;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-left:1px solid #d0d0d0;border-right:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;">
                       <span
                         style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">東南亞料理</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="flex-shrink:0;"><polygon points="5.33,3.33 12.67,8 5.33,12.67" fill="#909090"/></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                        style="flex-shrink:0;">
+                        <polygon points="5.33,3.33 12.67,8 5.33,12.67" fill="#909090" />
+                      </svg>
                     </div>
                     <div
-                      style="display:flex;align-items:center;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;width:130px;">
+                      style="display:flex;align-items:center;justify-content:space-between;width:130px;height:40px;padding:0 12px;box-sizing:border-box;background:#efefef;border:1px solid #d0d0d0;">
                       <span
-                        style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">台式料理</span>
+                        style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#4d4d4d;letter-spacing:1px;white-space:nowrap;">東南亞料理</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                        style="flex-shrink:0;">
+                        <polygon points="5.33,3.33 12.67,8 5.33,12.67" fill="#4d4d4d" />
+                      </svg>
                     </div>
                   </div>
-                </div>
-                <!-- 展開子選單 -->
-                <div style="display:inline-flex;flex-direction:column;gap:6px;">
-                  <div style="font-family:'Roboto Mono',monospace;font-size:9px;color:#b0b0b0;">展開子選單</div>
-                  <div
-                    style="display:flex;flex-direction:row;border:1px solid #d0d0d0;border-radius:4px;overflow:hidden;">
-                    <!-- main list -->
-                    <div style="display:flex;flex-direction:column;border-right:1px solid #d0d0d0;">
-                      <div
-                        style="display:flex;align-items:center;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-bottom:1px solid #d0d0d0;width:130px;">
-                        <span
-                          style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">日式料理</span>
-                      </div>
-                      <div
-                        style="display:flex;align-items:center;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-bottom:1px solid #d0d0d0;width:130px;">
-                        <span
-                          style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">韓式料理</span>
-                      </div>
-                      <div
-                        style="display:flex;align-items:center;justify-content:space-between;height:40px;padding:0 12px;box-sizing:border-box;background:#efefef;border-bottom:1px solid #d0d0d0;width:130px;">
-                        <span
-                          style="font-family:'Roboto',sans-serif;font-size:14px;font-weight:400;color:#909090;line-height:22px;white-space:nowrap;">東南亞料理</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="flex-shrink:0;"><polygon points="5.33,3.33 12.67,8 5.33,12.67" fill="#909090"/></svg>
-                      </div>
-                      <div
-                        style="display:flex;align-items:center;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;width:130px;">
-                        <span
-                          style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">台式料理</span>
-                      </div>
-                    </div>
-                    <!-- sub-panel -->
-                    <div style="display:flex;flex-direction:column;">
-                      <div
-                        style="display:flex;align-items:center;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-bottom:1px solid #d0d0d0;width:95px;">
-                        <span
-                          style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">泰式料理</span>
-                      </div>
-                      <div
-                        style="display:flex;align-items:center;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-bottom:1px solid #d0d0d0;width:95px;">
-                        <span
-                          style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">越式料理</span>
-                      </div>
-                      <div
-                        style="display:flex;align-items:center;height:40px;padding:0 12px;box-sizing:border-box;background:#efefef;border-bottom:1px solid #d0d0d0;width:95px;">
-                        <span
-                          style="font-family:'Roboto',sans-serif;font-size:14px;font-weight:400;color:#909090;line-height:22px;white-space:nowrap;">印度料理</span>
-                      </div>
-                      <div
-                        style="display:flex;align-items:center;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;width:95px;">
-                        <span
-                          style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">馬來西亞</span>
-                      </div>
-                    </div>
+                  <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">選單 · 有子項目 · off / on
                   </div>
                 </div>
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">子選單展開樣式 · 未展開 / 展開</div>
-            </div>
 
-          </div><!-- /Section A -->
+                <!-- ── Card A2: 選單 · 無箭頭 ── -->
+                <div style="display:inline-flex;flex-direction:column;gap:10px;">
+                  <div class="ig-frame-card"
+                    style="padding:12px;display:inline-flex;flex-direction:column;gap:0;overflow:hidden;">
+                    <div
+                      style="display:flex;align-items:center;width:130px;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-left:1px solid #d0d0d0;border-right:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;">
+                      <span
+                        style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">早午餐店</span>
+                    </div>
+                    <div
+                      style="display:flex;align-items:center;width:130px;height:40px;padding:0 12px;box-sizing:border-box;background:#efefef;border:1px solid #d0d0d0;">
+                      <span
+                        style="font-family:'Roboto',sans-serif;font-size:14px;font-weight:400;color:#909090;line-height:22px;white-space:nowrap;">甜點/咖啡</span>
+                    </div>
+                  </div>
+                  <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">選單 · 無展開 · off / on
+                  </div>
+                </div>
 
-          <!-- ── Section B: 選單操作元件 277-6114 ── -->
-          <div
-            style="font-family:'Roboto Mono',monospace;font-size:10px;color:#b0b0b0;letter-spacing:1.5px;margin-bottom:16px;">
-            B · 選單操作元件 · 277-6114</div>
-          <div style="display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start;">
+                <!-- ── Card A3: 子選單元件 ── -->
+                <div style="display:inline-flex;flex-direction:column;gap:10px;">
+                  <div class="ig-frame-card"
+                    style="padding:12px;display:inline-flex;flex-direction:column;gap:0;overflow:hidden;">
+                    <div
+                      style="display:flex;align-items:center;width:95px;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-left:1px solid #d0d0d0;border-right:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;border-radius:4px 4px 0 0;">
+                      <span
+                        style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">泰式料理</span>
+                    </div>
+                    <div
+                      style="display:flex;align-items:center;width:95px;height:40px;padding:0 12px;box-sizing:border-box;background:#efefef;border:1px solid #d0d0d0;border-radius:0 0 4px 4px;">
+                      <span
+                        style="font-family:'Roboto',sans-serif;font-size:14px;font-weight:400;color:#909090;line-height:22px;white-space:nowrap;">越式料理</span>
+                    </div>
+                  </div>
+                  <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">子選單元件 · off / on</div>
+                </div>
 
-            <!-- ── 左欄: 搜尋列 + 下拉選單鈕 + 篩選框 ── -->
-            <div style="display:flex;flex-direction:column;gap:16px;">
-              <!-- 搜尋列佔位 -->
-              <div style="width:155px;height:32px;background:#fcfcfc;border:1px solid #d0d0d0;border-radius:3px;"></div>
+              </div><!-- /Section A row 1 -->
 
-              <!-- 下拉選單鈕 -->
-              <div style="display:flex;flex-direction:column;gap:8px;">
+              <!-- ── Card A4: 子選單展開樣式 (interactive) ── -->
+              <div style="margin-top:24px;">
                 <div
-                  style="display:flex;align-items:center;justify-content:space-between;width:155px;height:40px;padding:0 4px 0 12px;box-sizing:border-box;background:linear-gradient(180deg,#FF8A80 16%,#FF5A4F 100%);border-radius:4px;outline:1px solid #FF8A80;outline-offset:-0.5px;">
-                  <span
-                    style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:700;color:#fcfcfc;letter-spacing:1px;text-shadow:0px 1px 4px rgba(156,99,99,0.35);">區域</span>
-                  <div style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpolygon points='2,4 12,4 7,10' fill='%23ffffff'/%3E%3C/svg%3E" width="14" height="14" alt="" style="object-fit:contain;">
+                  style="font-family:'Roboto Mono',monospace;font-size:10px;color:#b0b0b0;letter-spacing:1.5px;margin-bottom:16px;">
+                  子選單展開樣式 · 互動</div>
+                <div style="display:inline-flex;flex-direction:column;gap:10px;">
+                  <div class="ig-frame-card"
+                    style="padding:12px;display:inline-flex;flex-direction:row;align-items:flex-start;">
+                    <!-- Main list -->
+                    <div
+                      style="display:flex;flex-direction:column;border:1px solid #d0d0d0;border-radius:4px 0 0 4px;overflow:hidden;">
+                      <button class="ig-a4-item" onclick="igSelectA4(this,null)">日式料理</button>
+                      <button class="ig-a4-item" onclick="igSelectA4(this,null)">韓式料理</button>
+                      <button class="ig-a4-item" onclick="igSelectA4(this,null)">早午餐店</button>
+                      <button class="ig-a4-item" onclick="igSelectA4(this,null)">甜點/咖啡</button>
+                      <button class="ig-a4-item" onclick="igSelectA4(this,null)">台式料理</button>
+                      <button class="ig-a4-item ig-a4-has-sub active" onclick="igSelectA4(this,'a4-dongnan-sub')">
+                        <span>東南亞料理</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                          style="flex-shrink:0;">
+                          <polygon points="5.33,3.33 12.67,8 5.33,12.67" fill="#909090" />
+                        </svg>
+                      </button>
+                    </div>
+                    <!-- Sub panel (visible by default showing expanded state) -->
+                    <div id="a4-dongnan-sub" class="ig-a4-sub" style="display:flex;">
+                      <button class="ig-a4-item">泰式料理</button>
+                      <button class="ig-a4-item">越式料理</button>
+                      <button class="ig-a4-item">印度料理</button>
+                      <button class="ig-a4-item">馬來西亞料理</button>
+                    </div>
                   </div>
+                  <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">子選單展開樣式 · 點擊主項目切換</div>
                 </div>
-                <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">下拉選單鈕</div>
               </div>
 
-              <!-- 篩選框 off / on -->
+            </div><!-- /Section A -->
+          </div><!-- /ig-menu-section A -->
+
+          <div class="ig-menu-section">
+            <!-- ── Section B: 選單操作元件 277-6114 ── -->
+            <div
+              style="font-family:'Roboto Mono',monospace;font-size:10px;color:#b0b0b0;letter-spacing:1.5px;margin-bottom:16px;">
+              B · 區域選單</div>
+            <div style="display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start;">
+
+              <!-- ── 左欄: 搜尋列 + 下拉選單鈕 + 篩選框 ── -->
+              <div style="display:flex;flex-direction:column;gap:16px;">
+                <!-- 搜尋列佔位 -->
+                <div style="width:155px;height:32px;background:#fcfcfc;border:1px solid #d0d0d0;border-radius:3px;">
+                </div>
+
+                <!-- 下拉選單鈕 -->
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                  <div
+                    style="display:flex;align-items:center;justify-content:space-between;width:155px;height:40px;padding:0 4px 0 12px;box-sizing:border-box;background:linear-gradient(180deg,#FF8A80 16%,#FF5A4F 100%);border-radius:4px;outline:1px solid #FF8A80;outline-offset:-0.5px;">
+                    <span
+                      style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:700;color:#fcfcfc;letter-spacing:1px;text-shadow:0px 1px 4px rgba(156,99,99,0.35);">區域</span>
+                    <div style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;">
+                      <img
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpolygon points='2,4 12,4 7,10' fill='%23ffffff'/%3E%3C/svg%3E"
+                        width="14" height="14" alt="" style="object-fit:contain;">
+                    </div>
+                  </div>
+                  <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">下拉選單鈕</div>
+                </div>
+
+                <!-- 篩選框 複選 -->
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                  <div class="ig-frame-card" style="padding:0;overflow:hidden;">
+                    <button class="ig-chk-row" onclick="igToggleRegion(this)">
+                      <span>不限(預設)</span>
+                      <span class="ig-chk-box-icon"></span>
+                    </button>
+                    <button class="ig-chk-row ig-chk-on" onclick="igToggleRegion(this)">
+                      <span>中西區</span>
+                      <span class="ig-chk-box-icon"></span>
+                    </button>
+                    <button class="ig-chk-row ig-chk-on" onclick="igToggleRegion(this)">
+                      <span>東區</span>
+                      <span class="ig-chk-box-icon"></span>
+                    </button>
+                    <button class="ig-chk-row" onclick="igToggleRegion(this)">
+                      <span>北區</span>
+                      <span class="ig-chk-box-icon"></span>
+                    </button>
+                    <button class="ig-chk-row" onclick="igToggleRegion(this)">
+                      <span>南區</span>
+                      <span class="ig-chk-box-icon"></span>
+                    </button>
+                  </div>
+                  <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">篩選框 · 複選</div>
+                </div>
+              </div>
+
+              <!-- ── 右欄: 長條清單 ── -->
               <div style="display:flex;flex-direction:column;gap:8px;">
-                <div style="border:1.5px dashed #8b7fe8;border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:8px;">
-                  <!-- off -->
-                  <div
-                    style="display:flex;align-items:center;justify-content:space-between;width:155px;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-left:1px solid #d0d0d0;border-right:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;">
-                    <span
-                      style="font-family:'Roboto',sans-serif;font-size:14px;font-weight:400;color:#4d4d4d;line-height:22px;">不限(預設)</span>
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3C/svg%3E" width="20" height="20" alt="" style="flex-shrink:0;object-fit:contain;">
-                  </div>
-                  <!-- on -->
-                  <div
-                    style="display:flex;align-items:center;justify-content:space-between;width:155px;height:40px;padding:0 12px;box-sizing:border-box;background:#efefef;border-left:1px solid #d0d0d0;border-right:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;">
-                    <span
-                      style="font-family:'Roboto',sans-serif;font-size:14px;font-weight:400;color:#4d4d4d;line-height:22px;">不限(預設)</span>
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3Cpolyline points='5,10.5 8.5,14 15,7' fill='none' stroke='%234d4d4d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" width="20" height="20" alt="" style="flex-shrink:0;object-fit:contain;">
-                  </div>
+                <div style="width:135px;overflow:hidden;">
+<div style="width: 135px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+    <div style="width: 135px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+        <div style="align-self: stretch; height: 40px; padding-left: 12px; padding-right: 4px; background: linear-gradient(180deg, var(--Color-Light-Mode-Brand-Colors-Primary---coral-400, #FF8A80) 16%, var(--Color-Light-Mode-Brand-Colors-Primary---coral-600, #FF5A4F) 100%); border-top-left-radius: 4px; border-top-right-radius: 4px; outline: 1px var(--Colo-Dark-Mode-Brand-Colors-Primary---coral-500, #FF8A80) solid; outline-offset: -0.50px; justify-content: space-between; align-items: center; display: inline-flex">
+            <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-Background-bg-primary-50, #FCFCFC); font-size: 14px; font-family: Noto Sans TC; font-weight: 700; line-height: 16.80px; letter-spacing: 1px; word-wrap: break-word; text-shadow: 0px 1px 4px rgba(156, 99, 99, 0.35)">區域</div>
+            <div data-type="Icon" style="width: 58.02px; height: 32px; position: relative; transform: rotate(90deg); transform-origin: top left; box-shadow: 0px 1px 4px rgba(155.55, 98.90, 98.90, 0.35)">
+                <div style="width: 32px; height: 32px; left: 0px; top: 0px; position: absolute">
+                    <div style="width: 13.33px; height: 6.67px; left: 9.33px; top: 13.33px; position: absolute; background: var(--Color-Light-Mode-Background-bg-primary-50, #FCFCFC)"></div>
                 </div>
-                <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">篩選框 · off / on</div>
-              </div>
             </div>
-
-            <!-- ── 右欄: 長條清單 (interactive) ── -->
-            <div style="display:flex;flex-direction:column;gap:8px;">
-              <div style="width:155px;position:relative;overflow:hidden;">
-                <!-- Header -->
-                <div
-                  style="display:flex;align-items:center;justify-content:space-between;padding:0 4px 0 12px;height:40px;background:linear-gradient(180deg,#FF8A80 16%,#FF5A4F 100%);border-radius:4px 4px 0 0;outline:1px solid #d97070;outline-offset:-0.5px;">
-                  <span
-                    style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:700;color:#fcfcfc;letter-spacing:0.025em;text-shadow:0px 1px 4px rgba(156,99,99,0.35);">區域</span>
-                  <div style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpolygon points='2,4 12,4 7,10' fill='%23ffffff'/%3E%3C/svg%3E" width="14" height="14" alt="" style="object-fit:contain;">
-                  </div>
-                </div>
-                <!-- List (h-96 total = 384px, minus 40px header = 344px) -->
-                <div class="ig-list-scroll" style="height:344px;overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;scrollbar-color:#d0d0d0 transparent;">
-                  <button class="ig-chk-row" onclick="igToggleRegion(this)">
-                    <span>不限(預設)</span>
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row ig-chk-on" onclick="igToggleRegion(this)">
-                    <span>中西區</span>
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3Cpolyline points='5,10.5 8.5,14 15,7' fill='none' stroke='%234d4d4d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row ig-chk-on" onclick="igToggleRegion(this)">
-                    <span>東區</span>
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3Cpolyline points='5,10.5 8.5,14 15,7' fill='none' stroke='%234d4d4d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row ig-chk-on" onclick="igToggleRegion(this)">
-                    <span>北區</span>
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3Cpolyline points='5,10.5 8.5,14 15,7' fill='none' stroke='%234d4d4d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row ig-chk-on" onclick="igToggleRegion(this)">
-                    <span>南區</span>
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3Cpolyline points='5,10.5 8.5,14 15,7' fill='none' stroke='%234d4d4d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row ig-chk-on" onclick="igToggleRegion(this)">
-                    <span>永康區</span>
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3Cpolyline points='5,10.5 8.5,14 15,7' fill='none' stroke='%234d4d4d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row" onclick="igToggleRegion(this)">
-                    <span>善化</span>
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row" onclick="igToggleRegion(this)">
-                    <span>新市</span>
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row" onclick="igToggleRegion(this)">
-                    <span>七股</span>
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row" onclick="igToggleRegion(this)">
-                    <span>麻豆</span>
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row" onclick="igToggleRegion(this)">
-                    <span>安南</span>
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row" onclick="igToggleRegion(this)">
-                    <span>新營</span>
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3C/svg%3E" width="20" height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                </div>
-              </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">長條清單 · 點擊切換勾選</div>
-            </div>
-
-          </div><!-- /Section B -->
-
         </div>
-      </div><!-- /comp-menu -->
+        <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+            <div data-property-1="off" style="width: 135px; height: 40px; background: var(--Alabaster-50, #FCFCFC); justify-content: space-between; align-items: flex-start; display: inline-flex">
+                <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                    <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">不限(預設)</div>
+                    <span class="b3-chk-icon"></span>
+                </div>
+            </div>
+            <div data-property-1="on" style="width: 135px; height: 40px; justify-content: space-between; align-items: flex-start; display: inline-flex">
+                <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; background: var(--Color-Light-Mode-Background-bg-secondary-100, #EFEFEF); border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                    <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">中西區</div>
+                    <span class="b3-chk-icon"></span>
+                </div>
+            </div>
+            <div data-property-1="on" style="width: 135px; height: 40px; justify-content: space-between; align-items: flex-start; display: inline-flex">
+                <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; background: var(--Color-Light-Mode-Background-bg-secondary-100, #EFEFEF); border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                    <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">東區</div>
+                    <span class="b3-chk-icon"></span>
+                </div>
+            </div>
+            <div data-property-1="on" style="width: 135px; height: 40px; justify-content: space-between; align-items: flex-start; display: inline-flex">
+                <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; background: var(--Color-Light-Mode-Background-bg-secondary-100, #EFEFEF); border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                    <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">北區</div>
+                    <span class="b3-chk-icon"></span>
+                </div>
+            </div>
+            <div data-property-1="on" style="width: 135px; height: 40px; justify-content: space-between; align-items: flex-start; display: inline-flex">
+                <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; background: var(--Color-Light-Mode-Background-bg-secondary-100, #EFEFEF); border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                    <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">南區</div>
+                    <span class="b3-chk-icon"></span>
+                </div>
+            </div>
+            <div data-property-1="on" style="width: 135px; height: 40px; justify-content: space-between; align-items: flex-start; display: inline-flex">
+                <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; background: var(--Color-Light-Mode-Background-bg-secondary-100, #EFEFEF); border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                    <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">永康區</div>
+                    <span class="b3-chk-icon"></span>
+                </div>
+            </div>
+            <div data-property-1="off" style="width: 135px; height: 40px; background: var(--Alabaster-50, #FCFCFC); justify-content: space-between; align-items: flex-start; display: inline-flex">
+                <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                    <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">善化</div>
+                    <span class="b3-chk-icon"></span>
+                </div>
+            </div>
+            <div data-property-1="off" style="width: 135px; height: 40px; background: var(--Alabaster-50, #FCFCFC); justify-content: space-between; align-items: flex-start; display: inline-flex">
+                <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                    <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">新市</div>
+                    <span class="b3-chk-icon"></span>
+                </div>
+            </div>
+        </div>
+        <div data-property-1="off" style="width: 135px; height: 40px; background: var(--Alabaster-50, #FCFCFC); justify-content: space-between; align-items: flex-start; display: inline-flex">
+            <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">七股</div>
+                <span class="b3-chk-icon"></span>
+            </div>
+        </div>
+        <div data-property-1="off" style="width: 135px; height: 40px; background: var(--Alabaster-50, #FCFCFC); justify-content: space-between; align-items: flex-start; display: inline-flex">
+            <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">麻豆</div>
+                <span class="b3-chk-icon"></span>
+            </div>
+        </div>
+        <div data-property-1="off" style="width: 135px; height: 40px; background: var(--Alabaster-50, #FCFCFC); justify-content: space-between; align-items: flex-start; display: inline-flex">
+            <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">安南</div>
+                <span class="b3-chk-icon"></span>
+            </div>
+        </div>
+        <div data-property-1="off" style="width: 135px; height: 40px; background: var(--Alabaster-50, #FCFCFC); justify-content: space-between; align-items: flex-start; display: inline-flex">
+            <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">新營</div>
+                <span class="b3-chk-icon"></span>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+                <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">長條清單 · 靜態示意</div>
+              </div>
+
+            </div><!-- /Section B -->
+          </div><!-- /ig-menu-section B -->
+        </div><!-- /ig-menu-sections -->
+
+      </div>
+    </div><!-- /comp-menu -->
 
     </div>
   </section>
@@ -6649,8 +6801,6 @@
     }
 
     // ── 展開選單 sub-menu toggle ──
-    var CHK_ON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3Cpolyline points='5,10.5 8.5,14 15,7' fill='none' stroke='%234d4d4d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E";
-    var CHK_OFF = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='2' y='2' width='16' height='16' rx='1.5' fill='none' stroke='%234d4d4d' stroke-width='1.5'/%3E%3C/svg%3E";
     function igToggleSubMenu(btn) {
       var sub = document.getElementById('ig-sub-cuisine');
       var open = sub.style.display === 'flex';
@@ -6659,8 +6809,16 @@
     }
     // ── 區域選單 checkbox toggle ──
     function igToggleRegion(btn) {
-      var isOn = btn.classList.toggle('ig-chk-on');
-      btn.querySelector('.ig-chk-box-icon').src = isOn ? CHK_ON : CHK_OFF;
+      btn.classList.toggle('ig-chk-on');
+    }
+
+    // ── A4 sub-menu toggle ──────────────────────────
+    function igSelectA4(btn, subId) {
+      var frame = btn.closest('.ig-frame-card');
+      frame.querySelectorAll('.ig-a4-item').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var sub = document.getElementById('a4-dongnan-sub');
+      sub.style.display = subId ? 'flex' : 'none';
     }
 
     showComp('buttons');
@@ -6710,7 +6868,7 @@
             <div class="wf-card-right">
               <div class="wf-embed-phone">
                 <div class="wf-embed-phone-notch"></div>
-                <img class="wf-wireframe-img" src="assets/wireframes/hmw01-wf.svg" alt="篩選頁線框稿" loading="lazy">
+                <img class="wf-wireframe-img" src="assets/wireframes/hmw01-wf.png" alt="篩選頁線框稿" loading="lazy">
               </div>
             </div>
           </div>
@@ -6816,16 +6974,28 @@
             onmouseover="this.style.background='rgba(170,232,236,0.07)'"
             onmouseout="this.style.background='rgba(255,255,255,0.03)'">
             <svg width="40" height="40" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19 28.5C19 25.9804 20.0009 23.5641 21.7825 21.7825C23.5641 20.0009 25.9804 19 28.5 19C31.0196 19 33.4359 20.0009 35.2175 21.7825C36.9991 23.5641 38 25.9804 38 28.5C38 31.0196 36.9991 33.4359 35.2175 35.2175C33.4359 36.9991 31.0196 38 28.5 38C25.9804 38 23.5641 36.9991 21.7825 35.2175C20.0009 33.4359 19 31.0196 19 28.5Z" fill="#1ABCFE" />
-              <path d="M0 47.5C0 44.9804 1.00089 42.5641 2.78249 40.7825C4.56408 39.0009 6.98044 38 9.5 38H19V47.5C19 50.0196 17.9991 52.4359 16.2175 54.2175C14.4359 55.9991 12.0196 57 9.5 57C6.98044 57 4.56408 55.9991 2.78249 54.2175C1.00089 52.4359 0 50.0196 0 47.5Z" fill="#0ACF83" />
-              <path d="M19 0V19H28.5C31.0196 19 33.4359 17.9991 35.2175 16.2175C36.9991 14.4359 38 12.0196 38 9.5C38 6.98044 36.9991 4.56408 35.2175 2.78249C33.4359 1.00089 31.0196 0 28.5 0H19Z" fill="#FF7262" />
-              <path d="M0 9.5C0 12.0196 1.00089 14.4359 2.78249 16.2175C4.56408 17.9991 6.98044 19 9.5 19H19V0H9.5C6.98044 0 4.56408 1.00089 2.78249 2.78249C1.00089 4.56408 0 6.98044 0 9.5Z" fill="#F24E1E" />
-              <path d="M0 28.5C0 31.0196 1.00089 33.4359 2.78249 35.2175C4.56408 36.9991 6.98044 38 9.5 38H19V19H9.5C6.98044 19 4.56408 20.0009 2.78249 21.7825C1.00089 23.5641 0 25.9804 0 28.5Z" fill="#A259FF" />
+              <path
+                d="M19 28.5C19 25.9804 20.0009 23.5641 21.7825 21.7825C23.5641 20.0009 25.9804 19 28.5 19C31.0196 19 33.4359 20.0009 35.2175 21.7825C36.9991 23.5641 38 25.9804 38 28.5C38 31.0196 36.9991 33.4359 35.2175 35.2175C33.4359 36.9991 31.0196 38 28.5 38C25.9804 38 23.5641 36.9991 21.7825 35.2175C20.0009 33.4359 19 31.0196 19 28.5Z"
+                fill="#1ABCFE" />
+              <path
+                d="M0 47.5C0 44.9804 1.00089 42.5641 2.78249 40.7825C4.56408 39.0009 6.98044 38 9.5 38H19V47.5C19 50.0196 17.9991 52.4359 16.2175 54.2175C14.4359 55.9991 12.0196 57 9.5 57C6.98044 57 4.56408 55.9991 2.78249 54.2175C1.00089 52.4359 0 50.0196 0 47.5Z"
+                fill="#0ACF83" />
+              <path
+                d="M19 0V19H28.5C31.0196 19 33.4359 17.9991 35.2175 16.2175C36.9991 14.4359 38 12.0196 38 9.5C38 6.98044 36.9991 4.56408 35.2175 2.78249C33.4359 1.00089 31.0196 0 28.5 0H19Z"
+                fill="#FF7262" />
+              <path
+                d="M0 9.5C0 12.0196 1.00089 14.4359 2.78249 16.2175C4.56408 17.9991 6.98044 19 9.5 19H19V0H9.5C6.98044 0 4.56408 1.00089 2.78249 2.78249C1.00089 4.56408 0 6.98044 0 9.5Z"
+                fill="#F24E1E" />
+              <path
+                d="M0 28.5C0 31.0196 1.00089 33.4359 2.78249 35.2175C4.56408 36.9991 6.98044 38 9.5 38H19V19H9.5C6.98044 19 4.56408 20.0009 2.78249 21.7825C1.00089 23.5641 0 25.9804 0 28.5Z"
+                fill="#A259FF" />
             </svg>
-            <div style="font-size:13px;color:var(--text-dim);font-family:'Roboto Mono',monospace;letter-spacing:1px;text-align:center;">
+            <div
+              style="font-size:13px;color:var(--text-dim);font-family:'Roboto Mono',monospace;letter-spacing:1px;text-align:center;">
               CLICK TO OPEN IN FIGMA
             </div>
-            <div style="font-size:11px;color:rgba(170,232,236,0.4);font-family:'Roboto Mono',monospace;text-align:center;">
+            <div
+              style="font-size:11px;color:rgba(170,232,236,0.4);font-family:'Roboto Mono',monospace;text-align:center;">
               ⚠ Figma embed 需部署至 HTTPS 才可預覽，點此直接開啟
             </div>
           </a>
@@ -6843,7 +7013,8 @@
       background: #FCFCFC;
       border-radius: 12px;
       box-shadow: 0 2px 5px rgba(168, 99, 99, 0.3);
-      width: 382px;
+      max-width: 382px;
+      width: 100%;
       overflow: hidden;
       font-family: 'Noto Sans TC', sans-serif;
     }
@@ -7134,6 +7305,92 @@
       object-fit: contain;
     }
 
+    /* ── Filter Components — phone-size grid ── */
+    .fg-phone-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .fg-phone-slot {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 10px;
+      zoom: 0.82;
+    }
+
+    @media (max-width: 767px) {
+      .fg-phone-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    /* ── A4 Sub-menu interactive ── */
+    .ig-a4-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 40px;
+      padding: 0 12px;
+      background: #fcfcfc;
+      border: none;
+      border-bottom: 1px solid #d0d0d0;
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #909090;
+      letter-spacing: 1px;
+      white-space: nowrap;
+      cursor: pointer;
+      text-align: left;
+      box-sizing: border-box;
+      width: 130px;
+    }
+
+    .ig-a4-item:last-child {
+      border-bottom: none;
+    }
+
+    .ig-a4-item.active {
+      background: #efefef;
+      color: #4d4d4d;
+    }
+
+    .ig-a4-sub {
+      flex-direction: column;
+      border: 1px solid #d0d0d0;
+      border-left: none;
+      border-radius: 0 4px 4px 0;
+      overflow: hidden;
+    }
+
+    .ig-a4-sub .ig-a4-item {
+      width: 100px;
+    }
+
+    /* ── Menu Sections RWD layout ── */
+    .ig-menu-sections {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .ig-menu-section {
+      min-width: 0;
+    }
+
+    @media (max-width: 900px) {
+      .ig-menu-sections {
+        flex-direction: column;
+        gap: 32px;
+      }
+    }
+
     /* ── Menu Components ── */
     .ig-menu-row {
       display: flex;
@@ -7189,12 +7446,50 @@
     }
 
     .ig-chk-row.ig-chk-on {
-      background: #efefef;
+      background: transparent;
     }
 
-    .ig-list-scroll::-webkit-scrollbar { width: 6px; }
-    .ig-list-scroll::-webkit-scrollbar-track { background: transparent; }
-    .ig-list-scroll::-webkit-scrollbar-thumb { background: #d0d0d0; border-radius: 3px; }
+    .ig-chk-box-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      border: 1.5px solid #d0d0d0;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+
+    .ig-chk-on .ig-chk-box-icon {
+      background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpolyline points='2,6.5 5,9.5 10,3' stroke='%234d4d4d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center/12px no-repeat;
+      border-color: #4d4d4d;
+    }
+
+    /* ── B3 checkbox icons ── */
+    .b3-chk-icon {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      background: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 18C1.45 18 0.979167 17.8042 0.5875 17.4125C0.195833 17.0208 0 16.55 0 16V2C0 1.45 0.195833 0.979167 0.5875 0.5875C0.979167 0.195833 1.45 0 2 0H16C16.55 0 17.0208 0.195833 17.4125 0.5875C17.8042 0.979167 18 1.45 18 2V16C18 16.55 17.8042 17.0208 17.4125 17.4125C17.0208 17.8042 16.55 18 16 18H2ZM2 16H16V2H2V16Z' fill='%231D1B20'/%3E%3C/svg%3E") center/18px no-repeat;
+    }
+    [data-property-1="on"] .b3-chk-icon {
+      background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.6 13.2L14.65 6.15L13.25 4.75L7.6 10.4L4.75 7.55L3.35 8.95L7.6 13.2ZM2 18C1.45 18 0.979167 17.8042 0.5875 17.4125C0.195833 17.0208 0 16.55 0 16V2C0 1.45 0.195833 0.979167 0.5875 0.5875C0.979167 0.195833 1.45 0 2 0H16C16.55 0 17.0208 0.195833 17.4125 0.5875C17.8042 0.979167 18 1.45 18 2V16C18 16.55 17.8042 17.0208 17.4125 17.4125C17.0208 17.8042 16.55 18 16 18H2ZM2 16H16V2H2V16Z' fill='%231D1B20'/%3E%3C/svg%3E");
+    }
+
+    .ig-list-scroll::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .ig-list-scroll::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .ig-list-scroll::-webkit-scrollbar-thumb {
+      background: #d0d0d0;
+      border-radius: 3px;
+    }
 
     /* ── RWD: comp-slide 超出螢幕時橫向捲動 ── */
     .comp-slide>div {

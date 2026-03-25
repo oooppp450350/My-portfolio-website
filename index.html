@@ -2570,6 +2570,9 @@
     }
 
     .wf-wireframe-img {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -5240,44 +5243,6 @@
           </div>
         </div>
 
-        <!-- Dark Mode -->
-        <div style="margin-bottom:20px;">
-          <div style="font-size:11px;color:var(--text-muted);letter-spacing:1px;margin-bottom:12px;">DARK MODE</div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;">
-            <div>
-              <div style="background:#E0E0E0;border-radius:8px;padding:14px 10px;"><span
-                  style="font-family:'Roboto Mono',monospace;font-size:11px;color:#111;">#E0E0E0</span></div>
-              <div style="font-size:11px;color:var(--text-muted);margin-top:5px;">Text Primary</div>
-            </div>
-            <div>
-              <div style="background:#BDBDBD;border-radius:8px;padding:14px 10px;"><span
-                  style="font-family:'Roboto Mono',monospace;font-size:11px;color:#111;">#BDBDBD</span></div>
-              <div style="font-size:11px;color:var(--text-muted);margin-top:5px;">Text Secondary</div>
-            </div>
-            <div>
-              <div
-                style="background:#121212;border-radius:8px;padding:14px 10px;border:1px solid rgba(255,255,255,0.1);">
-                <span style="font-family:'Roboto Mono',monospace;font-size:11px;color:#eee;">#121212</span>
-              </div>
-              <div style="font-size:11px;color:var(--text-muted);margin-top:5px;">Background Primary</div>
-            </div>
-            <div>
-              <div
-                style="background:#333333;border-radius:8px;padding:14px 10px;border:1px solid rgba(255,255,255,0.1);">
-                <span style="font-family:'Roboto Mono',monospace;font-size:11px;color:#eee;">#333333</span>
-              </div>
-              <div style="font-size:11px;color:var(--text-muted);margin-top:5px;">Background Secondary</div>
-            </div>
-            <div>
-              <div
-                style="background:#424242;border-radius:8px;padding:14px 10px;border:1px solid rgba(255,255,255,0.1);">
-                <span style="font-family:'Roboto Mono',monospace;font-size:11px;color:#eee;">#424242</span>
-              </div>
-              <div style="font-size:11px;color:var(--text-muted);margin-top:5px;">Border Gray</div>
-            </div>
-          </div>
-        </div>
-
         <!-- Brand Colors -->
         <div style="margin-bottom:20px;">
           <div style="font-size:11px;color:var(--text-muted);letter-spacing:1px;margin-bottom:12px;">BRAND · CORAL /
@@ -5783,7 +5748,7 @@
             style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:24px;">
             CARD · 382px</div>
           <div
-            style="display:flex;flex-direction:column;gap:24px;align-items:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            style="display:flex;flex-direction:column;gap:24px;align-items:flex-start;">
 
             <!-- Variant5：4:3 圖片 -->
             <div>
@@ -5920,10 +5885,10 @@
             FILTER COMPONENTS · 篩選框元件</div>
 
           <!-- Frame 卡片 Grid -->
-          <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;">
+          <div class="fg-phone-grid">
 
             <!-- ── Frame 1: 篩選框－類型 ── -->
-            <div style="display:inline-flex;flex-direction:column;gap:10px;">
+            <div class="fg-phone-slot">
               <div class="ig-frame-card" style="width:340px;">
                 <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px;">
                   <img src="https://www.figma.com/api/mcp/asset/ccd799aa-97bd-4b02-a5ba-04d4579784ae" width="24"
@@ -5974,7 +5939,7 @@
             </div>
 
             <!-- ── Frame 2: 造訪狀態 (Figma node 160:6873) ── -->
-            <div style="display:inline-flex;flex-direction:column;gap:10px;">
+            <div class="fg-phone-slot">
               <div class="ig-frame-card"
                 style="width:380px;display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
                 <!-- 標題列 -->
@@ -6001,7 +5966,7 @@
             </div>
 
             <!-- ── Frame 3: 地點 ── -->
-            <div style="display:inline-flex;flex-direction:column;gap:10px;">
+            <div class="fg-phone-slot">
               <!-- 未選擇地點 (互動) -->
               <div>
                 <button onclick="igToggleLocation(this)"
@@ -6037,7 +6002,7 @@
             </div>
 
             <!-- ── Frame 4: 套用篩選 ── -->
-            <div style="display:inline-flex;flex-direction:column;gap:10px;">
+            <div class="fg-phone-slot">
               <div class="ig-frame-card">
                 <button onclick="igToggleApplyLocal(this)"
                   style="display:flex;gap:12px;align-items:center;background:none;border:none;cursor:pointer;padding:0;">
@@ -6058,7 +6023,7 @@
             </div>
 
             <!-- ── Frame 5: 價格區間 ── -->
-            <div style="display:inline-flex;flex-direction:column;gap:10px;">
+            <div class="fg-phone-slot">
               <div class="ig-frame-card" style="width:340px;">
                 <div style="display:flex;gap:12px;align-items:center;margin-bottom:16px;">
                   <img src="https://www.figma.com/api/mcp/asset/85816054-f532-4127-a15a-52cc46710ca9" width="24"
@@ -6107,11 +6072,13 @@
       <!-- ── 選單元件 Slide ── -->
       <div id="comp-menu" class="comp-slide" style="display:none;">
         <div
-          style="background:#FFFFFF;border:1px solid rgba(0,0,0,0.1);border-radius:2px;padding:32px;overflow-x:auto;-webkit-overflow-scrolling:touch;">
+          style="background:#FFFFFF;border:1px solid rgba(0,0,0,0.1);border-radius:2px;padding:32px;">
           <div
             style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:24px;">
             MENU COMPONENTS · 選單元件</div>
 
+          <div class="ig-menu-sections">
+          <div class="ig-menu-section">
           <!-- ── Section A: 選單列元件 287-14567 ── -->
           <div
             style="font-family:'Roboto Mono',monospace;font-size:10px;color:#b0b0b0;letter-spacing:1.5px;margin-bottom:16px;">
@@ -6125,16 +6092,14 @@
                 <div
                   style="display:flex;align-items:center;justify-content:space-between;width:130px;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-left:1px solid #d0d0d0;border-right:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;">
                   <span
-                    style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">日式料理</span>
-                  <img src="https://www.figma.com/api/mcp/asset/7d5846b5-b17c-47b8-88ba-af213f7d8a08" width="12"
-                    height="14" alt="" style="flex-shrink:0;object-fit:contain;">
+                    style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">東南亞料理</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="flex-shrink:0;"><polygon points="5.33,3.33 12.67,8 5.33,12.67" fill="#909090"/></svg>
                 </div>
                 <div
                   style="display:flex;align-items:center;justify-content:space-between;width:130px;height:40px;padding:0 12px;box-sizing:border-box;background:#efefef;border:1px solid #d0d0d0;">
                   <span
-                    style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#4d4d4d;letter-spacing:1px;white-space:nowrap;">韓式料理</span>
-                  <img src="https://www.figma.com/api/mcp/asset/7d5846b5-b17c-47b8-88ba-af213f7d8a08" width="12"
-                    height="14" alt="" style="flex-shrink:0;object-fit:contain;">
+                    style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#4d4d4d;letter-spacing:1px;white-space:nowrap;">東南亞料理</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="flex-shrink:0;"><polygon points="5.33,3.33 12.67,8 5.33,12.67" fill="#4d4d4d"/></svg>
                 </div>
               </div>
               <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">選單 · 有箭頭 · off / on</div>
@@ -6176,104 +6141,45 @@
               <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">子選單元件 · off / on</div>
             </div>
 
-            <!-- ── Card A4: 子選單展開樣式 ── -->
+          </div><!-- /Section A row 1 -->
+
+          <!-- ── Card A4: 子選單展開樣式 (interactive) ── -->
+          <div style="margin-top:24px;">
+            <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#b0b0b0;letter-spacing:1.5px;margin-bottom:16px;">子選單展開樣式 · 互動</div>
             <div style="display:inline-flex;flex-direction:column;gap:10px;">
-              <div class="ig-frame-card"
-                style="padding:12px;display:inline-flex;flex-direction:row;gap:20px;align-items:flex-start;">
-                <!-- 未展開 -->
-                <div style="display:inline-flex;flex-direction:column;gap:6px;">
-                  <div style="font-family:'Roboto Mono',monospace;font-size:9px;color:#b0b0b0;">未展開</div>
-                  <div
-                    style="display:flex;flex-direction:column;border:1px solid #d0d0d0;border-radius:4px;overflow:hidden;">
-                    <div
-                      style="display:flex;align-items:center;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-bottom:1px solid #d0d0d0;width:130px;">
-                      <span
-                        style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">日式料理</span>
-                    </div>
-                    <div
-                      style="display:flex;align-items:center;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-bottom:1px solid #d0d0d0;width:130px;">
-                      <span
-                        style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">韓式料理</span>
-                    </div>
-                    <div
-                      style="display:flex;align-items:center;justify-content:space-between;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-bottom:1px solid #d0d0d0;width:130px;">
-                      <span
-                        style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">東南亞料理</span>
-                      <img src="https://www.figma.com/api/mcp/asset/7d5846b5-b17c-47b8-88ba-af213f7d8a08" width="12"
-                        height="14" alt="" style="flex-shrink:0;object-fit:contain;">
-                    </div>
-                    <div
-                      style="display:flex;align-items:center;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;width:130px;">
-                      <span
-                        style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">台式料理</span>
-                    </div>
-                  </div>
+              <div class="ig-frame-card" style="padding:12px;display:inline-flex;flex-direction:row;align-items:flex-start;">
+                <!-- Main list -->
+                <div style="display:flex;flex-direction:column;border:1px solid #d0d0d0;border-radius:4px 0 0 4px;overflow:hidden;">
+                  <button class="ig-a4-item" onclick="igSelectA4(this,null)">日式料理</button>
+                  <button class="ig-a4-item" onclick="igSelectA4(this,null)">韓式料理</button>
+                  <button class="ig-a4-item" onclick="igSelectA4(this,null)">早午餐店</button>
+                  <button class="ig-a4-item" onclick="igSelectA4(this,null)">甜點/咖啡</button>
+                  <button class="ig-a4-item" onclick="igSelectA4(this,null)">台式料理</button>
+                  <button class="ig-a4-item ig-a4-has-sub active" onclick="igSelectA4(this,'a4-dongnan-sub')">
+                    <span>東南亞料理</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="flex-shrink:0;"><polygon points="5.33,3.33 12.67,8 5.33,12.67" fill="#909090"/></svg>
+                  </button>
                 </div>
-                <!-- 展開子選單 -->
-                <div style="display:inline-flex;flex-direction:column;gap:6px;">
-                  <div style="font-family:'Roboto Mono',monospace;font-size:9px;color:#b0b0b0;">展開子選單</div>
-                  <div
-                    style="display:flex;flex-direction:row;border:1px solid #d0d0d0;border-radius:4px;overflow:hidden;">
-                    <!-- main list -->
-                    <div style="display:flex;flex-direction:column;border-right:1px solid #d0d0d0;">
-                      <div
-                        style="display:flex;align-items:center;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-bottom:1px solid #d0d0d0;width:130px;">
-                        <span
-                          style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">日式料理</span>
-                      </div>
-                      <div
-                        style="display:flex;align-items:center;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-bottom:1px solid #d0d0d0;width:130px;">
-                        <span
-                          style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">韓式料理</span>
-                      </div>
-                      <div
-                        style="display:flex;align-items:center;justify-content:space-between;height:40px;padding:0 12px;box-sizing:border-box;background:#efefef;border-bottom:1px solid #d0d0d0;width:130px;">
-                        <span
-                          style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#4d4d4d;letter-spacing:1px;white-space:nowrap;">東南亞料理</span>
-                        <img src="https://www.figma.com/api/mcp/asset/7d5846b5-b17c-47b8-88ba-af213f7d8a08" width="12"
-                          height="14" alt="" style="flex-shrink:0;object-fit:contain;">
-                      </div>
-                      <div
-                        style="display:flex;align-items:center;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;width:130px;">
-                        <span
-                          style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">台式料理</span>
-                      </div>
-                    </div>
-                    <!-- sub-panel -->
-                    <div style="display:flex;flex-direction:column;">
-                      <div
-                        style="display:flex;align-items:center;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-bottom:1px solid #d0d0d0;width:95px;">
-                        <span
-                          style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">泰式料理</span>
-                      </div>
-                      <div
-                        style="display:flex;align-items:center;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-bottom:1px solid #d0d0d0;width:95px;">
-                        <span
-                          style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">越式料理</span>
-                      </div>
-                      <div
-                        style="display:flex;align-items:center;height:40px;padding:0 12px;box-sizing:border-box;background:#efefef;border-bottom:1px solid #d0d0d0;width:95px;">
-                        <span
-                          style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#4d4d4d;letter-spacing:1px;white-space:nowrap;">印度料理</span>
-                      </div>
-                      <div
-                        style="display:flex;align-items:center;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;width:95px;">
-                        <span
-                          style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">馬來西亞</span>
-                      </div>
-                    </div>
-                  </div>
+                <!-- Sub panel (visible by default showing expanded state) -->
+                <div id="a4-dongnan-sub" class="ig-a4-sub" style="display:flex;">
+                  <button class="ig-a4-item">泰式料理</button>
+                  <button class="ig-a4-item">越式料理</button>
+                  <button class="ig-a4-item">印度料理</button>
+                  <button class="ig-a4-item">馬來西亞料理</button>
                 </div>
               </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">子選單展開樣式 · 未展開 / 展開</div>
+              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">子選單展開樣式 · 點擊主項目切換</div>
             </div>
+          </div>
 
           </div><!-- /Section A -->
+          </div><!-- /ig-menu-section A -->
 
+          <div class="ig-menu-section">
           <!-- ── Section B: 選單操作元件 277-6114 ── -->
           <div
             style="font-family:'Roboto Mono',monospace;font-size:10px;color:#b0b0b0;letter-spacing:1.5px;margin-bottom:16px;">
-            B · 選單操作元件 · 277-6114</div>
+            B · 區域選單</div>
           <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;">
 
             <!-- ── Card B1: 下拉選單鈕 ── -->
@@ -6292,107 +6198,129 @@
               <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">下拉選單鈕</div>
             </div>
 
-            <!-- ── Card B2: 篩選框 (off / on) ── -->
+            <!-- ── Card B2: 篩選框 (複選) ── -->
             <div style="display:inline-flex;flex-direction:column;gap:10px;">
-              <div class="ig-frame-card"
-                style="padding:12px;display:inline-flex;flex-direction:column;gap:0;overflow:hidden;">
-                <div
-                  style="display:flex;align-items:center;justify-content:space-between;width:135px;height:40px;padding:0 12px;box-sizing:border-box;background:#fcfcfc;border-left:1px solid #d0d0d0;border-right:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;">
-                  <span
-                    style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#909090;letter-spacing:1px;white-space:nowrap;">不限(預設)</span>
-                  <img src="https://www.figma.com/api/mcp/asset/4cd4f97d-581d-42f1-8181-d24e62d2941a" width="20"
-                    height="20" alt="" style="flex-shrink:0;object-fit:contain;">
-                </div>
-                <div
-                  style="display:flex;align-items:center;justify-content:space-between;width:135px;height:40px;padding:0 12px;box-sizing:border-box;background:#efefef;border:1px solid #d0d0d0;">
-                  <span
-                    style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:500;color:#4d4d4d;letter-spacing:1px;white-space:nowrap;">中西區</span>
-                  <img src="https://www.figma.com/api/mcp/asset/8a85f2cf-5e54-4b46-8591-d1127eb4e5e7" width="20"
-                    height="20" alt="" style="flex-shrink:0;object-fit:contain;">
-                </div>
+              <div class="ig-frame-card" style="padding:0;overflow:hidden;">
+                <button class="ig-chk-row" onclick="igToggleRegion(this)">
+                  <span>不限(預設)</span>
+                  <span class="ig-chk-box-icon"></span>
+                </button>
+                <button class="ig-chk-row ig-chk-on" onclick="igToggleRegion(this)">
+                  <span>中西區</span>
+                  <span class="ig-chk-box-icon"></span>
+                </button>
+                <button class="ig-chk-row ig-chk-on" onclick="igToggleRegion(this)">
+                  <span>東區</span>
+                  <span class="ig-chk-box-icon"></span>
+                </button>
+                <button class="ig-chk-row" onclick="igToggleRegion(this)">
+                  <span>北區</span>
+                  <span class="ig-chk-box-icon"></span>
+                </button>
+                <button class="ig-chk-row" onclick="igToggleRegion(this)">
+                  <span>南區</span>
+                  <span class="ig-chk-box-icon"></span>
+                </button>
               </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">篩選框 · off / on</div>
+              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">篩選框 · 複選</div>
             </div>
 
-            <!-- ── Card B3: 長條清單 (interactive) ── -->
+            <!-- ── Card B3: 長條清單 ── -->
             <div style="display:inline-flex;flex-direction:column;gap:10px;">
               <div class="ig-frame-card" style="padding:0;overflow:hidden;width:135px;">
-                <div
-                  style="display:flex;align-items:center;justify-content:space-between;padding:0 4px 0 12px;height:40px;background:linear-gradient(180deg,#FF8A80 16%,#FF5A4F 100%);border-radius:4px 4px 0 0;">
-                  <span
-                    style="font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:700;color:#fcfcfc;letter-spacing:1px;">區域</span>
-                  <div style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;">
-                    <img src="https://www.figma.com/api/mcp/asset/b3f51f0f-d85c-4db6-8fef-0d63f937d834" width="14"
-                      height="14" alt="" style="object-fit:contain;">
-                  </div>
+<div style="width: 135px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+    <div style="width: 135px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+        <div style="align-self: stretch; height: 40px; padding-left: 12px; padding-right: 4px; background: linear-gradient(180deg, var(--Color-Light-Mode-Brand-Colors-Primary---coral-400, #FF8A80) 16%, var(--Color-Light-Mode-Brand-Colors-Primary---coral-600, #FF5A4F) 100%); border-top-left-radius: 4px; border-top-right-radius: 4px; outline: 1px var(--Colo-Dark-Mode-Brand-Colors-Primary---coral-500, #FF8A80) solid; outline-offset: -0.50px; justify-content: space-between; align-items: center; display: inline-flex">
+            <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-Background-bg-primary-50, #FCFCFC); font-size: 14px; font-family: Noto Sans TC; font-weight: 700; line-height: 16.80px; letter-spacing: 1px; word-wrap: break-word; text-shadow: 0px 1px 4px rgba(156, 99, 99, 0.35)">區域</div>
+            <div data-type="Icon" style="width: 58.02px; height: 32px; position: relative; transform: rotate(90deg); transform-origin: top left; box-shadow: 0px 1px 4px rgba(155.55, 98.90, 98.90, 0.35)">
+                <div style="width: 32px; height: 32px; left: 0px; top: 0px; position: absolute">
+                    <div style="width: 13.33px; height: 6.67px; left: 9.33px; top: 13.33px; position: absolute; background: var(--Color-Light-Mode-Background-bg-primary-50, #FCFCFC)"></div>
                 </div>
-                <div style="max-height:280px;overflow-y:auto;">
-                  <button class="ig-chk-row" onclick="igToggleRegion(this)">
-                    <span>不限(預設)</span>
-                    <img src="https://www.figma.com/api/mcp/asset/4cd4f97d-581d-42f1-8181-d24e62d2941a" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row ig-chk-on" onclick="igToggleRegion(this)">
-                    <span>中西區</span>
-                    <img src="https://www.figma.com/api/mcp/asset/8a85f2cf-5e54-4b46-8591-d1127eb4e5e7" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row ig-chk-on" onclick="igToggleRegion(this)">
-                    <span>東區</span>
-                    <img src="https://www.figma.com/api/mcp/asset/8a85f2cf-5e54-4b46-8591-d1127eb4e5e7" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row ig-chk-on" onclick="igToggleRegion(this)">
-                    <span>北區</span>
-                    <img src="https://www.figma.com/api/mcp/asset/8a85f2cf-5e54-4b46-8591-d1127eb4e5e7" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row ig-chk-on" onclick="igToggleRegion(this)">
-                    <span>南區</span>
-                    <img src="https://www.figma.com/api/mcp/asset/8a85f2cf-5e54-4b46-8591-d1127eb4e5e7" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row ig-chk-on" onclick="igToggleRegion(this)">
-                    <span>永康區</span>
-                    <img src="https://www.figma.com/api/mcp/asset/8a85f2cf-5e54-4b46-8591-d1127eb4e5e7" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row" onclick="igToggleRegion(this)">
-                    <span>善化</span>
-                    <img src="https://www.figma.com/api/mcp/asset/4cd4f97d-581d-42f1-8181-d24e62d2941a" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row" onclick="igToggleRegion(this)">
-                    <span>新市</span>
-                    <img src="https://www.figma.com/api/mcp/asset/4cd4f97d-581d-42f1-8181-d24e62d2941a" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row" onclick="igToggleRegion(this)">
-                    <span>七股</span>
-                    <img src="https://www.figma.com/api/mcp/asset/4cd4f97d-581d-42f1-8181-d24e62d2941a" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row" onclick="igToggleRegion(this)">
-                    <span>麻豆</span>
-                    <img src="https://www.figma.com/api/mcp/asset/4cd4f97d-581d-42f1-8181-d24e62d2941a" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row" onclick="igToggleRegion(this)">
-                    <span>安南</span>
-                    <img src="https://www.figma.com/api/mcp/asset/4cd4f97d-581d-42f1-8181-d24e62d2941a" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
-                  <button class="ig-chk-row" onclick="igToggleRegion(this)">
-                    <span>新營</span>
-                    <img src="https://www.figma.com/api/mcp/asset/4cd4f97d-581d-42f1-8181-d24e62d2941a" width="20"
-                      height="20" alt="" class="ig-chk-box-icon" style="flex-shrink:0;object-fit:contain;">
-                  </button>
+            </div>
+        </div>
+        <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+            <div data-property-1="off" style="width: 135px; height: 40px; background: var(--Alabaster-50, #FCFCFC); justify-content: space-between; align-items: flex-start; display: inline-flex">
+                <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                    <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">不限(預設)</div>
+                    <span class="b3-chk-icon"></span>
                 </div>
+            </div>
+            <div data-property-1="on" style="width: 135px; height: 40px; justify-content: space-between; align-items: flex-start; display: inline-flex">
+                <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; background: var(--Color-Light-Mode-Background-bg-secondary-100, #EFEFEF); border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                    <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">中西區</div>
+                    <span class="b3-chk-icon"></span>
+                </div>
+            </div>
+            <div data-property-1="on" style="width: 135px; height: 40px; justify-content: space-between; align-items: flex-start; display: inline-flex">
+                <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; background: var(--Color-Light-Mode-Background-bg-secondary-100, #EFEFEF); border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                    <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">東區</div>
+                    <span class="b3-chk-icon"></span>
+                </div>
+            </div>
+            <div data-property-1="on" style="width: 135px; height: 40px; justify-content: space-between; align-items: flex-start; display: inline-flex">
+                <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; background: var(--Color-Light-Mode-Background-bg-secondary-100, #EFEFEF); border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                    <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">北區</div>
+                    <span class="b3-chk-icon"></span>
+                </div>
+            </div>
+            <div data-property-1="on" style="width: 135px; height: 40px; justify-content: space-between; align-items: flex-start; display: inline-flex">
+                <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; background: var(--Color-Light-Mode-Background-bg-secondary-100, #EFEFEF); border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                    <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">南區</div>
+                    <span class="b3-chk-icon"></span>
+                </div>
+            </div>
+            <div data-property-1="on" style="width: 135px; height: 40px; justify-content: space-between; align-items: flex-start; display: inline-flex">
+                <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; background: var(--Color-Light-Mode-Background-bg-secondary-100, #EFEFEF); border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                    <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">永康區</div>
+                    <span class="b3-chk-icon"></span>
+                </div>
+            </div>
+            <div data-property-1="off" style="width: 135px; height: 40px; background: var(--Alabaster-50, #FCFCFC); justify-content: space-between; align-items: flex-start; display: inline-flex">
+                <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                    <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">善化</div>
+                    <span class="b3-chk-icon"></span>
+                </div>
+            </div>
+            <div data-property-1="off" style="width: 135px; height: 40px; background: var(--Alabaster-50, #FCFCFC); justify-content: space-between; align-items: flex-start; display: inline-flex">
+                <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                    <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">新市</div>
+                    <span class="b3-chk-icon"></span>
+                </div>
+            </div>
+        </div>
+        <div data-property-1="off" style="width: 135px; height: 40px; background: var(--Alabaster-50, #FCFCFC); justify-content: space-between; align-items: flex-start; display: inline-flex">
+            <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">七股</div>
+                <span class="b3-chk-icon"></span>
+            </div>
+        </div>
+        <div data-property-1="off" style="width: 135px; height: 40px; background: var(--Alabaster-50, #FCFCFC); justify-content: space-between; align-items: flex-start; display: inline-flex">
+            <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">麻豆</div>
+                <span class="b3-chk-icon"></span>
+            </div>
+        </div>
+        <div data-property-1="off" style="width: 135px; height: 40px; background: var(--Alabaster-50, #FCFCFC); justify-content: space-between; align-items: flex-start; display: inline-flex">
+            <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">安南</div>
+                <span class="b3-chk-icon"></span>
+            </div>
+        </div>
+        <div data-property-1="off" style="width: 135px; height: 40px; background: var(--Alabaster-50, #FCFCFC); justify-content: space-between; align-items: flex-start; display: inline-flex">
+            <div style="width: 135px; align-self: stretch; padding-left: 12px; padding-right: 12px; border-left: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-right: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; border-bottom: 1px var(--Color-Light-Mode-border-gray-300, #D0D0D0) solid; justify-content: space-between; align-items: center; display: flex">
+                <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Color-Light-Mode-text-primary, #4D4D4D); font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 22px; word-wrap: break-word">新營</div>
+                <span class="b3-chk-icon"></span>
+            </div>
+        </div>
+    </div>
+</div>
               </div>
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">長條清單 · 點擊切換勾選</div>
+              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;">長條清單 · 靜態示意</div>
             </div>
 
           </div><!-- /Section B -->
+          </div><!-- /ig-menu-section B -->
+          </div><!-- /ig-menu-sections -->
 
         </div>
       </div><!-- /comp-menu -->
@@ -6500,8 +6428,6 @@
     }
 
     // ── 展開選單 sub-menu toggle ──
-    var CHK_ON = 'https://www.figma.com/api/mcp/asset/8a85f2cf-5e54-4b46-8591-d1127eb4e5e7';
-    var CHK_OFF = 'https://www.figma.com/api/mcp/asset/4cd4f97d-581d-42f1-8181-d24e62d2941a';
     function igToggleSubMenu(btn) {
       var sub = document.getElementById('ig-sub-cuisine');
       var open = sub.style.display === 'flex';
@@ -6510,8 +6436,16 @@
     }
     // ── 區域選單 checkbox toggle ──
     function igToggleRegion(btn) {
-      var isOn = btn.classList.toggle('ig-chk-on');
-      btn.querySelector('.ig-chk-box-icon').src = isOn ? CHK_ON : CHK_OFF;
+      btn.classList.toggle('ig-chk-on');
+    }
+
+    // ── A4 sub-menu toggle ──────────────────────────
+    function igSelectA4(btn, subId) {
+      var frame = btn.closest('.ig-frame-card');
+      frame.querySelectorAll('.ig-a4-item').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var sub = document.getElementById('a4-dongnan-sub');
+      sub.style.display = subId ? 'flex' : 'none';
     }
 
     showComp('buttons');
@@ -6673,7 +6607,8 @@
       background: #FCFCFC;
       border-radius: 12px;
       box-shadow: 0 2px 5px rgba(168, 99, 99, 0.3);
-      width: 382px;
+      max-width: 382px;
+      width: 100%;
       overflow: hidden;
       font-family: 'Noto Sans TC', sans-serif;
     }
@@ -6964,6 +6899,92 @@
       object-fit: contain;
     }
 
+    /* ── Filter Components — phone-size grid ── */
+    .fg-phone-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .fg-phone-slot {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 10px;
+      zoom: 0.82;
+    }
+
+    @media (max-width: 767px) {
+      .fg-phone-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    /* ── A4 Sub-menu interactive ── */
+    .ig-a4-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 40px;
+      padding: 0 12px;
+      background: #fcfcfc;
+      border: none;
+      border-bottom: 1px solid #d0d0d0;
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #909090;
+      letter-spacing: 1px;
+      white-space: nowrap;
+      cursor: pointer;
+      text-align: left;
+      box-sizing: border-box;
+      width: 130px;
+    }
+
+    .ig-a4-item:last-child {
+      border-bottom: none;
+    }
+
+    .ig-a4-item.active {
+      background: #efefef;
+      color: #4d4d4d;
+    }
+
+    .ig-a4-sub {
+      flex-direction: column;
+      border: 1px solid #d0d0d0;
+      border-left: none;
+      border-radius: 0 4px 4px 0;
+      overflow: hidden;
+    }
+
+    .ig-a4-sub .ig-a4-item {
+      width: 100px;
+    }
+
+    /* ── Menu Sections RWD layout ── */
+    .ig-menu-sections {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .ig-menu-section {
+      min-width: 0;
+    }
+
+    @media (max-width: 900px) {
+      .ig-menu-sections {
+        flex-direction: column;
+        gap: 32px;
+      }
+    }
+
     /* ── Menu Components ── */
     .ig-menu-row {
       display: flex;
@@ -7004,6 +7025,7 @@
       align-items: center;
       justify-content: space-between;
       width: 135px;
+      box-sizing: border-box;
       height: 40px;
       padding: 0 12px;
       border-left: 1px solid #d0d0d0;
@@ -7017,7 +7039,36 @@
     }
 
     .ig-chk-row.ig-chk-on {
-      background: #efefef;
+      background: transparent;
+    }
+
+    .ig-chk-box-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      border: 1.5px solid #d0d0d0;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+
+    .ig-chk-on .ig-chk-box-icon {
+      background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpolyline points='2,6.5 5,9.5 10,3' stroke='%234d4d4d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center/12px no-repeat;
+      border-color: #4d4d4d;
+    }
+
+    /* ── B3 checkbox icons ── */
+    .b3-chk-icon {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      background: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 18C1.45 18 0.979167 17.8042 0.5875 17.4125C0.195833 17.0208 0 16.55 0 16V2C0 1.45 0.195833 0.979167 0.5875 0.5875C0.979167 0.195833 1.45 0 2 0H16C16.55 0 17.0208 0.195833 17.4125 0.5875C17.8042 0.979167 18 1.45 18 2V16C18 16.55 17.8042 17.0208 17.4125 17.4125C17.0208 17.8042 16.55 18 16 18H2ZM2 16H16V2H2V16Z' fill='%231D1B20'/%3E%3C/svg%3E") center/18px no-repeat;
+    }
+    [data-property-1="on"] .b3-chk-icon {
+      background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.6 13.2L14.65 6.15L13.25 4.75L7.6 10.4L4.75 7.55L3.35 8.95L7.6 13.2ZM2 18C1.45 18 0.979167 17.8042 0.5875 17.4125C0.195833 17.0208 0 16.55 0 16V2C0 1.45 0.195833 0.979167 0.5875 0.5875C0.979167 0.195833 1.45 0 2 0H16C16.55 0 17.0208 0.195833 17.4125 0.5875C17.8042 0.979167 18 1.45 18 2V16C18 16.55 17.8042 17.0208 17.4125 17.4125C17.0208 17.8042 16.55 18 16 18H2ZM2 16H16V2H2V16Z' fill='%231D1B20'/%3E%3C/svg%3E");
     }
 
     /* ── RWD: comp-slide 超出螢幕時橫向捲動 ── */
