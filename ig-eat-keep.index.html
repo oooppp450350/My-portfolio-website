@@ -5750,9 +5750,23 @@
             CARD · 382px</div>
           <div style="display:flex;flex-direction:column;gap:24px;align-items:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;">
 
-            <img src="assets/card.png"
-                 class="comp-card-screenshot"
-                 alt="卡片元件設計規格">
+            <div>
+              <img src="assets/card.svg"
+                   class="comp-card-screenshot"
+                   alt="卡片元件 - 一般檢視">
+              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:8px;letter-spacing:1px;">
+                Default
+              </div>
+            </div>
+
+            <div>
+              <img src="assets/card-edit.svg"
+                   class="comp-card-screenshot"
+                   alt="卡片元件 - 編輯模式">
+              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:8px;letter-spacing:1px;">
+                Edit
+              </div>
+            </div>
 
           </div>
         </div>
@@ -5995,7 +6009,7 @@
       <!-- ── 選單元件 Slide ── -->
       <div id="comp-menu" class="comp-slide" style="display:none;">
         <div
-          style="background:#FFFFFF;border:1px solid rgba(0,0,0,0.1);border-radius:2px;padding:32px;overflow-x:hidden;">
+          style="background:#FFFFFF;border:1px solid rgba(0,0,0,0.1);border-radius:2px;padding:32px;">
           <div
             style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:24px;">
             MENU COMPONENTS · 選單元件</div>
@@ -7197,6 +7211,8 @@
     /* ── RWD: comp-slide 超出螢幕時橫向捲動 ── */
     .comp-slide>div {
       max-width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     @media (max-width:480px) {
