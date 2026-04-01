@@ -6734,6 +6734,122 @@
     </div><!-- /wf-layout -->
   </section>
 
+  <!-- ══════════════════════════════
+     ENGINEERING SECTION
+     工程面規劃
+     ══════════════════════════════ -->
+  <section id="engineering" style="padding-bottom:80px;">
+    <p class="sec-label">05 / Engineering</p>
+    <h2 class="sec-title">工程面規劃</h2>
+
+    <div class="eng-block">
+      <div class="eng-topic">關於匯入面的技術可行性限制修正記錄</div>
+
+      <div class="eng-row">
+        <div class="eng-tag eng-tag--original">原本的想法</div>
+        <p class="eng-body">直接從 IG 的個人收藏內匯入</p>
+      </div>
+
+      <div class="eng-row">
+        <div class="eng-tag eng-tag--problem">遇到的問題</div>
+        <p class="eng-body">當前 Instagram 出於對用戶隱私的高度重視，並未開放可用於自動化用戶行為（如收藏、瀏覽紀錄等）的 API 介面，也不允許第三方 APP 取得用戶的個人隱私資訊。官方僅有限度地提供創作者帳號相關的公開內容與影片資料查詢權限，確保平台安全並保護用戶資料不被未授權存取。</p>
+      </div>
+
+      <div class="eng-row">
+        <div class="eng-tag eng-tag--current">原本的解法（目前版本）</div>
+        <p class="eng-body">利用監聽嵌入的技術，讓使用者在點按收藏或複製按鈕時，能夠自動完成收藏內容的複製和貼上操作，無需手動操作。這樣可以大幅簡化使用者的收藏流程，提升整體的使用體驗。</p>
+      </div>
+
+      <div class="eng-row">
+        <div class="eng-tag eng-tag--new">現在的想法</div>
+        <p class="eng-body">還是透過「分享到第三方應用」的方式，讓程式自動執行複製貼上操作會更為便捷且符合當前平台規範。這種做法既簡化了使用流程，又避開了對 Instagram 隱私權限制的違反，同時也能保障用戶資料的安全與產品的穩定運作。</p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* ── Engineering Section ── */
+    #engineering {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .eng-block {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 32px;
+    }
+    .eng-topic {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--accent);
+      padding: 16px 24px;
+      background: var(--accent-dim);
+      border-bottom: 1px solid var(--border-subtle);
+      text-transform: uppercase;
+    }
+    .eng-row {
+      display: flex;
+      gap: 20px;
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border-subtle);
+      align-items: flex-start;
+    }
+    .eng-row:last-child {
+      border-bottom: none;
+    }
+    .eng-tag {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 1px;
+      padding: 4px 10px;
+      border-radius: 100px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .eng-tag--original {
+      background: rgba(255,255,255,0.06);
+      color: var(--text-dim);
+      border: 1px solid var(--border-subtle);
+    }
+    .eng-tag--problem {
+      background: rgba(255, 100, 80, 0.12);
+      color: #ff9a8a;
+      border: 1px solid rgba(255, 100, 80, 0.25);
+    }
+    .eng-tag--current {
+      background: rgba(170, 232, 236, 0.08);
+      color: var(--accent);
+      border: 1px solid var(--border);
+    }
+    .eng-tag--new {
+      background: rgba(100, 220, 160, 0.1);
+      color: #7de8b0;
+      border: 1px solid rgba(100, 220, 160, 0.25);
+    }
+    .eng-body {
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--text-dim);
+    }
+    @media (max-width: 600px) {
+      .eng-row {
+        flex-direction: column;
+        gap: 8px;
+        padding: 16px 20px;
+      }
+      .eng-topic {
+        padding: 14px 20px;
+      }
+    }
+  </style>
+
   <!-- ─── 額外元件 CSS（卡片、Loader、篩選框）─── -->
   <style>
     /* ── Card ─────────────────────────────── */
