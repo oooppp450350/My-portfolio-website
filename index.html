@@ -1289,6 +1289,30 @@
       color: var(--text-muted);
     }
 
+    .nav-home {
+      opacity: 0.6;
+    }
+    .nav-home:hover {
+      opacity: 1;
+    }
+
+    .footer-home-btn {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 7px 20px;
+      border: 1px solid var(--accent);
+      border-radius: 20px;
+      color: var(--accent);
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 13px;
+      text-decoration: none;
+      transition: background .2s, color .2s;
+    }
+    .footer-home-btn:hover {
+      background: var(--accent);
+      color: #2b2b2b;
+    }
+
     /* ─────────────────────────────────────────────────────────
   20. ANIMATIONS & KEYFRAMES
    ───────────────────────────────────────────────────────── */
@@ -3479,6 +3503,7 @@
   </section>
 
   <nav>
+    <a class="nav-item nav-home" href="https://lychen.framer.website/" target="_blank" rel="noopener">← 首頁</a>
     <span class="nav-brand">LYC</span>
     <div class="nav-sep"></div>
     <a class="nav-item" href="#intro">研究背景</a>
@@ -3806,7 +3831,7 @@
         <div class="phase-name">User Journey Map</div>
       </div>
     </div>
-    <p class="sec-desc" style="margin-bottom:8px;">Emily 從發現餐廳到最終決定造訪的完整旅程，標記情緒起伏與關鍵痛點（hover 痛點按鈕查看細節）。</p>
+    <p class="sec-desc" style="margin-bottom:8px;">Emily 從發現餐廳到最終決定造訪的完整旅程，標記情緒起伏與關鍵痛點</p>
 
     <!-- Desktop: 5欄 table + prev/next arrows -->
     <div style="position:relative;">
@@ -4998,6 +5023,7 @@
   <footer>
     <div class="footer-brand">LYC Portfolio</div>
     <div class="footer-note">IG Reels 收藏管理工具 · UX Research &amp; Design Process · 2024</div>
+    <a class="footer-home-btn" href="https://lychen.framer.website/" target="_blank" rel="noopener">回首頁</a>
   </footer>
 
   <script>
@@ -5748,22 +5774,21 @@
           <div
             style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:24px;">
             CARD · 382px</div>
-          <div style="display:flex;flex-direction:column;gap:24px;align-items:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;">
+          <div
+            style="display:flex;flex-direction:column;gap:24px;align-items:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;">
 
             <div>
-              <img src="assets/card.svg"
-                   class="comp-card-screenshot"
-                   alt="卡片元件 - 一般檢視">
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:8px;letter-spacing:1px;">
+              <img src="assets/card.svg" class="comp-card-screenshot" alt="卡片元件 - 一般檢視">
+              <div
+                style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:8px;letter-spacing:1px;">
                 Default
               </div>
             </div>
 
             <div>
-              <img src="assets/card-edit.svg"
-                   class="comp-card-screenshot"
-                   alt="卡片元件 - 編輯模式">
-              <div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:8px;letter-spacing:1px;">
+              <img src="assets/card-edit.svg" class="comp-card-screenshot" alt="卡片元件 - 編輯模式">
+              <div
+                style="font-family:'Roboto Mono',monospace;font-size:10px;color:#909090;margin-top:8px;letter-spacing:1px;">
                 Edit
               </div>
             </div>
@@ -5779,12 +5804,16 @@
             style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:24px;">
             LOADER · 48×48px</div>
           <div style="display:flex;flex-direction:column;gap:20px;align-items:flex-start;">
-            <svg class="ig-spin-loader" width="48" height="48" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M22.5 2.5V10.5M22.5 34.5V42.5M8.36 8.36L14.02 14.02M30.98 30.98L36.64 36.64M2.5 22.5H10.5M34.5 22.5H42.5M8.36 36.64L14.02 30.98M30.98 14.02L36.64 8.36" stroke="url(#ig-loader-grad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg class="ig-spin-loader" width="48" height="48" viewBox="0 0 45 45" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M22.5 2.5V10.5M22.5 34.5V42.5M8.36 8.36L14.02 14.02M30.98 30.98L36.64 36.64M2.5 22.5H10.5M34.5 22.5H42.5M8.36 36.64L14.02 30.98M30.98 14.02L36.64 8.36"
+                stroke="url(#ig-loader-grad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
               <defs>
-                <linearGradient id="ig-loader-grad" x1="22.5" y1="2.5" x2="22.5" y2="42.5" gradientUnits="userSpaceOnUse">
-                  <stop offset="0.16" stop-color="#FF6F61"/>
-                  <stop offset="1" stop-color="#FFB74D"/>
+                <linearGradient id="ig-loader-grad" x1="22.5" y1="2.5" x2="22.5" y2="42.5"
+                  gradientUnits="userSpaceOnUse">
+                  <stop offset="0.16" stop-color="#FF6F61" />
+                  <stop offset="1" stop-color="#FFB74D" />
                 </linearGradient>
               </defs>
             </svg>
@@ -6008,8 +6037,7 @@
 
       <!-- ── 選單元件 Slide ── -->
       <div id="comp-menu" class="comp-slide" style="display:none;">
-        <div
-          style="background:#FFFFFF;border:1px solid rgba(0,0,0,0.1);border-radius:2px;padding:32px;">
+        <div style="background:#FFFFFF;border:1px solid rgba(0,0,0,0.1);border-radius:2px;padding:32px;">
           <div
             style="font-family:'Roboto Mono',monospace;font-size:11px;color:#909090;letter-spacing:2px;margin-bottom:24px;">
             MENU COMPONENTS · 選單元件</div>
@@ -6831,6 +6859,7 @@
       width: 100%;
       display: block;
     }
+
     @media (max-width: 480px) {
       .comp-card-screenshot {
         max-width: 267px;

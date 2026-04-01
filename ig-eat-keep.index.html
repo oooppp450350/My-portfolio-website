@@ -1289,6 +1289,30 @@
       color: var(--text-muted);
     }
 
+    .nav-home {
+      opacity: 0.6;
+    }
+    .nav-home:hover {
+      opacity: 1;
+    }
+
+    .footer-home-btn {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 7px 20px;
+      border: 1px solid var(--accent);
+      border-radius: 20px;
+      color: var(--accent);
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 13px;
+      text-decoration: none;
+      transition: background .2s, color .2s;
+    }
+    .footer-home-btn:hover {
+      background: var(--accent);
+      color: #2b2b2b;
+    }
+
     /* ─────────────────────────────────────────────────────────
   20. ANIMATIONS & KEYFRAMES
    ───────────────────────────────────────────────────────── */
@@ -3479,6 +3503,7 @@
   </section>
 
   <nav>
+    <a class="nav-item nav-home" href="https://lychen.framer.website/" target="_blank" rel="noopener">← 首頁</a>
     <span class="nav-brand">LYC</span>
     <div class="nav-sep"></div>
     <a class="nav-item" href="#intro">研究背景</a>
@@ -4998,6 +5023,7 @@
   <footer>
     <div class="footer-brand">LYC Portfolio</div>
     <div class="footer-note">IG Reels 收藏管理工具 · UX Research &amp; Design Process · 2024</div>
+    <a class="footer-home-btn" href="https://lychen.framer.website/" target="_blank" rel="noopener">回首頁</a>
   </footer>
 
   <script>
